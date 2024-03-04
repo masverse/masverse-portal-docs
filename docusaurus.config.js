@@ -13,15 +13,15 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://maschain.enterprise.github.io',
+  url: 'https://masverse-portal-docs.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/masverse-portal-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Maschain Enterprise', // Usually your GitHub org/user name.
-  projectName: 'Maschain Enterprise Docs', // Usually your repo name.
+  organizationName: 'masverse', // Usually your GitHub org/user name.
+  projectName: 'masverse-portal-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
