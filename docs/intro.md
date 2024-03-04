@@ -1,10 +1,11 @@
 ---
 sidebar_position: 1
+slug: /
 ---
 
 # Tutorial Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Welcome to the first step of diving into the world of blockchain. Here are a few steps to help you get started.
 
 ## Getting Started
 
