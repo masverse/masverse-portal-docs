@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Overview
 
-Documents are **groups of pages** connected through:
+Documents are **groups of pages** connected through test:
 
 - a **sidebar**
 - **previous/next navigation**
