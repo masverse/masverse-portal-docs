@@ -293,7 +293,7 @@ Transfer Tokens to another wallet address
 >**POST** 
 
 ```
-{{base_url}}/transfer
+{{base_url}}/token-transfer
 ```
 #### HEADERS
 

@@ -11,7 +11,7 @@ Retrieves all entity category records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/entitycategory
+{{base_url}}/get-all-entity-category
 ```
 #### HEADERS
 
@@ -46,7 +46,7 @@ Retrieves a specific entity category record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/entitycategory/{id}
+{{base_url}}/get-entity-category/{id}
 ```
 #### HEADERS
 
@@ -79,7 +79,7 @@ Creates an entity category by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/entitycategory
+{{base_url}}/post-entity-category
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -116,7 +116,7 @@ Update entity category by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/entitycategory/{id}
+{{base_url}}/update-entity-category/{id}
 ```
 #### HEADERS
 
@@ -155,7 +155,7 @@ Activate entity category by id.
 >**PUT** 
 
 ```
-{{base_url}}/entitycategory/{id}/activate
+{{base_url}}/activate-entity-category/{id}
 ```
 #### HEADERS
 
@@ -189,7 +189,7 @@ Deactivate entity category by id.
 >**PUT** 
 
 ```
-{{base_url}}/entitycategory/{id}/deactivate
+{{base_url}}/deactivate-entity-category/{id}
 ```
 #### HEADERS
 
@@ -223,7 +223,7 @@ Delete entity category by id.
 >**DELETE** 
 
 ```
-{{base_url}}/entitycategory/{id}
+{{base_url}}/delete-entity-category/{id}
 ```
 #### HEADERS
 
