@@ -11,7 +11,7 @@ Retrieves all wallet category records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/walletcategory
+{{base_url}}/get-all-wallet-category
 ```
 #### HEADERS
 
@@ -46,7 +46,7 @@ Retrieves a specific wallet category record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/walletcategory/{id}
+{{base_url}}/get-wallet-category/{id}
 ```
 #### HEADERS
 
@@ -79,7 +79,7 @@ Creates an wallet category by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/walletcategory
+{{base_url}}/post-wallet-category
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -116,7 +116,7 @@ Update wallet category by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/walletcategory/{id}
+{{base_url}}/update-wallet-category/{id}
 ```
 #### HEADERS
 
@@ -155,7 +155,7 @@ Activate wallet category by id.
 >**PUT** 
 
 ```
-{{base_url}}/walletcategory/{id}/activate
+{{base_url}}/activate-wallet-category/{id}
 ```
 #### HEADERS
 
@@ -189,7 +189,7 @@ Deactivate wallet category by id.
 >**PUT** 
 
 ```
-{{base_url}}/walletcategory/{id}/deactivate
+{{base_url}}/deactivate-wallet-category/{id}
 ```
 #### HEADERS
 
@@ -223,7 +223,7 @@ Delete wallet category by id.
 >**DELETE** 
 
 ```
-{{base_url}}/walletcategory/{id}
+{{base_url}}/delete-wallet-category/{id}
 ```
 #### HEADERS
 

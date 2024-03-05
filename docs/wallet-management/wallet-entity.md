@@ -11,7 +11,7 @@ Retrieves all entity records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/entity
+{{base_url}}/get-all-entity
 ```
 #### HEADERS
 
@@ -46,7 +46,7 @@ Retrieves a specific entity  record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/entity/{id}
+{{base_url}}/get-entity/{id}
 ```
 #### HEADERS
 
@@ -78,7 +78,7 @@ Creates an entity  by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/entity
+{{base_url}}/post-entity
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -116,7 +116,7 @@ Update entity by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/entity/{id}
+{{base_url}}/update-entity/{id}
 ```
 #### HEADERS
 
@@ -157,7 +157,7 @@ Delete entity by id.
 >**DELETE** 
 
 ```
-{{base_url}}/entity/{id}
+{{base_url}}/delete-entity/{id}
 ```
 #### HEADERS
 
