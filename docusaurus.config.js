@@ -62,7 +62,7 @@ const config = {
         // title: 'Masverse',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/M1.svg',
+          src: 'img/maschain.svg',
         },
         // items: [
         //   {
