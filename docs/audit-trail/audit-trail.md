@@ -11,7 +11,7 @@ Retrieves all audit trail records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/audit/audit
+{{base_url}}/api/audit/audit
 ```
 #### HEADERS
 
@@ -47,7 +47,7 @@ Retrieves a specific audit trail record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/audit/audit/{id}
+{{base_url}}/api/audit/audit/{id}
 ```
 #### HEADERS
 
@@ -81,7 +81,7 @@ Creates an audit trail with category and tags, storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/audit/audit
+{{base_url}}/api/audit/audit
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -124,7 +124,7 @@ Reads metadata from MasChain.
 >**GET** 
 
 ```
-{{base_url}}/audit/audit-tx
+{{base_url}}/api/audit/audit-tx
 ```
 #### HEADERS
 

@@ -11,7 +11,7 @@ Retrieves all category records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/audit/category
+{{base_url}}/api/audit/category
 ```
 #### HEADERS
 
@@ -54,7 +54,7 @@ Retrieves a specific organisation category record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/audit/category/{id}
+{{base_url}}/api/audit/category/{id}
 ```
 #### HEADERS
 
@@ -86,7 +86,7 @@ Creates a category by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/audit/category
+{{base_url}}/api/audit/category
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -121,7 +121,7 @@ Update category by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/audit/category/{id}
+{{base_url}}/api/audit/category/{id}
 ```
 #### HEADERS
 
@@ -158,7 +158,7 @@ Activate category by id.
 >**PUT** 
 
 ```
-{{base_url}}/audit/activate-category/{id}
+{{base_url}}/api/audit/activate-category/{id}
 ```
 #### HEADERS
 
@@ -191,7 +191,7 @@ Deactivate category by id.
 >**PUT** 
 
 ```
-{{base_url}}/audit/deactivate-category/{id}
+{{base_url}}/api/audit/deactivate-category/{id}
 ```
 #### HEADERS
 
@@ -224,7 +224,7 @@ Delete category by id.
 >**DELETE** 
 
 ```
-{{base_url}}/audit/delete-category/{id}
+{{base_url}}/api/audit/delete-category/{id}
 ```
 #### HEADERS
 

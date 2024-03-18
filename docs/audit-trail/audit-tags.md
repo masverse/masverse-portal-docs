@@ -11,7 +11,7 @@ Retrieves all tags records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/audit/tag
+{{base_url}}/api/audit/tag
 ```
 #### HEADERS
 
@@ -45,7 +45,7 @@ Retrieves a specific organisation tags record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/audit/tag/{id}
+{{base_url}}/api/audit/tag/{id}
 ```
 #### HEADERS
 
@@ -77,7 +77,7 @@ Creates a tag by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/audit/tag
+{{base_url}}/api/audit/tag
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -112,7 +112,7 @@ Update tags by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/audit/tag/{id}
+{{base_url}}/api/audit/tag/{id}
 ```
 #### HEADERS
 
@@ -151,7 +151,7 @@ Activate tags by id.
 >**PUT** 
 
 ```
-{{base_url}}/audit/activate-tag/{id}
+{{base_url}}/api/audit/activate-tag/{id}
 ```
 #### HEADERS
 
@@ -184,7 +184,7 @@ Deactivate tags by id.
 >**PUT** 
 
 ```
-{{base_url}}/audit/deactivate-tag/{id}
+{{base_url}}/api/audit/deactivate-tag/{id}
 ```
 #### HEADERS
 
@@ -217,7 +217,7 @@ Delete tags by id.
 >**DELETE** 
 
 ```
-{{base_url}}/audit/delete-tag/{id}
+{{base_url}}/api/audit/delete-tag/{id}
 ```
 #### HEADERS
 

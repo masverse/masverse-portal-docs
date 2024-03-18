@@ -11,7 +11,7 @@ Pauses a token, restricting it from every transaction
 >**POST** 
 
 ```
-{{base_url}}/pause
+{{base_url}}/api/token/pause
 ```
 #### HEADERS
 
@@ -80,7 +80,7 @@ Resumes a token workings.
 >**POST** 
 
 ```
-{{base_url}}/resume
+{{base_url}}/api/token/resume
 ```
 #### HEADERS
 
@@ -149,7 +149,7 @@ Mints tokens
 >**POST** 
 
 ```
-{{base_url}}/mint
+{{base_url}}/api/token/mint
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -220,7 +220,7 @@ Burns Tokens
 >**POST** 
 
 ```
-{{base_url}}/burn
+{{base_url}}/api/token/burn
 ```
 #### HEADERS
 
@@ -293,7 +293,7 @@ Transfer Tokens to another wallet address
 >**POST** 
 
 ```
-{{base_url}}/token-transfer
+{{base_url}}/api/token/token-transfer
 ```
 #### HEADERS
 
