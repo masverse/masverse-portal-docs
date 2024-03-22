@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import { Analytics } from "@vercel/analytics/react"
 
 const FeatureList = [
   {
@@ -54,6 +55,7 @@ export default function HomepageFeatures() {
     <section className={styles.features}>
       <div className="container">
         <div className="row">
+          <Analytics />
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Tags
+# Audit Tags
 
 ## Get Tags list
 

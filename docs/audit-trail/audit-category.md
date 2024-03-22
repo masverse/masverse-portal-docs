@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Category
+# Audit Category
 
 ## Get Category list
 
