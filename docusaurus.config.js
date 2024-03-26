@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Masverse Enterprise Docs',
   tagline: 'Innovation meets success',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/masfavicon.png',
 
   // Set the production url of your site here
   url: 'https://docs-maschain.vercel.app/',
