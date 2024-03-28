@@ -1,6 +1,7 @@
 # Dependencies
 /node_modules
 /build
+*lockb
 
 # Production
 node_modules*

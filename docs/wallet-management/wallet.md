@@ -11,7 +11,7 @@ Retrieves all wallet records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/api/wallet/wallet
+API_URL/api/wallet/wallet
 ```
 #### HEADERS
 
@@ -58,7 +58,7 @@ Retrieves a specific wallet record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/api/wallet/wallet/{id}
+API_URL/api/wallet/wallet/{id}
 ```
 #### HEADERS
 
@@ -94,7 +94,7 @@ Creates an wallet by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/api/wallet/wallet
+API_URL/api/wallet/wallet
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -140,7 +140,7 @@ Update wallet by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/api/wallet/wallet/{id}
+API_URL/api/wallet/wallet/{id}
 ```
 #### HEADERS
 
@@ -190,7 +190,7 @@ Activate wallet by id.
 >**PUT** 
 
 ```
-{{base_url}}/api/wallet/activate-wallet/{id}
+API_URL/api/wallet/activate-wallet/{id}
 ```
 #### HEADERS
 
@@ -227,7 +227,7 @@ Deactivate wallet by id.
 >**PUT** 
 
 ```
-{{base_url}}/api/wallet/deactivate-wallet/{id}
+API_URL/api/wallet/deactivate-wallet/{id}
 ```
 #### HEADERS
 
@@ -264,7 +264,7 @@ Delete wallet by id.
 >**DELETE** 
 
 ```
-{{base_url}}/api/wallet/wallet/{id}
+API_URL/api/wallet/wallet/{id}
 ```
 #### HEADERS
 
@@ -289,7 +289,7 @@ Creates a User and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/api/wallet/create-user
+API_URL/api/wallet/create-user
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***

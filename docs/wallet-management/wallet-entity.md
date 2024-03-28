@@ -11,7 +11,7 @@ Retrieves all entity records for an organization from the database.
 >**GET** 
 
 ```
-{{base_url}}/api/wallet/entity
+API_URL/api/wallet/entity
 ```
 #### HEADERS
 
@@ -46,7 +46,7 @@ Retrieves a specific entity  record by its ID from the database.
 >**GET** 
 
 ```
-{{base_url}}/api/wallet/entity/{id}
+API_URL/api/wallet/entity/{id}
 ```
 #### HEADERS
 
@@ -78,7 +78,7 @@ Creates an entity  by organisation id and storing it in MasChain.
 >**POST** 
 
 ```
-{{base_url}}/api/wallet/entity
+API_URL/api/wallet/entity
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -116,7 +116,7 @@ Update entity by id and store to db.
 >**PUT** 
 
 ```
-{{base_url}}/api/wallet/entity/{id}
+API_URL/api/wallet/entity/{id}
 ```
 #### HEADERS
 
@@ -157,7 +157,7 @@ Delete entity by id.
 >**DELETE** 
 
 ```
-{{base_url}}/api/wallet/entity/{id}
+API_URL/api/wallet/entity/{id}
 ```
 #### HEADERS
 

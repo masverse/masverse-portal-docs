@@ -15,7 +15,7 @@ We also separate different use cases into different Service.
 
 ## Getting Started
 
-To kickstart integrations, you will need to go to [portal.maschain.com*](https://portal.maschain.com/) to register for an enterprise account. Once you have completed the KYB process you may choose to subscribe a **Service** that you're interested to integrate and create an API key
+To kickstart integrations, you will need to go to [Enterprise Portal](#enterprise-portal-links) to register for an enterprise account. Once you have completed the KYB process you may choose to subscribe a **Service** that you're interested to integrate and create an API key
 
  What you'll need
 - **API Key**
@@ -27,6 +27,17 @@ To kickstart integrations, you will need to go to [portal.maschain.com*](https:/
 2. Enter your desired Project Name and select a service for that API key.
 3. After you have succesfully created your API key, you'll need it to perform and authorize API calls when using those services.
 
-### Staging*
+## Enterprise Portal Links
 
-Since we are still in a development phase, our current domain will be [portal-testnet.maschain](https://portal-testnet.maschain.com)
+### Testnet
+
+Enterprise Portal : [portal-testnet.maschain](https://portal-testnet.maschain.com)
+
+API URL: https://service-testnet.maschain.com
+
+### Mainnet
+
+Enterprise Portal : [portal.maschain](https://portal.maschain.com)
+
+API URL: https://service.maschain.com
+
