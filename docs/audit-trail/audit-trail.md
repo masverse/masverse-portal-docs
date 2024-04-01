@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # Audit Trail
@@ -92,9 +92,10 @@ API_URL/api/audit/audit
 ```
 {
     "category_id":[1,5],
-    "tag_id":[2,3],
+    "tag_id":[5,6],
+    "contract_address":"0xc02161D9e08E620dD1B9a243Fa8BdA82acCB9df4",
     "metadata":{"name" : "xxxxxxxx","data" : "yyyyyyyy","entity_id" : "zzzzzzzzz","content" : "wwwwwwwwwwww"},
-    "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
+    "wallet_address":"0x40095850F2bb577b364414af444EdFcCa3324322",
     "file":"file",
     "callbackUrl": "https://postman-echo.com/post?"
 }
