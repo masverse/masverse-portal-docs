@@ -93,8 +93,13 @@ API_URL/api/audit/category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### BODY
-```
+**content-type &emsp; json/application**
+
+| Name  | Type  | Required |
+| :----: | :----: | :-----------: |
+|  name | string  | Yes|
+
+```js title="Sample request"
 {
           "name":"test Izz"
 }
@@ -114,7 +119,7 @@ API_URL/api/audit/category
 ```
 <br/>
 
-## Update Category by ID
+## Update Category
 
 Update category by id and store to db.
 
@@ -129,8 +134,14 @@ API_URL/api/audit/category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### BODY
-```
+**content-type &emsp; json/application**
+
+
+| Name  | Type  | Required |
+| :----: | :----: | :-----------: |
+|  name | string  | Yes|
+
+```js title="Sample request"
 {
     "name":"Jason Izz"
 }
@@ -151,7 +162,7 @@ API_URL/api/audit/category/{id}
 
 <br/>
 
-## Activate Category by ID
+## Activate Category
 
 Activate category by id.
 
@@ -184,7 +195,7 @@ API_URL/api/audit/activate-category/{id}
 
 <br/>
 
-## Deactivate Category by ID
+## Deactivate Category
 
 Deactivate category by id.
 
@@ -217,7 +228,7 @@ API_URL/api/audit/deactivate-category/{id}
 
 <br/>
 
-## Delete Category by ID
+## Delete Category 
 
 Delete category by id.
 

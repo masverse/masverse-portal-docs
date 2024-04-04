@@ -84,8 +84,13 @@ API_URL/api/audit/tag
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### BODY
-```
+**content-type &emsp; json/application**
+
+| Name  | Type  | Required |
+| :----: | :----: | :-----------: |
+|  name | string  | Yes|
+
+```js title="Sample result"
 {
     "name":"tester tag"
 }
@@ -105,7 +110,7 @@ API_URL/api/audit/tag
 ```
 <br/>
 
-## Update Tags by ID
+## Update Tags
 
 Update tags by id and store to db.
 
@@ -120,8 +125,13 @@ API_URL/api/audit/tag/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### BODY
-```
+**content-type &emsp; json/application**
+
+| Name  | Type  | Required |
+| :----: | :----: | :-----------: |
+|  name | string  | Yes|
+
+```js title="Sample result"
 {
     "name":"Update test"
 }
