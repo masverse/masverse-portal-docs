@@ -86,6 +86,11 @@ API_URL/api/wallet/wallet-category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
+
 #### BODY
 ```
 {
@@ -123,6 +128,11 @@ API_URL/api/wallet/wallet-category/{id}
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 #### BODY
 ```
@@ -163,6 +173,10 @@ API_URL/api/wallet/activate-wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {
@@ -197,6 +211,10 @@ API_URL/api/wallet/deactivate-wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {
@@ -231,6 +249,10 @@ API_URL/api/wallet/wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {

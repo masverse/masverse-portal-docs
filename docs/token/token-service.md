@@ -19,6 +19,13 @@ API_URL/api/token/pause
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
+
 #### BODY
 ```
 {
@@ -88,6 +95,13 @@ API_URL/api/token/resume
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
+
 #### BODY
 ```
 {
@@ -155,6 +169,13 @@ API_URL/api/token/mint
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 #### BODY
 ```
@@ -228,6 +249,13 @@ API_URL/api/token/burn
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
+
 #### BODY
 ```
 {
@@ -300,6 +328,13 @@ API_URL/api/token/token-transfer
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 #### BODY
 ```

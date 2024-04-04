@@ -64,8 +64,16 @@ API_URL/api/certificate/create-smartcontract
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | name                 | string          | Yes                 |
+    | field                | object          | Yes                 |
+
 #### BODY
-```
+```js title="Sample request"
 {
     "wallet_address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1",
     "name" : "NFT2",
@@ -103,6 +111,19 @@ API_URL/api/certificate/mint-certificate
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |:--------------------:|:----------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | file                 | file            | Yes                 |
+    | attribute[0][value]  | string          | Yes                 |
+    | attribute[0][text]   | string          | Yes                 |
+    | name                 | string          | Yes                 |
+    | decription           | string          | Yes                 |
 
 #### BODY(form-data)
 ```
@@ -184,7 +205,7 @@ transaction_id        : 0x3b1d66bd24a7614db9624f0018f99dcedc2d3b887422d1127e37a2
 
 Get Certificate Mint API field property
 
->**PUT** 
+>**GET** 
 
 ```
 API_URL/api/certificate/get-deploy-field
@@ -195,6 +216,7 @@ API_URL/api/certificate/get-deploy-field
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {

@@ -19,6 +19,8 @@ API_URL/api/wallet/wallet
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
 ```js title="Sample result"
 {
     "status": 200,
@@ -66,6 +68,8 @@ API_URL/api/wallet/wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
 ```js title="Sample result"
 {
     "status": 200,
@@ -100,6 +104,13 @@ API_URL/api/wallet/wallet
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 #### BODY
 ```
@@ -147,6 +158,13 @@ API_URL/api/wallet/wallet/{id}
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 #### BODY
 ```
@@ -198,6 +216,12 @@ API_URL/api/wallet/activate-wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {
@@ -235,6 +259,12 @@ API_URL/api/wallet/deactivate-wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {
@@ -272,6 +302,12 @@ API_URL/api/wallet/wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {
@@ -295,6 +331,13 @@ API_URL/api/wallet/create-user
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | Identifiant          | int UNSIGNED AI | -                   |
+    | Type                 | int UNSIGNED    | -                   |
 
 #### BODY
 ```
