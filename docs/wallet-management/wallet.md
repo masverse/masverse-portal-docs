@@ -91,12 +91,14 @@ API_URL/api/wallet/wallet
 **content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | entity_id            | int             | Yes                 |
+    | name                 | string          | No                  |
+    | entity               | object          | No                  |
+    | wallet_category_id   | array           | No                  |
 
 #### BODY
-```
+```js title="Sample request"
 {
        "entity_id" : 1,
        "name":"test",
@@ -140,12 +142,14 @@ API_URL/api/wallet/wallet/{id}
 **content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | entity_id            | int             | Yes                 |
+    | name                 | string          | Yes                 |
+    | entity               | object          | No                  |
+    | wallet_category_id   | array           | No                  |
 
 #### BODY
-```
+```js title="Sample request"
 {
        "entity_id" : 1,
        "name":"123",
@@ -189,11 +193,6 @@ API_URL/api/wallet/activate-wallet/{id}
 
 **content-type &emsp; json/application**
 
-    | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
-
 ```js title="Sample result"
 {
     "status": 200,
@@ -224,11 +223,6 @@ API_URL/api/wallet/deactivate-wallet/{id}
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 **content-type &emsp; json/application**
-
-    | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
 
 ```js title="Sample result"
 {
@@ -261,11 +255,6 @@ API_URL/api/wallet/wallet/{id}
 
 **content-type &emsp; json/application**
 
-    | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
-
 ```js title="Sample result"
 {
     "status": 200,
@@ -292,12 +281,14 @@ API_URL/api/wallet/create-user
 **content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | name                 | string          | Yes                 |
+    | email                | string          | Yes                 |
+    | ic                   | string          | Yes                 |
+    | entity_id            | int             | No                  |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "name":"test name2",
     "email":"testemail9@gmail.com",

@@ -15,9 +15,11 @@ API_URL/api/certificate/get-all-sc-list
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {
@@ -60,9 +62,9 @@ API_URL/api/certificate/create-smartcontract
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
 **content-type &emsp; json/application**
 
@@ -71,6 +73,7 @@ API_URL/api/certificate/create-smartcontract
     | wallet_address       | string          | Yes                 |
     | name                 | string          | Yes                 |
     | field                | object          | Yes                 |
+    | callbackUrl          | string          | No                  |
 
 #### BODY
 ```js title="Sample request"
@@ -108,14 +111,16 @@ Mint Certificate by contract_address and storing it in MasChain.
 API_URL/api/certificate/mint-certificate
 ```
 #### HEADERS
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
 **content-type &emsp; json/application**
 
+**body &emsp; form-data**
+
     | Name                 | Type            | Required            |
-    |:--------------------:|:----------------:|:-------------------:|
+    |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | to                   | string          | Yes                 |
     | contract_address     | string          | Yes                 |
@@ -165,9 +170,11 @@ API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; json/application**
 
 #### Params
 ```
@@ -212,9 +219,9 @@ API_URL/api/certificate/get-deploy-field
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
 **content-type &emsp; json/application**
 

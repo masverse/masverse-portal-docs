@@ -15,9 +15,11 @@ API_URL/api/wallet/entity-category
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {
@@ -50,9 +52,11 @@ API_URL/api/wallet/entity-category/{id}
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {
@@ -82,17 +86,19 @@ Creates an entity category by organisation id and storing it in MasChain.
 API_URL/api/wallet/entity-category
 ```
 #### HEADERS
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | name                 | string          | Yes                 |
+    | subcategory_id       | int             | Yes                 |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "name":"Johnathan 456",
     "subcategory_id":"1"
@@ -125,17 +131,19 @@ API_URL/api/wallet/entity-category/{id}
 ```
 #### HEADERS
 
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | name                 | string          | Yes                 |
+    | subcategory_id       | int             | Yes                 |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "name":"Kien",
     "subcategory_id":"1"
@@ -173,10 +181,7 @@ API_URL/api/wallet/activate-entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-    | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {
@@ -211,10 +216,7 @@ API_URL/api/wallet/deactivate-entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-    | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {
@@ -249,10 +251,7 @@ API_URL/api/wallet/entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-    | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+**content-type &emsp; json/application**
 
 ```js title="Sample result"
 {

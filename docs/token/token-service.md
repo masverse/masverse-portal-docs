@@ -22,12 +22,13 @@ API_URL/api/token/pause
 **content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callbackUrl          | string          | Yes                 |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683"   ,
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
@@ -98,12 +99,13 @@ API_URL/api/token/resume
 **content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callbackUrl          | string          | Yes                 |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683"   ,
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
@@ -173,9 +175,12 @@ API_URL/api/token/mint
 **content-type &emsp; json/application**
 
     | Name                 | Type            | Required            |
-    |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | amount               | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callbackUrl          | string          | Yes                 |
 
 #### BODY
 ```
@@ -253,11 +258,14 @@ API_URL/api/token/burn
 
     | Name                 | Type            | Required            |
     |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | amount               | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callbackUrl          | string          | Yes                 |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
     "to":"0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475",
@@ -333,11 +341,14 @@ API_URL/api/token/token-transfer
 
     | Name                 | Type            | Required            |
     |----------------------|-----------------|---------------------|
-    | Identifiant          | int UNSIGNED AI | -                   |
-    | Type                 | int UNSIGNED    | -                   |
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | amount               | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callbackUrl          | string          | Yes                 |
 
 #### BODY
-```
+```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
     "to":"0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475",
