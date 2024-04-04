@@ -135,12 +135,12 @@ description           : NFT CERT
 
 ## Get Certificate
 
-Get Certificate details.
+Get Certificate details. Parameter can be null.
 
 >**GET** 
 
 ```
-API_URL/api/certificate/get-certificate
+API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b7955a664A4452F14bF1&contract_address=0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c&transaction_id=ds21342eds90f71fe1-6f7b-4edf-8cdd-77ce7d1afc7720240402073926.jpeg
 ```
 #### HEADERS
 
@@ -148,7 +148,7 @@ API_URL/api/certificate/get-certificate
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### BODY(form-data)
+#### Params
 ```
 wallet_address        : 0x3423BF219008A8D6b644b7955a664A4452F14bF1
 contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
