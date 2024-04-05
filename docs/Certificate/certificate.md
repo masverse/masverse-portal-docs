@@ -72,7 +72,7 @@ API_URL/api/certificate/create-smartcontract
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | name                 | string          | Yes                 |
-    | field                | object          | Yes                 |
+    | field                | [object](#get-deployment-field)          | Yes                 |
     | callbackUrl          | string          | No                  |
 
 #### BODY
@@ -83,8 +83,8 @@ API_URL/api/certificate/create-smartcontract
     "field":{
         "address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1",
         "max-supply":1000,
-        "nft-name":"Maschain",
-        "nft-symbol":"MT"
+        "name":"Maschain",
+        "symbol":"MT"
     }
 }
 ```
@@ -125,10 +125,14 @@ API_URL/api/certificate/mint-certificate
     | to                   | string          | Yes                 |
     | contract_address     | string          | Yes                 |
     | file                 | file            | Yes                 |
-    | attribute[0][value]  | string          | Yes                 |
-    | attribute[0][text]   | string          | Yes                 |
+    | attribute[0][value]  | string          | No                  |
+    | attribute[0][text]   | string          | No                  |
+    | attribute[1][value]  | string          | No                  |
+    | attribute[2][text]   | string          | No                  |
     | name                 | string          | Yes                 |
     | decription           | string          | Yes                 |
+
+`NOTE : Attribute fields can be empty or many`
 
 #### BODY(form-data)
 ```
@@ -225,29 +229,40 @@ API_URL/api/certificate/get-deploy-field
 
 **content-type &emsp; json/application**
 
+    | Field Type           | Category         | Description      | 
+    |:--------------------:|:---------------: |:--------------- |
+    | 1                    | string           | Contain alphanumeric  | 
+    | 2                    | int              | Number            |
+    | 3                    | decimal          | ERC20 Decimal (Max 18)  |
+    | 4                    | wallet           | Wallet Address within your organisation            |
+ 
+
+
 ```js title="Sample result"
 {
     "status": 200,
     "result": [
         {
             "property": "address",
-            "field_type": 1
-        },
-        {
-            "property": "url",
-            "field_type": 1
+            "field_type": 4,
+            "description" : "Wallet address that will be the owner of the smart contract"
         },
         {
             "property": "max-supply",
-            "field_type": 1
+            "field_type": 2
+            "description" : "Max supply available for your smart contract"
         },
         {
-            "property": "nft-name",
+            "property": "name",
             "field_type": 1
+            "description" : "Token name"
+
         },
         {
-            "property": "nft-symbol",
-            "field_type": 1
+            "property": "decimal",
+            "field_type": 3
+            "description" : "Smart contract decimal"
+
         }
     ]
 }
