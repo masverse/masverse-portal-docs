@@ -86,6 +86,7 @@ API_URL/api/audit/tag
 
 **content-type &emsp; json/application**
 
+#### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
 |  name | string  | Yes|
@@ -127,6 +128,7 @@ API_URL/api/audit/tag/{id}
 
 **content-type &emsp; json/application**
 
+#### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
 |  name | string  | Yes|

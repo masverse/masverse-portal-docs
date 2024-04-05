@@ -92,12 +92,12 @@ API_URL/api/wallet/wallet-category
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | subcategory_id       | int             | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
     "name":"test 456",
@@ -137,12 +137,12 @@ API_URL/api/wallet/wallet-category/{id}
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | subcategory_id       | int             | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
     "name":"test",

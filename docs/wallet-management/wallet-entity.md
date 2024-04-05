@@ -91,13 +91,13 @@ API_URL/api/wallet/entity
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | external_id          | string          | Yes                 |
     | entity_id            | int             | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
     "name" : "test",
@@ -138,13 +138,13 @@ API_URL/api/wallet/entity/{id}
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | external_id          | string          | Yes                 |
     | entity_id            | int             | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
     "name" : "test2",

@@ -23,7 +23,7 @@ API_URL/api/wallet/wallet?type=1
 
 #### Params
 ```
-type        : 1 | 2     -- not required
+type  : 1 | 2  -- not required
 
 ```
 
@@ -90,6 +90,7 @@ API_URL/api/wallet/wallet
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | entity_id            | int             | Yes                 |
@@ -97,7 +98,6 @@ API_URL/api/wallet/wallet
     | entity               | object          | No                  |
     | wallet_category_id   | array           | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
        "entity_id" : 1,
@@ -141,6 +141,7 @@ API_URL/api/wallet/wallet/{id}
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | entity_id            | int             | Yes                 |
@@ -148,7 +149,6 @@ API_URL/api/wallet/wallet/{id}
     | entity               | object          | No                  |
     | wallet_category_id   | array           | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
        "entity_id" : 1,
@@ -280,6 +280,7 @@ API_URL/api/wallet/create-user
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
@@ -287,7 +288,6 @@ API_URL/api/wallet/create-user
     | ic                   | string          | Yes                 |
     | entity_id            | int             | No                  |
 
-#### BODY
 ```js title="Sample request"
 {
     "name":"test name2",

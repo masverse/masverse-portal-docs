@@ -90,6 +90,7 @@ API_URL/api/audit/audit
 
 **content-type &emsp; json/application**
 
+#### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
 |  wallet_address | string  | Yes|
@@ -148,6 +149,7 @@ API_URL/api/audit/audit
 
 **content-type &emsp; json/application**
 
+#### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
 |  wallet_address | string  | Yes|

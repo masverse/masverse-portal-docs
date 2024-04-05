@@ -95,6 +95,7 @@ API_URL/api/audit/category
 
 **content-type &emsp; json/application**
 
+#### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
 |  name | string  | Yes|
@@ -136,7 +137,7 @@ API_URL/api/audit/category/{id}
 
 **content-type &emsp; json/application**
 
-
+#### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
 |  name | string  | Yes|

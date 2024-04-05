@@ -53,8 +53,7 @@ API_URL/api/certificate/get-all-sc-list
 
 ## Create Smart Contract
 
-Create New Smart Contract to MasChain with field by call API_URL//api/certificate/get-deploy-field
-
+Create New Certificate Smart Contract to MasChain with fields.
 >**POST** 
 
 ```
@@ -68,26 +67,32 @@ API_URL/api/certificate/create-smartcontract
 
 **content-type &emsp; json/application**
 
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | wallet_address       | string          | Yes                 |
-    | name                 | string          | Yes                 |
-    | field                | [object](#get-deployment-field)          | Yes                 |
-    | callbackUrl          | string          | No                  |
+<br/>
 
 #### BODY
+
 ```js title="Sample request"
 {
-    "wallet_address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1",
-    "name" : "NFT2",
+    "wallet_address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Address used to deploy this contract
+    "name" : "NFT2", //Contract Nickname
     "field":{
-        "address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1",
-        "max-supply":1000,
-        "name":"Maschain",
-        "symbol":"MT"
+        "ownerAddress":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Owner of the Certificate contract
+        "max-supply":1000, //Maximum supply 
+        "name":"Maschain", //Name of Certificate
+        "symbol":"MT" //Certificate Symbol
     }
 }
 ```
+>****IMPORTANT : Only Owner can mint certificates**
+
+* ***wallet_address*** is used to deploy this smart contract and it can set a different or separate owner for this contract in the **ownerAddress** field. Be careful to set a proper owner address.
+* ***name*** is just to give a nickname for the smart contract.
+* ***field*** is an object that contains the required properties to create this smart contract.
+    * **ownerAddress** : owner of the smart contract
+    * **max-supply** : Total maximum supply of certificates ( max 2^256 )
+    * **name** : Name of the certificate 
+    * **symbol** : Symbol of the certificate
+<br/>
 
 ```js title="Sample result"
 {
@@ -119,6 +124,7 @@ API_URL/api/certificate/mint-certificate
 
 **body &emsp; form-data**
 
+#### BODY ( form-data )
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
@@ -134,7 +140,6 @@ API_URL/api/certificate/mint-certificate
 
 `NOTE : Attribute fields can be empty or many`
 
-#### BODY(form-data)
 ```
 wallet_address        : 0x3423BF219008A8D6b644b7955a664A4452F14bF1
 to                    : 0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475
@@ -145,6 +150,16 @@ attribute[0][text]    : 123
 name                  : NFT CERT
 description           : NFT CERT
 ```
+* ***wallet_address*** must be the owner of the smart contract.
+* ***to*** is the receiver of the certificate.
+* ***contract_address*** is the certificate contract address.
+* ***attribute*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
+    * **attribute[0]** : **Key** of a attribute (eg. Month)
+    * **attribute[0]** : **Value** of a attribute (eg. December)
+* ***name*** name of the certificate being minted.
+* ***description*** description of the certificate being minted.
+
+<br/>
 
 ```js title="Sample result"
 {
@@ -212,60 +227,3 @@ transaction_id        : 0x3b1d66bd24a7614db9624f0018f99dcedc2d3b887422d1127e37a2
 
 <br/>
 
-## Get Deployment Field
-
-Get Certificate Mint API field property
-
->**GET** 
-
-```
-API_URL/api/certificate/get-deploy-field
-```
-#### HEADERS
-
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
-
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
-
-**content-type &emsp; json/application**
-
-    | Field Type           | Category         | Description      | 
-    |:--------------------:|:---------------: |:--------------- |
-    | 1                    | string           | Contain alphanumeric  | 
-    | 2                    | int              | Number            |
-    | 3                    | decimal          | ERC20 Decimal (Max 18)  |
-    | 4                    | wallet           | Wallet Address within your organisation            |
- 
-
-
-```js title="Sample result"
-{
-    "status": 200,
-    "result": [
-        {
-            "property": "address",
-            "field_type": 4,
-            "description" : "Wallet address that will be the owner of the smart contract"
-        },
-        {
-            "property": "max-supply",
-            "field_type": 2
-            "description" : "Max supply available for your smart contract"
-        },
-        {
-            "property": "name",
-            "field_type": 1
-            "description" : "Token name"
-
-        },
-        {
-            "property": "decimal",
-            "field_type": 3
-            "description" : "Smart contract decimal"
-
-        }
-    ]
-}
-```
-
-<br/>

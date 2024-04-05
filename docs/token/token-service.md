@@ -21,13 +21,13 @@ API_URL/api/token/pause
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | contract_address     | string          | Yes                 |
     | callbackUrl          | string          | Yes                 |
 
-#### BODY
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683"   ,
@@ -98,13 +98,13 @@ API_URL/api/token/resume
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | contract_address     | string          | Yes                 |
     | callbackUrl          | string          | Yes                 |
 
-#### BODY
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683"   ,
@@ -174,6 +174,7 @@ API_URL/api/token/mint
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
@@ -182,7 +183,6 @@ API_URL/api/token/mint
     | contract_address     | string          | Yes                 |
     | callbackUrl          | string          | Yes                 |
 
-#### BODY
 ```
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
@@ -256,6 +256,7 @@ API_URL/api/token/burn
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |----------------------|-----------------|---------------------|
     | wallet_address       | string          | Yes                 |
@@ -264,7 +265,6 @@ API_URL/api/token/burn
     | contract_address     | string          | Yes                 |
     | callbackUrl          | string          | Yes                 |
 
-#### BODY
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
@@ -339,6 +339,7 @@ API_URL/api/token/token-transfer
 
 **content-type &emsp; json/application**
 
+#### BODY
     | Name                 | Type            | Required            |
     |----------------------|-----------------|---------------------|
     | wallet_address       | string          | Yes                 |
@@ -347,7 +348,6 @@ API_URL/api/token/token-transfer
     | contract_address     | string          | Yes                 |
     | callbackUrl          | string          | Yes                 |
 
-#### BODY
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
