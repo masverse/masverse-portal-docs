@@ -165,14 +165,15 @@ description           : NFT CERT
 {
     "status": 200,
     "result": {
-        "status": "success",
-        "result": {
-            "requestId": 128,
-            "from": "0x3423BF219008A8D6b644b7955a664A4452F14bF1",
-            "nonce": 114,
-            "transactionHash": "0xbf6f349fd7b54dfe9b91f9725be43cec89136e39fcaeae5e48672e45e9b1b2ae",
-            "status": 1
-        }
+        "nft_token_id": 17,
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "recveiver_wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "organisation_id": 2,
+        "certificate": "https://maschain-staging.obs.ap-southeast-3.myhuaweicloud.com/15e7ce3a2fa248889ce17320dcf26676/metadata/17.json",
+        "certificate_image": "https://maschain-staging.obs.ap-southeast-3.myhuaweicloud.com/15e7ce3a2fa248889ce17320dcf26676/image/4643ce2433774554aeeda92d0851133420240411074630.pdf",
+        "status": "pending"
     }
 }
 ```
