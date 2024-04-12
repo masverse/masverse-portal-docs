@@ -182,7 +182,7 @@ callbackUrl           : https://your.domain/
 }
 ```
 
-```js title="callback success response"
+```js title="Sample Callback success response"
 {
     "status": 200,
     "result": {
@@ -195,7 +195,7 @@ callbackUrl           : https://your.domain/
 }
 ```
 
-```js title="callback fail response"
+```js title="Sample Callback fail response"
 {
     "status": 200,
     "result": {
