@@ -307,9 +307,9 @@ API_URL/api/wallet/create-user
         "ic": "9505....",
         "email": "xxx@gmail.com",
         'wallets' : {
-            "id" : 1,
-            "address": "0x147f20........",
-            "name": null,
+            "wallet_id": 21,
+            "wallet_name": "Test",
+            "wallet_address": "0x40848317995B5702....."
         }
     }
 }
