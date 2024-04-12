@@ -286,6 +286,7 @@ API_URL/api/wallet/create-user
     | name                 | string          | Yes                 |
     | email                | string          | Yes                 |
     | ic                   | string          | Yes                 |
+    | phone                | string          | No                  |
     | entity_id            | int             | No                  |
 
 ```js title="Sample request"
@@ -293,6 +294,7 @@ API_URL/api/wallet/create-user
     "name":"test name2",
     "email":"testemail9@gmail.com",
     "ic":"test ic",
+    "phone":"test ic",
     "entity_id":1
 }
 ```
