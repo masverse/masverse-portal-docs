@@ -137,6 +137,8 @@ API_URL/api/certificate/mint-certificate
     | attribute[2][text]   | string          | No                  |
     | name                 | string          | Yes                 |
     | decription           | string          | Yes                 |
+    | callbackUrl          | string          | No                 |
+
 
 `NOTE : Attribute fields can be empty or many`
 
@@ -149,6 +151,7 @@ attribute[0][value]   : 123
 attribute[0][text]    : 123
 name                  : NFT CERT
 description           : NFT CERT
+callbackUrl           : https://your.domain/
 ```
 * ***wallet_address*** must be the owner of the smart contract.
 * ***to*** is the receiver of the certificate.
@@ -158,6 +161,7 @@ description           : NFT CERT
     * **attribute[0]** : **Value** of a attribute (eg. December)
 * ***name*** name of the certificate being minted.
 * ***description*** description of the certificate being minted.
+* ***callbackUrl*** response after data is minted into blockchain
 
 <br/>
 
