@@ -177,6 +177,32 @@ description           : NFT CERT
     }
 }
 ```
+
+```js title="callback success response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "status": "success"
+        "receipt" : { Transaction Receipt Object }
+    }
+}
+```
+
+```js title="callback fail response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "status": "failed"
+        "message": "Error message"
+    }
+}
+```
 <br/>
 
 ## Get Certificate
