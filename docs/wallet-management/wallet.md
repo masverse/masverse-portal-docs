@@ -306,11 +306,11 @@ API_URL/api/wallet/create-user
         "name": "test name2",
         "ic": "9505....",
         "email": "xxx@gmail.com",
-        'wallets' : {
-            "wallet_id": 21,
-            "wallet_name": "Test",
-            "wallet_address": "0x40848317995B5702....."
-        }
+    }
+    'wallets' : {
+        "wallet_id": 21,
+        "wallet_name": "Test",
+        "wallet_address": "0x40848317995B5702....."
     }
 }
 ```
