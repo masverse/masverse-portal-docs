@@ -4,26 +4,27 @@ sidebar_position: 2
 
 # Pricing
 
-## Monthly Subcription Fee
+[comment]: <> (## Monthly Subcription Fee)
 
-Fixed rate of:
+[comment]: <> (Fixed rate of:)
 
-# **RM 1000.00** 
+[comment]: <> (# **MYR 1,000.00** )
 
-
-
-<br/>
+[comment]: <> (<br/>)
 
 ## Pay Per Use Fees
 
+#### Transfer Token
 
-| Functions | Usage | Fees per Transaction ( MYR ) |
-| :----: | :----: | :-----------: |
-| Transfer Token | 0 - 99,999 | 0.18 |
-|  | 100,000 - 499,999 | 0.17 |
-|  | 500,000 - 999,999 | 0.16 |
-|  | 1,000,000 - 1,999,999 | 0.15 |
-|  | > 2,000,000 | 0.13 |
+| Usage | Fees per Transaction ( MYR ) |
+| :----: | :-----------: |
+| 0 - 99,999 | 0.10 |
+| 100,000 - 499,999 | 0.09 |
+| 500,000 - 999,999 | 0.08 |
+| 1,000,000 - 1,999,999 | 0.07 |
+| > 2,000,000 | 0.06 |
+
+### Calculation example
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 200,000 calls, the first 99,999 calls will be charged as 0.18 per transaction and any subsequent calls will be charged as 0.17. Another clearer example can be found below.
 
@@ -35,7 +36,8 @@ The table above represents the usage fees for the service. The amount will be ch
 | 100,000 - 499,999     | 0.17                         | 400,000 x 0.17 = 68,000     |
 | 500,000 - 999,999     | 0.16                         | 500,000 x 0.16 = 80,000     |
 | 1,000,000 - 1,999,999 | 0.15                         | 400,001 x 0.15 = 60,000.15  |
-| > 2,000,000           | 0.13                         | Total = RM 225,999.97       |
+| > 2,000,000           | 0.13                         | 0       |
+|       | Total                        | 225,999.97       |
 
 <br/>
 
