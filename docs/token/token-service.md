@@ -405,3 +405,39 @@ API_URL/api/token/token-transfer
 
 <br/>
 
+## Check Tokens balance
+
+Check Tokens balance
+
+>**POST** 
+
+```
+API_URL/api/token/balance
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+#### BODY
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+
+```
+{
+    "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683",
+    "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
+}
+```
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": '1000000000'
+}
+```
+<br/>

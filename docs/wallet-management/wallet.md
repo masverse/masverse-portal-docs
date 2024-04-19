@@ -23,7 +23,8 @@ API_URL/api/wallet/wallet?type=1
 
 #### Params
 ```
-type  : 1 | 2  -- not required
+type 1 : organisation
+type 2 : end_user
 
 ```
 
@@ -33,7 +34,7 @@ type  : 1 | 2  -- not required
     "result": [
         {
             "id": 1,
-            "wallet_type": 1,
+            "wallet_type": 'organisation',
             "address": "0x147f2......",
             "name": null,
         }
@@ -68,6 +69,8 @@ API_URL/api/wallet/wallet/{id}
         "entity_id": 1,
         "address": "0x147f20........",
         "name": null,
+        "is_active" : 1,
+        'wallet_type' : 'end_user',
     }
 }
 ```
@@ -93,32 +96,30 @@ API_URL/api/wallet/wallet
 #### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
-    | entity_id            | int             | Yes                 |
+    | *entity               | [object](wallet-entity#create-entity)          | No                  |
+    | *entity_id            | int             | No                  |
     | name                 | string          | No                  |
-    | entity               | object          | No                  |
     | wallet_category_id   | array           | No                  |
+
+`NOTE : Pass only entity or entity_id`
+ 
 
 ```js title="Sample request"
 {
-       "entity_id" : 1,
-       "name":"test",
-       "entity":{
-           "name":"test ",
-           "external_id":"yyyy",
-           "entity_category_id":[1]
-       },
-    "wallet_category_id" : [1]
+    "name":"test",
 }
 ```
 
 ```js title="Sample result"
 {
     "status": 200,
-     "result": {
-        "id" : 1,
-        "entity_id": 1,
+    "result": {
+        "id" : 1
+        "entity_id" : 1,
+        "name":"name",
+        "is_active": 1,
+        'wallet_type' : 'end_user',
         "address": "0x147f20........",
-        "name": null,
     }
 }
 ```
@@ -144,32 +145,26 @@ API_URL/api/wallet/wallet/{id}
 #### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
-    | entity_id            | int             | Yes                 |
-    | name                 | string          | Yes                 |
-    | entity               | object          | No                  |
-    | wallet_category_id   | array           | No                  |
+    | entity_id            | int             | no                  |
+    | name                 | string          | no                  |
 
 ```js title="Sample request"
 {
-       "entity_id" : 1,
-       "name":"123",
-       "entity":{
-           "name":"Jason",
-           "external_id":"fgbfg",
-           "entity_category_id":[1]
-       },
-    "wallet_category_id" : [1]
+    "entity_id" : 1,
+    "name":"update name",
 }
 ```
 
 ```js title="Sample result"
 {
     "status": 200,
-     "result": {
-        "id" : 1,
-        "entity_id": 1,
+    "result": {
+        "id" : 1
+        "entity_id" : 1,
+        "is_active": 1,
+        "name":"update name",
+        'wallet_type' : 'end_user',
         "address": "0x147f20........",
-        "name": null,
     }
 }
 ```
@@ -196,11 +191,13 @@ API_URL/api/wallet/activate-wallet/{id}
 ```js title="Sample result"
 {
     "status": 200,
-     "result": {
-        "id" : 1,
-        "entity_id": 1,
+    "result": {
+        "id" : 1
+        "entity_id" : 1,
+        "is_active": 1,
+        "name":"name",
+        'wallet_type' : 'end_user',
         "address": "0x147f20........",
-        "name": null,
     }
 }
 ```
@@ -227,11 +224,13 @@ API_URL/api/wallet/deactivate-wallet/{id}
 ```js title="Sample result"
 {
     "status": 200,
-     "result": {
-        "id" : 1,
-        "entity_id": 1,
+    "result": {
+        "id" : 1
+        "entity_id" : 1,
+        "is_active": 1,
+        "name":"name",
+        'wallet_type' : 'end_user',
         "address": "0x147f20........",
-        "name": null,
     }
 }
 ```

@@ -76,8 +76,8 @@ API_URL/api/certificate/create-smartcontract
     "wallet_address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Address used to deploy this contract
     "name" : "NFT2", //Contract Nickname
     "field":{
-        "ownerAddress":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Owner of the Certificate contract
-        "max-supply":1000, //Maximum supply 
+        "wallet_address_owner":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Owner of the Certificate contract
+        "max_supply":1000, //Maximum supply 
         "name":"Maschain", //Name of Certificate
         "symbol":"MT" //Certificate Symbol
     }
@@ -88,8 +88,8 @@ API_URL/api/certificate/create-smartcontract
 * ***wallet_address*** is used to deploy this smart contract and it can set a different or separate owner for this contract in the **ownerAddress** field. Be careful to set a proper owner address.
 * ***name*** is just to give a nickname for the smart contract.
 * ***field*** is an object that contains the required properties to create this smart contract.
-    * **ownerAddress** : owner of the smart contract
-    * **max-supply** : Total maximum supply of certificates ( max 2^256 )
+    * **wallet_address_owner** : owner of the smart contract
+    * **max_supply** : Total maximum supply of certificates ( max 2^256 )
     * **name** : Name of the certificate 
     * **symbol** : Symbol of the certificate
 <br/>
@@ -241,6 +241,7 @@ transaction_id        : 0x3b1d66bd24a7614db9624f0018f99dcedc2d3b887422d1127e37a2
         {
             "id": 16,
             "wallet_id": 3,
+            "wallet_address": '0x40848317995B5702.....',
             "organisation_id": 2,
             "token_id": 36,
             "nft_token_id": 16,
