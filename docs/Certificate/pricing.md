@@ -1,0 +1,45 @@
+---
+sidebar_position: 2
+---
+
+# Pricing
+
+[comment]: <> (## Monthly Subcription Fee)
+
+[comment]: <> (Fixed rate of:)
+
+[comment]: <> (# **MYR 1,000.00** )
+
+[comment]: <> (<br/>)
+
+## Pay Per Use Fees
+
+#### Create Certificate ( file < 1mb )
+
+| Usage | Fees per Transaction ( MYR ) |
+| :----: | :-----------: |
+| 1 - 30 | FREE |
+| 31 - 1000 | 1.00 |
+| 1001 - 5000 | 0.95 |
+| 5,001 - 10,000 | 0.90 |
+| 10,001 - 20,000 | 0.85 |
+| > 20,001 | 0.80 |
+
+### Calculation example
+
+The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 10,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
+
+**Total Calls made = 10,000**
+
+| Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )       |
+| :-------------------: | :--------------------------: | :-------------------------:  |
+| 1 - 30                | FREE                         | 0                            |
+| 31 - 1000             | 1.00                         | 970 x 1.00 = 970     |
+| 1,001 - 5000          | 0.95                         | 4000 x 0.95 = 3800   |
+| 5,001 - 10,000        | 0.90                         | 5000 x 0.90 = 4500 |
+| 10,001 - 20,000       | 0.85                         |  0   |
+| > 20,001              | 0.80                         |  0   |
+|            | Total                      |  9,270        |
+
+<br/>
+

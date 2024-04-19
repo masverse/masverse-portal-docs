@@ -16,28 +16,30 @@ sidebar_position: 2
 
 #### Transfer Token
 
-| Usage | Fees per Transaction ( MYR ) |
-| :----: | :-----------: |
-| 0 - 99,999 | 0.10 |
-| 100,000 - 499,999 | 0.09 |
-| 500,000 - 999,999 | 0.08 |
-| 1,000,000 - 1,999,999 | 0.07 |
-| > 2,000,000 | 0.06 |
+| Usage                 | Fees per Transaction ( MYR ) |
+| :-------------------: | :-----------: |
+| 1 - 1000              | FREE |
+| 1001 - 100,000        | 0.10 |
+| 100,001 - 500,000     | 0.09 |
+| 500,001 - 1,000,000   | 0.08 |
+| 1,000,001 - 2,000,000 | 0.07 |
+| > 2,000,000           | 0.06 |
 
 ### Calculation example
 
-The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 200,000 calls, the first 99,999 calls will be charged as 0.18 per transaction and any subsequent calls will be charged as 0.17. Another clearer example can be found below.
+The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 200,000 calls, the first 1000 calls will be free of charge per transaction and any subsequent calls will be charged as 0.10 and so on. Another clearer example can be found below.
 
 **Total Calls made = 1,400,00**
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )      |
 | :-------------------: | :--------------------------: | :-------------------------: |
-| 1 - 99,999            | 0.18                         | 99,999 x 0.18 = 17,999.82   |
-| 100,000 - 499,999     | 0.17                         | 400,000 x 0.17 = 68,000     |
-| 500,000 - 999,999     | 0.16                         | 500,000 x 0.16 = 80,000     |
-| 1,000,000 - 1,999,999 | 0.15                         | 400,001 x 0.15 = 60,000.15  |
-| > 2,000,000           | 0.13                         | 0       |
-|       | Total                        | 225,999.97       |
+| 1 - 1000              | FREE                         | 0                           |
+| 1001 - 100,000        | 0.10                         | 98,999 x 0.10 = 9899.90     |
+| 100,001 - 500,000     | 0.09                         | 399,999 x 0.09 = 35,999.91  |
+| 500,001 - 1,000,000   | 0.08                         | 499,999 x 0.08 = 39,999.92  |
+| 1,000,001 - 2,000,000 | 0.07                         | 400,003 x 0.07 = 28,000.21  |
+| > 2,000,000           | 0.06                         | 0       |
+|       | Total                        | 113,899.94      |
 
 <br/>
 
