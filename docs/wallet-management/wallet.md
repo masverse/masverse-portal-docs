@@ -237,32 +237,6 @@ API_URL/api/wallet/deactivate-wallet/{id}
 
 <br/>
 
-## Delete Wallet by ID
-
-Delete wallet by id.
-
->**DELETE** 
-
-```
-API_URL/api/wallet/wallet/{id}
-```
-#### HEADERS
-
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
-
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
-
-**content-type &emsp; json/application**
-
-```js title="Sample result"
-{
-    "status": 200,
-    "result": "Success"
-}
-```
-
-<br/>
-
 ## Create User 
 
 Creates a User and storing it in MasChain.
