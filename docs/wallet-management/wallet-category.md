@@ -19,7 +19,7 @@ API_URL/api/wallet/wallet-category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -56,7 +56,7 @@ API_URL/api/wallet/wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -90,7 +90,7 @@ API_URL/api/wallet/wallet-category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -135,7 +135,7 @@ API_URL/api/wallet/wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -181,7 +181,7 @@ API_URL/api/wallet/activate-wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -216,7 +216,7 @@ API_URL/api/wallet/deactivate-wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -251,7 +251,7 @@ API_URL/api/wallet/wallet-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {

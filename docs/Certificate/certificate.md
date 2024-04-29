@@ -19,7 +19,7 @@ API_URL/api/certificate/get-all-sc-list
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -65,7 +65,7 @@ API_URL/api/certificate/create-smartcontract
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 <br/>
 
@@ -224,7 +224,7 @@ API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### Params
 ```
@@ -274,7 +274,7 @@ API_URL/api/certificate/owner-transfer
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |

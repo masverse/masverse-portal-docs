@@ -93,7 +93,7 @@ API_URL/api/audit/category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
 | Name  | Type  | Required |
@@ -135,7 +135,7 @@ API_URL/api/audit/category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
 | Name  | Type  | Required |
