@@ -70,6 +70,12 @@ API_URL/api/certificate/create-smartcontract
 <br/>
 
 #### BODY
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | name                 | string          | Yes                 |
+    | field                | object          | Yes                 |
+    | callbackUrl          | string          | No                  |
 
 ```js title="Sample request"
 {
@@ -80,7 +86,8 @@ API_URL/api/certificate/create-smartcontract
         "max_supply":1000, //Maximum supply 
         "name":"Maschain", //Name of Certificate
         "symbol":"MT" //Certificate Symbol
-    }
+    },
+    "callbackUrl": "https://postman-echo.com/post?"
 }
 ```
 >****IMPORTANT : Only Owner can mint certificates**
@@ -92,6 +99,7 @@ API_URL/api/certificate/create-smartcontract
     * **max_supply** : Total maximum supply of certificates ( max 2^256 )
     * **name** : Name of the certificate 
     * **symbol** : Symbol of the certificate
+* ***callbackUrl*** response after data is minted into blockchain
 <br/>
 
 ```js title="Sample result"
