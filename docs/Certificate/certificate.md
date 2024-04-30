@@ -107,11 +107,27 @@ API_URL/api/certificate/create-smartcontract
     "status": 200,
     "result": {
         "status": "success",
-        "message": "Success contract creation"
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...."
     }
 }
 ```
+```js title="Sample Callback Success response"
+{
+    "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1....",
+    "wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
+    "block_number" : 1001
+    'contract_address' : "0xf519ba69ba0e6035.....",
+    "status": "success"
+}
+```
 
+```js title="Sample Callback Fail response"
+{
+    "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1....",
+    "status": "failed"
+    "message": "Error message"
+}
+```
 <br/>
 
 ## Mint Certificate
@@ -181,7 +197,7 @@ callbackUrl           : https://your.domain/
         "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
         "nonce": 752,
         "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
-        "recveiver_wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "receiver_wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
         "organisation_id": 2,
         "certificate": "https://maschain-staging.obs.ap-southeast-3.myhuaweicloud.com/15e7ce3a2fa248889ce17320dcf26676/metadata/17.json",
         "certificate_image": "https://maschain-staging.obs.ap-southeast-3.myhuaweicloud.com/15e7ce3a2fa248889ce17320dcf26676/image/4643ce2433774554aeeda92d0851133420240411074630.pdf",
@@ -190,7 +206,7 @@ callbackUrl           : https://your.domain/
 }
 ```
 
-```js title="Sample Callback success response"
+```js title="Sample Callback Success response"
 {
     "status": 200,
     "result": {
@@ -203,7 +219,7 @@ callbackUrl           : https://your.domain/
 }
 ```
 
-```js title="Sample Callback fail response"
+```js title="Sample Callback Fail response"
 {
     "status": 200,
     "result": {
