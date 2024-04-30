@@ -14,7 +14,7 @@ sidebar_position: 2
 
 ## Pay Per Use Fees
 
-#### Transfer Token
+#### Mint & Transfer Token
 
 | Usage                 | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------------: | :--------------------------: | :--------------------------: |
