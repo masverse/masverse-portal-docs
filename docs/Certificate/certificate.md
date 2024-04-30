@@ -26,26 +26,49 @@ API_URL/api/certificate/get-all-sc-list
     "status": 200,
     "result": [
         {
+            "transactionHash" : "0xf519ba69ba0e603583e0e885786f5ad1...."
             "contract_address": "0xab3379af6e256063b92B82071D57AB082A2b51bA",
             "name": "Certificate",
             "limit_to_org": 1
         },
         {
+            "transactionHash" : "0xf519ba69ba0e603583e0e885786f5ad1...."
             "contract_address": "0x49DbCCC560CE46A582436e195576D3ea55DE72D4",
-            "name": "Certificate",
-            "limit_to_org": 1
-        },
-        {
-            "contract_address": "0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c",
-            "name": "Certificate",
-            "limit_to_org": 1
-        },
-        {
-            "contract_address": "0x724C89385ea32B60F1776Bf5A78DbC4966451890",
             "name": "Certificate",
             "limit_to_org": 1
         }
     ]
+}
+```
+
+<br/>
+
+## Get Smart Contract by transaction hash
+
+Retrieves all smart contract records for an organization.
+
+>**GET** 
+
+```
+API_URL/api/certificate/contract
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; application/json**
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "transactionHash" : "0xf519ba69ba0e603583e0e885786f5ad1...."
+        "contract_address": "0xab3379af6e256063b92B82071D57AB082A2b51bA",
+        "name": "Certificate",
+        "limit_to_org": 1
+    },
 }
 ```
 
@@ -79,10 +102,10 @@ API_URL/api/certificate/create-smartcontract
 
 ```js title="Sample request"
 {
-    "wallet_address":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Address used to deploy this contract
+    "wallet_address":"0x3423BF219008A8D6b644b79.....", //Address used to deploy this contract
     "name" : "NFT2", //Contract Nickname
     "field":{
-        "wallet_address_owner":"0x3423BF219008A8D6b644b7955a664A4452F14bF1", //Owner of the Certificate contract
+        "wallet_address_owner":"0x3423BF219008A8D6b644b79.....", //Owner of the Certificate contract
         "max_supply":1000, //Maximum supply 
         "name":"Maschain", //Name of Certificate
         "symbol":"MT" //Certificate Symbol
@@ -114,7 +137,7 @@ API_URL/api/certificate/create-smartcontract
 ```js title="Sample Callback Success response"
 {
     "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1....",
-    "wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
+    "wallet_address": "0x147f20a28739da15419AdC04e61....",
     "block_number" : 1001
     'contract_address' : "0xf519ba69ba0e6035.....",
     "status": "success"
@@ -167,7 +190,7 @@ API_URL/api/certificate/mint-certificate
 `NOTE : Attributes fields can be empty or many`
 
 ```
-wallet_address        : 0x3423BF219008A8D6b644b7955a664A4452F14bF1
+wallet_address        : 0x3423BF219008A8D6b644b79.....
 to                    : 0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475
 contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
 file                  : upload an image
@@ -240,7 +263,7 @@ Get Certificate details. Parameter can be null.
 >**GET** 
 
 ```
-API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b7955a664A4452F14bF1&contract_address=0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c&transaction_id=ds21342eds90f71fe1-6f7b-4edf-8cdd-77ce7d1afc7720240402073926.jpeg
+API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79.....&contract_address=0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c&transaction_id=ds21342eds90f71fe1-6f7b-4edf-8cdd-77ce7d1afc7720240402073926.jpeg
 ```
 #### HEADERS
 
@@ -252,7 +275,7 @@ API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79
 
 #### Params
 ```
-wallet_address        : 0x3423BF219008A8D6b644b7955a664A4452F14bF1
+wallet_address        : 0x3423BF219008A8D6b644b79.....
 contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
 transaction_id        : 0x3b1d66bd24a7614db9624f0018f99dcedc2d3b887422d1127e37a2d4ac3269e5
 
