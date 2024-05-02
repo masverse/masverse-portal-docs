@@ -77,7 +77,7 @@ API_URL/api/wallet/wallet/{id}
 
 <br/>
 
-## Create Wallet 
+## Create Organisation Wallet 
 
 Creates an wallet by organisation id and storing it in MasChain.
 
