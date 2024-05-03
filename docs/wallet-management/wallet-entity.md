@@ -29,7 +29,7 @@ API_URL/api/wallet/entity
             "id": 1,
             "organisation_id": 1,
             "name": "entity 1",
-            "external_id": "123",
+            "external_id": "example 1",
             "created_at": null,
             "updated_at": null,
             "deleted_at": null,
@@ -95,27 +95,43 @@ API_URL/api/wallet/entity
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
-    | external_id          | string          | Yes                 |
-    | entity_id            | int             | No                  |
-
+    | external_id          | string          | no                  |
+    | entity_category_id   | int             | No                  |
+    | entity_category      | [object](wallet-entity-category#create-entity-category)          | No                  |
 ```js title="Sample request"
 {
-    "name" : "test",
-    "external_id" : "0123",
-    "entity_id" : "2"
+    "name" : "Project 1",
+    "external_id" : "external 1",
+    "entity_category_id" : 2
 }
 ```
 
-```js title="Sample result"
+```js title="Sample request 2"
+{
+    "name" : "Project 1",
+    "external_id" : "external 1",
+    "entity_category" : {
+        "name" : "category 1",
+        "parent_category_id" : 1
+    }
+}
+```
+
+```js title="Sample result 1"
 {
     "status": 200,
     "result": {
+        "id": 2
         "organisation_id": 1,
         "name": "test",
-        "external_id": "0123",
+        "external_id": "external 1",
         "updated_at": "2024-03-01T07:03:30.000000Z",
         "created_at": "2024-03-01T07:03:30.000000Z",
-        "id": 2
+        "entity_category" : {
+            "id" : 1
+            "name" : "category 1",
+            "parent_category_id" : 1
+        }
     }
 }
 ```
