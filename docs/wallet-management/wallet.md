@@ -44,14 +44,14 @@ type 2 : end_user
 
 <br/>
 
-## Get Wallet by ID
+## Get Wallet by address
 
 Retrieves a specific wallet record by its ID from the database.
 
 >**GET** 
 
 ```
-API_URL/api/wallet/wallet/{id}
+API_URL/api/wallet/wallet/{address}
 ```
 #### HEADERS
 
