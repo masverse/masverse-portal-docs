@@ -178,13 +178,10 @@ API_URL/api/certificate/mint-certificate
     | to                   | string          | Yes                 |
     | contract_address     | string          | Yes                 |
     | file                 | file            | Yes                 |
-    | attributes[0][value]  | string          | No                  |
-    | attributes[0][text]   | string          | No                  |
-    | attributes[1][value]  | string          | No                  |
-    | attributes[2][text]   | string          | No                  |
+    | attributes           | json            | No                  |
     | name                 | string          | Yes                 |
     | decription           | string          | Yes                 |
-    | callbackUrl          | string          | No                 |
+    | callbackUrl          | string          | No                  |
 
 
 `NOTE : Attributes fields can be empty or many`
@@ -194,8 +191,7 @@ wallet_address        : 0x3423BF219008A8D6b644b79.....
 to                    : 0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475
 contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
 file                  : upload an image
-attributes[0][value]   : 123
-attributes[0][text]    : 123
+attributes            : [{"trait":"New Cert","value":"10001"},{"Student":"yes","value":"Chan"}]
 name                  : NFT CERT
 description           : NFT CERT
 callbackUrl           : https://your.domain/
@@ -204,8 +200,6 @@ callbackUrl           : https://your.domain/
 * ***to*** is the receiver of the certificate.
 * ***contract_address*** is the certificate contract address.
 * ***attributes*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
-    * **attributes[0]** : **Key** of a attribute (eg. Month)
-    * **attributes[0]** : **Value** of a attribute (eg. December)
 * ***name*** name of the certificate being minted.
 * ***description*** description of the certificate being minted.
 * ***callbackUrl*** response after data is minted into blockchain
