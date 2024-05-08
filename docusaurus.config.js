@@ -13,7 +13,7 @@ const config = {
   favicon: 'img/masfavicon.png',
 
   // Set the production url of your site here
-  url: 'https://masverse.github.io/masverse-portal-docs/',
+  url: 'https://masverse.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
