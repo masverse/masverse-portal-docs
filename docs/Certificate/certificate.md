@@ -267,13 +267,21 @@ API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79
 
 **content-type &emsp; application/json**
 
-#### Params
-```
-wallet_address        : 0x3423BF219008A8D6b644b79.....
-contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
-transaction_id        : 0x3b1d66bd24a7614db9624f0018f99dcedc2d3b887422d1127e37a2d4ac3269e5
+#### Params 
+    | Name                 | Required            |
+    |:--------------------:|:-------------------:|
+    | wallet_address       | Yes                 |
+    | contract_address     | Yes                 |
+    | tx_id                | Yes                 |
 
 ```
+wallet_address        : 0x3423BF219008A8D6b644b79.....
+contract_address      : 0xb988C69344505faf....
+tx_id                 : 0x3b1d66bd24a7614db9....
+
+```
+
+
 
 ```js title="Sample result"
 {
