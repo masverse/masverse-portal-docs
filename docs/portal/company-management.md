@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Company Management
 ## Manage Organisation
-**TO MANAGE YOUR OWN COMPANY**, you may go to [**Manage Organisation**](https://portal-testnet.maschain.com/user-organisation-management) to manage. You may create and manage *more than one company* in your account. But each company will need to resubscribe their own services. 
+In **Manage Organisations**, you may create and manage *more than one company* in your account. But each company will need to resubscribe their own services. 
 
 In this category, you will be able to view all the company which is created and able to trigger and take action to each company, such as subscribing services and create their own API Keys.
 

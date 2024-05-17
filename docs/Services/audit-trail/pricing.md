@@ -3,15 +3,6 @@ sidebar_position: 2
 ---
 
 # Pricing
-
-[comment]: <> (## Monthly Subcription Fee)
-
-[comment]: <> (Fixed rate of:)
-
-[comment]: <> (# **MYR 1,000.00** )
-
-[comment]: <> (<br/>)
-
 ## Pay Per Use Fees
 
 #### Create Record

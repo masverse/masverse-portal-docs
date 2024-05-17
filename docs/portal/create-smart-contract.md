@@ -11,6 +11,6 @@ Take Token Management as an example. In order to create a Token Management Smart
 - **Owner Wallet Address**: The wallet address which own this smart contract
 - **Token Name**: Name your own token
 - **Token Symbol**: Symbolize your own token
-- **Max Cap**: The total amount of the token that only can mint by this contract. Please note that, you may put **0** for unlimited initial supply
+- **Max Cap**: The total amount of the token that only can mint by this contract. To get unlimited initial supply, you may put **0** into the form.
 - **Decimals**: 
 - **Initial Supply**: 
