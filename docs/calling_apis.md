@@ -8,7 +8,7 @@ sidebar_position: 2
 
 Maschain authenticates your API requests using your account’s API keys. If a request doesn’t include a valid key, Maschain returns an invalid request error. If a request includes a deleted or expired key, Maschain returns an authentication error.
 
-Use the Enterprise Portal Dashboard to create, activate, and deactivate API keys. To access your API keys, select the API Keys tab in your Dashboard.
+Go to Enterprise Portal **API Service** to create, activate, and deactivate API keys. To access your API keys, select the API Keys tab in your Dashboard.
 
 
 ## Example

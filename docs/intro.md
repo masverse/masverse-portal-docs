@@ -24,7 +24,7 @@ By judiciously leveraging these services in tandem, you can effectively integrat
 
 Next, you will proceed to the [Enterprise Portal](#enterprise-portal-links) to register for an enterprise account. Upon completion of the Know Your Customer (KYC) and Know Your Business (KYB) processes, you will be prompted to link your account to a valid credit card. This ensures seamless payment processing for subscription fees and usage charges, as your credit card will be automatically charged at the end of each monthly billing period. 
 
-Subsequently, you can proceed to subscribe to the services identified in the previous step, selecting those that align with your specific requirements.
+Subsequently, you can proceed to subscribe to the services identified in the previous step, selecting those that align with your specific requirements. Please note that we provide some services to create smart contract for your purpose, you may refer to [Smart Contract Creation](/docs/portal/create-smart-contract.md).
 
 ### Step 3 : Creating an API key
 
