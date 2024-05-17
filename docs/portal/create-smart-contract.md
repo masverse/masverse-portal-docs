@@ -6,7 +6,7 @@ sidebar_position: 2
 
 After subscribe services that you needed, you will be able to create **Smart Contract**. Please be aware that some of the services will have **fields** that are required to be filled.
 
-Take Certificate Management as an example. In order to create a Certificate Management Smart Contract, you may follow the instruction to [Create Certificate Smart Contract](/docs/services/certificate/certificates.md#create-smart-contract).
+Take Certificate Management as an example. In order to create a Certificate Management Smart Contract, you may follow the instruction to [Create Certificate Smart Contract](/services/certificate/certificates.md#create-smart-contract).
 
 
 - **Smart Contract Name**: Name your own smart contract
