@@ -7,7 +7,7 @@ sidebar_position: 5
 We provide companies to create their own wallet. You may create and manage your company wallet in the portal.
 
 ## User Wallet
-For end user, you will have to create the their wallet by calling APIs. You may refer to [User Wallet Management](/docs/services/wallet-management/overview.md) to check on how to create and manage end users' wallet.
+For end user, you will have to create the their wallet by calling APIs. You may refer to [User Wallet Management](/services/wallet-management/overview) to check on how to create and manage end users' wallet.
 
 
 ## Wallet Rules
