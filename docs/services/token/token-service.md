@@ -4,6 +4,17 @@ sidebar_position: 3
 
 # Token Services
 
+## Create Smart Contract
+We allow clients to create more than 1 token, clients will need to create smart contract for each token in Enterprise Portal after you subscribe this service. In order to create Token Smart Contract, you will need to input these required fields:
+
+- **Smart Contract Name**: Name your own smart contract
+- **Owner Wallet Address**: The wallet address which own this smart contract
+- **Token Name**: Name your own token
+- **Token Symbol**: Symbolize your own token
+- **Max Cap**: The total amount of the token that only can mint by this contract. To get unlimited supply, you may put **0** into the form.
+- **Decimals**: 
+- **Initial Supply**: Amount of pre-supply token after create the smart contract. The token will be minted to contract owner's wallet.
+
 ## Pause Token
 
 Pauses a token, restricting it from every transaction

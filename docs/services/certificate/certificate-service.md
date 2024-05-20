@@ -76,7 +76,7 @@ API_URL/api/certificate/contract
 
 ## Create Smart Contract
 
-Create New Certificate Smart Contract to MasChain with fields.
+Create New Certificate Smart Contract to MasChain with fields. You may also create this smart contract in the portal.
 >**POST** 
 
 ```
@@ -101,6 +101,17 @@ API_URL/api/certificate/create-smartcontract
     | callbackUrl          | string          | No                  |
     | image                | string          | No                  |
 
+* ***wallet_address*** is used to deploy this smart contract and it can set a different or separate owner for this contract in the **ownerAddress** field. Be careful to set a proper owner address.
+* ***name*** is just to give a nickname for the smart contract.
+* ***field*** is an object that contains the required properties to create this smart contract.
+    * **wallet_address_owner** : owner of the smart contract
+    * **max_supply** : Total maximum supply of certificates ( max 2^256 ) *Put 0 for unlimited supply
+    * **name** : Name of the certificate 
+    * **symbol** : Symbol of the certificate
+* ***image*** A base64 image with max size of 0.5mb
+* ***callbackUrl*** response after data is minted into blockchain
+
+>****IMPORTANT : Only Owner can mint certificates**
 
 ```js title="Sample request"
 {
@@ -116,18 +127,7 @@ API_URL/api/certificate/create-smartcontract
     "callbackUrl": "https://postman-echo.com/post?"
 }
 ```
->****IMPORTANT : Only Owner can mint certificates**
 
-* ***wallet_address*** is used to deploy this smart contract and it can set a different or separate owner for this contract in the **ownerAddress** field. Be careful to set a proper owner address.
-* ***name*** is just to give a nickname for the smart contract.
-* ***field*** is an object that contains the required properties to create this smart contract.
-    * **wallet_address_owner** : owner of the smart contract
-    * **max_supply** : Total maximum supply of certificates ( max 2^256 ) *Put 0 for unlimited supply
-    * **name** : Name of the certificate 
-    * **symbol** : Symbol of the certificate
-* ***image*** A base64 image with max size of 0.5mb
-* ***callbackUrl*** response after data is minted into blockchain
-<br/>
 
 ```js title="Sample result"
 {

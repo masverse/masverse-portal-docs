@@ -4,15 +4,9 @@ sidebar_position: 2
 
 # Smart Contract Creation
 
-After subscribe services that you needed, you will be able to create **Smart Contract**. Please be aware that some of the services will have **fields** that are required to be filled.
+After subscribe services that you needed, you will be able to create **Smart Contract**. 
 
-Take Certificate Management as an example. In order to create a Certificate Management Smart Contract, you may follow the instruction to [Create Certificate Smart Contract](/services/certificate/certificates.md#create-smart-contract).
-
-
-- **Smart Contract Name**: Name your own smart contract
-- **Owner Wallet Address**: The wallet address which own this smart contract
-- **Token Name**: Name your own token
-- **Token Symbol**: Symbolize your own token
-- **Max Cap**: The total amount of the token that only can mint by this contract. To get unlimited supply, you may put **0** into the form.
-- **Decimals**: 
-- **Initial Supply**: 
+Please be aware that:
+1. Some of the services will have **fields** that are required to be filled.
+Take Certificate Management as an example. In order to create a Certificate Management Smart Contract, you may follow the instruction to [Create Certificate Smart Contract](/services/certificate/certificate-service.md#create-smart-contract).
+2. Wallet Address required for smart contract mostly applicable for the wallet which created from own company, but some contracts are also requiring owner address too, so please make sure that to differentiate these two wallet addresses so you won't be confused by yourself. In order to help our clients to identify the wallets clearer, we differentiate *Organisation Wallet* and *User Wallet*. You may refer to our [Wallet Management](/portal/wallet-management).
