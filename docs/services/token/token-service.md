@@ -9,11 +9,11 @@ We allow clients to create more than 1 token, clients will need to create smart 
 
 - **Smart Contract Name**: Name your own smart contract
 - **Owner Wallet Address**: The wallet address which own this smart contract
-- **Token Name**: Name your own token
-- **Token Symbol**: Symbolize your own token
-- **Max Cap**: The total amount of the token that only can mint by this contract. To get unlimited supply, you may put **0** into the form.
-- **Decimals**: 
-- **Initial Supply**: Amount of pre-supply token after create the smart contract. The token will be minted to contract owner's wallet.
+- **Token Name**: The name of your token
+- **Token Symbol**: The symbol of your token
+- **Max Cap**: The maximum supply of the token that can be minted. To get unlimited supply, you may put **0** into the form
+- **Decimals**: The decimal places of your token. Eg: RM have 2 decimal places
+- **Initial Supply**: The initial supply of tokens minted when creating the smart contract. The token will be minted to contract owner's wallet
 
 ## Pause Token
 
