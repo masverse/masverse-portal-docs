@@ -19,7 +19,7 @@ API_URL/api/wallet/wallet?type=1
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### Params
 ```
@@ -44,14 +44,14 @@ type 2 : end_user
 
 <br/>
 
-## Get Wallet by ID
+## Get Wallet by address
 
 Retrieves a specific wallet record by its ID from the database.
 
 >**GET** 
 
 ```
-API_URL/api/wallet/wallet/{id}
+API_URL/api/wallet/wallet/{address}
 ```
 #### HEADERS
 
@@ -59,7 +59,7 @@ API_URL/api/wallet/wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -77,7 +77,7 @@ API_URL/api/wallet/wallet/{id}
 
 <br/>
 
-## Create Wallet 
+## Create Organisation Wallet 
 
 Creates an wallet by organisation id and storing it in MasChain.
 
@@ -91,18 +91,16 @@ API_URL/api/wallet/wallet
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
-    | *entity               | [object](wallet-entity#create-entity)          | No                  |
-    | *entity_id            | int             | No                  |
-    | name                 | string          | No                  |
+    | name                 | string          | yes                 |
     | wallet_category_id   | array           | No                  |
-
-`NOTE : Pass only entity or entity_id`
- 
+    | entity_id            | int             | No                  |
+    | entity_category_id   | int             | No                  |
+   
 
 ```js title="Sample request"
 {
@@ -114,12 +112,72 @@ API_URL/api/wallet/wallet
 {
     "status": 200,
     "result": {
-        "id" : 1
-        "entity_id" : 1,
-        "name":"name",
+        "id": 1,
+        "address": "0xF821eaD377B6689D25.....",
+        "name": "test",
+        "wallet_type": "organisation",
         "is_active": 1,
-        'wallet_type' : 'end_user',
-        "address": "0x147f20........",
+        "entity_id": null,
+        "entity_category_id": null
+    }
+}
+```
+<br/>
+
+## Create User Wallet
+
+Creates a User and storing it in MasChain.
+
+>**POST** 
+
+```
+API_URL/api/wallet/create-user
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+#### BODY
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | name                 | string          | Yes                 |
+    | email                | string          | Yes                 |
+    | ic                   | string          | Yes                 |
+    | wallet_name          | string          | No                  |
+    | phone                | string          | No                  |
+    | entity_id            | int             | No                  |
+    | entity_category_id   | int             | No                  |
+
+```js title="Sample request"
+{
+    "name":"test name2",
+    "email":"testemail9@gmail.com",
+    "ic":"test ic",
+    "phone":"test ic",
+    "entity_id":1
+}
+```
+
+```js title="Sample result"
+{
+    "status": 200,
+    "user": {
+            "name": "Bob",
+            "email": "test@gmail.com",
+            "ic": "123131231",
+            "phone": null
+    },
+    "wallet": {
+        "wallet_id": 1,
+        "wallet_name": "bob wallet",
+        "wallet_address": "0x556283a26F5C3d7bcB9a...",
+        "wallet_type": "user",
+        "is_active": 1,
+        "entity_id": null,
+        "entity_category_id": null
     }
 }
 ```
@@ -140,7 +198,7 @@ API_URL/api/wallet/wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -186,7 +244,7 @@ API_URL/api/wallet/activate-wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -219,7 +277,7 @@ API_URL/api/wallet/deactivate-wallet/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -237,84 +295,6 @@ API_URL/api/wallet/deactivate-wallet/{id}
 
 <br/>
 
-## Delete Wallet by ID
-
-Delete wallet by id.
-
->**DELETE** 
-
-```
-API_URL/api/wallet/wallet/{id}
-```
-#### HEADERS
-
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
-
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
-
-**content-type &emsp; json/application**
-
-```js title="Sample result"
-{
-    "status": 200,
-    "result": "Success"
-}
-```
-
-<br/>
-
-## Create User 
-
-Creates a User and storing it in MasChain.
-
->**POST** 
-
-```
-API_URL/api/wallet/create-user
-```
-#### HEADERS
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
-
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
-
-**content-type &emsp; json/application**
-
-#### BODY
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | name                 | string          | Yes                 |
-    | email                | string          | Yes                 |
-    | ic                   | string          | Yes                 |
-    | phone                | string          | No                  |
-    | entity_id            | int             | No                  |
-
-```js title="Sample request"
-{
-    "name":"test name2",
-    "email":"testemail9@gmail.com",
-    "ic":"test ic",
-    "phone":"test ic",
-    "entity_id":1
-}
-```
-
-```js title="Sample result"
-{
-    "status": 200,
-    "user": {
-        "name": "test name2",
-        "ic": "9505....",
-        "email": "xxx@gmail.com",
-    }
-    'wallets' : {
-        "wallet_id": 21,
-        "wallet_name": "Test",
-        "wallet_address": "0x40848317995B5702....."
-    }
-}
-```
-<br/>
-
 ## Get Wallet Transaction Count
 
 Retrieves the number of transaction initiated by a wallet address including pending transactions
@@ -322,7 +302,7 @@ Retrieves the number of transaction initiated by a wallet address including pend
 >**GET**
 
 ```
-API_URL/api/wallet/wallet/transactions-count?wallet_id=xxx&wallet_addres=xxx
+API_URL/api/wallet/wallet/{address}/transactions-count
 ```
 #### HEADERS
 
@@ -330,11 +310,9 @@ API_URL/api/wallet/wallet/transactions-count?wallet_id=xxx&wallet_addres=xxx
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### Params
-
-Either wallet address or wallet id is required
 
 ```js title="Sample result"
 {

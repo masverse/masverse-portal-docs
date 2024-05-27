@@ -19,7 +19,7 @@ API_URL/api/wallet/entity-category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -29,7 +29,7 @@ API_URL/api/wallet/entity-category
             "id": 1,
             "organisation_id": 1,
             "name": "Johnathan 456",
-            "subcategory_id": null,
+            "parent_category_id": null,
             "is_active": 1,
             "created_at": "2024-03-01T03:38:53.000000Z",
             "updated_at": "2024-03-01T03:38:53.000000Z",
@@ -56,7 +56,7 @@ API_URL/api/wallet/entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -65,7 +65,7 @@ API_URL/api/wallet/entity-category/{id}
         "id": 2,
         "organisation_id": 1,
         "name": "Johnathan 456",
-        "subcategory_id": null,
+        "parent_category_id": null,
         "is_active": 1,
         "created_at": "2024-03-01T03:38:55.000000Z",
         "updated_at": "2024-03-01T03:38:55.000000Z",
@@ -90,18 +90,18 @@ API_URL/api/wallet/entity-category
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
-    | subcategory_id       | int             | Yes                 |
+    | parent_category_id       | int             | Yes                 |
 
 ```js title="Sample request"
 {
     "name":"Johnathan 456",
-    "subcategory_id":"1"
+    "parent_category_id":"1"
 }
 ```
 
@@ -111,7 +111,7 @@ API_URL/api/wallet/entity-category
     "result": {
         "organisation_id": 1,
         "name": "Johnathan 456",
-        "subcategory_id": null,
+        "parent_category_id": null,
         "updated_at": "2024-03-01T03:38:55.000000Z",
         "created_at": "2024-03-01T03:38:55.000000Z",
         "id": 3
@@ -135,18 +135,18 @@ API_URL/api/wallet/entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
-    | subcategory_id       | int             | Yes                 |
+    | parent_category_id       | int             | Yes                 |
 
 ```js title="Sample request"
 {
     "name":"Kien",
-    "subcategory_id":"1"
+    "parent_category_id":"1"
 }
 ```
 
@@ -156,7 +156,7 @@ API_URL/api/wallet/entity-category/{id}
     "result": {
         "organisation_id": 1,
         "name": "Kien",
-        "subcategory_id": null,
+        "parent_category_id": null,
         "updated_at": "2024-03-01T03:38:55.000000Z",
         "created_at": "2024-03-01T03:38:55.000000Z",
         "id": 3
@@ -181,7 +181,7 @@ API_URL/api/wallet/activate-entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -190,7 +190,7 @@ API_URL/api/wallet/activate-entity-category/{id}
         "id": 3,
         "organisation_id": 1,
         "name": "Kien",
-        "subcategory_id": 1,
+        "parent_category_id": 1,
         "is_active": 1,
         "created_at": "2024-03-01T03:38:55.000000Z",
         "updated_at": "2024-03-01T03:39:18.000000Z",
@@ -216,7 +216,7 @@ API_URL/api/wallet/deactivate-entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {
@@ -225,7 +225,7 @@ API_URL/api/wallet/deactivate-entity-category/{id}
         "id": 3,
         "organisation_id": 1,
         "name": "Kien",
-        "subcategory_id": 1,
+        "parent_category_id": 1,
         "is_active": 0,
         "created_at": "2024-03-01T03:38:55.000000Z",
         "updated_at": "2024-03-01T03:39:18.000000Z",
@@ -251,7 +251,7 @@ API_URL/api/wallet/entity-category/{id}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 ```js title="Sample result"
 {

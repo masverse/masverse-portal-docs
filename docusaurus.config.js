@@ -13,15 +13,16 @@ const config = {
   favicon: 'img/masfavicon.png',
 
   // Set the production url of your site here
-  url: 'https://docs-maschain.vercel.app/',
+  url: 'https://masverse.github.io/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  // organizationName: 'masverse', // Usually your GitHub org/user name.
-  // projectName: 'masverse-portal-docs', // Usually your repo name.
+  organizationName: 'masverse', // Usually your GitHub org/user name.
+  projectName: 'masverse-portal-docs', // Usually your repo name.
+  trailingSlash: false,
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',

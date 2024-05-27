@@ -4,6 +4,17 @@ sidebar_position: 3
 
 # Token Services
 
+## Create Smart Contract
+We allow clients to create more than 1 token, clients will need to create smart contract for each token in Enterprise Portal after you subscribe this service. In order to create Token Smart Contract, you will need to input these required fields:
+
+- **Smart Contract Name**: Name your own smart contract
+- **Owner Wallet Address**: The wallet address which own this smart contract
+- **Token Name**: The name of your token
+- **Token Symbol**: The symbol of your token
+- **Max Cap**: The maximum supply of the token that can be minted. To get unlimited supply, you may put **0** into the form
+- **Decimals**: The decimal places of your token. Eg: RM have 2 decimal places
+- **Initial Supply**: The initial supply of tokens minted when creating the smart contract. The token will be minted to contract owner's wallet
+
 ## Pause Token
 
 Pauses a token, restricting it from every transaction
@@ -19,7 +30,7 @@ API_URL/api/token/pause
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -96,7 +107,7 @@ API_URL/api/token/resume
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -172,7 +183,7 @@ API_URL/api/token/mint
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -256,7 +267,7 @@ API_URL/api/token/burn
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -339,7 +350,7 @@ API_URL/api/token/token-transfer
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
@@ -407,6 +418,57 @@ API_URL/api/token/token-transfer
 
 <br/>
 
+
+## Transfer Ownership
+
+Transfer ownership to another wallet address
+
+>**POST** 
+
+```
+API_URL/api/token/owner-transfer
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+#### BODY
+    | Name                 | Type            | Required            |
+    |----------------------|-----------------|---------------------|
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callbackUrl          | string          | No                  |
+
+```js title="Sample request"
+{
+    "wallet_address":"0x147f20a28739da1.....",
+    "to":"0xbD8992F758B4429b92D1Af....",
+    "contract_address":"0x4175a3EE7fbD167EAd1a.....",
+    "callbackUrl": "https://postman-echo.com/post?"
+}
+```
+
+```js title="Sample result"
+{
+    "status": "success",
+    "result": {
+        "requestId": "118628",
+        "from": "0xC5477130AB175674ce.....",
+        "nonce": 4,
+        "transactionHash": "0x5ce8fd99c9a1656d0c1005a36e8073ca1568d3dc....",
+        "status": 1
+    }
+}
+```
+
+<br/>
+
+
 ## Check Tokens balance
 
 Check Tokens balance
@@ -421,7 +483,7 @@ API_URL/api/token/balance
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; json/application**
+**content-type &emsp; application/json**
 
 #### BODY
     | Name                 | Type            | Required            |
