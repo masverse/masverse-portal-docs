@@ -314,3 +314,33 @@ API_URL/api/wallet/create-user
 }
 ```
 <br/>
+
+## Get Wallet Transaction Count
+
+Retrieves the number of transaction initiated by a wallet address including pending transactions
+
+>**GET**
+
+```
+API_URL/api/wallet/wallet/transactions-count?wallet_id=xxx&wallet_addres=xxx
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; json/application**
+
+#### Params
+
+Either wallet address or wallet id is required
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "transaction_count" : 1
+    }
+}
+```
