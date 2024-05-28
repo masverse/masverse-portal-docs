@@ -50,7 +50,7 @@ Retrieves all smart contract records for an organization.
 >**GET** 
 
 ```
-API_URL/api/certificate/contract
+API_URL/api/certificate/contract/{id}
 ```
 #### HEADERS
 
