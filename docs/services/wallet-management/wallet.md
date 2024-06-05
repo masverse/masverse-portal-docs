@@ -145,7 +145,7 @@ API_URL/api/wallet/create-user
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | email                | string          | Yes                 |
-    | ic                   | string          | Yes                 |
+    | ic                   | string          | no                  |
     | wallet_name          | string          | No                  |
     | phone                | string          | No                  |
     | entity_id            | int             | No                  |
