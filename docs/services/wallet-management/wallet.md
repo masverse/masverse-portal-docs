@@ -313,9 +313,11 @@ API_URL/api/wallet/wallet/{address}/transactions-count?block=pending
 **content-type &emsp; application/json**
 
 #### Params
+```
 Use this endpoint to get the nonce for next transaction to execute. When use it as nonce, please query with block = "pending"
 Default block values : "pending"
 Supported block values: "earliest", "latest", "pending", "safe", "finalized"
+```
 
 ```js title="Sample result"
 {
