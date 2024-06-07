@@ -37,13 +37,13 @@ API_URL/api/token/pause
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | Yes                 |
+    | callback_url          | string          | Yes                 |
 
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683"   ,
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -114,13 +114,13 @@ API_URL/api/token/resume
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | Yes                 |
+    | callback_url         | string          | Yes                 |
 
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da15419AdC04e61fd83e60962683"   ,
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -192,7 +192,7 @@ API_URL/api/token/mint
     | to                   | string          | Yes                 |
     | amount               | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | Yes                 |
+    | callback_url         | string          | Yes                 |
     | signed_data          | string          | No                  |
 
 ```
@@ -201,7 +201,7 @@ API_URL/api/token/mint
     "to":"0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475",
     "amount":"2000",
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
-    "callbackUrl": "https://postman-echo.com/post?",
+    "callback_url": "https://postman-echo.com/post?",
     "signed_data": ""
 }
 ```
@@ -276,7 +276,7 @@ API_URL/api/token/burn
     | to                   | string          | Yes                 |
     | amount               | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | Yes                 |
+    | callback_url          | string          | Yes                 |
 
 ```js title="Sample request"
 {
@@ -284,7 +284,7 @@ API_URL/api/token/burn
     "to":"0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475",
     "amount":"2000",
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -359,7 +359,7 @@ API_URL/api/token/token-transfer
     | to                   | string          | Yes                 |
     | amount               | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | Yes                 |
+    | callback_url          | string          | Yes                 |
 
 ```js title="Sample request"
 {
@@ -367,7 +367,7 @@ API_URL/api/token/token-transfer
     "to":"0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475",
     "amount":"2000",
     "contract_address":"0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -442,14 +442,14 @@ API_URL/api/token/owner-transfer
     | wallet_address       | string          | Yes                 |
     | to                   | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | No                  |
+    | callback_url          | string          | No                  |
 
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da1.....",
     "to":"0xbD8992F758B4429b92D1Af....",
     "contract_address":"0x4175a3EE7fbD167EAd1a.....",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 

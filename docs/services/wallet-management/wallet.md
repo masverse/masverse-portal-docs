@@ -323,6 +323,8 @@ Supported block values: "earliest", "latest", "pending", "safe", "finalized"
 {
     "status": 200,
     "result": {
+        "wallet_address" : "0x147f20.....",
+        "block_type" : "pending" 
         "transaction_count" : 1
     }
 }
