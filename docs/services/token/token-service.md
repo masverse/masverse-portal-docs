@@ -210,46 +210,41 @@ API_URL/api/token/mint
 {
     "status": 200,
     "result": {
-        "requestId": 28,
-        "nonce": 506,
-        "status": 2,
-        "receipt": {
-            "transactionHash": "0xe0f915f728f0ffd4b280efddcf171908acd95fe295a8affcafa8993644e05916",
-            "transactionIndex": 0,
-            "blockHash": "0x4b89e9c33ceaa0a3025168db65f2d86316844ee3cdafd9ef64e06e8d3dd08ebc",
-            "from": "0x147f20a28739da15419adc04e61fd83e60962683",
-            "to": "0x4175a3ee7fbd167ead1abef7ea410ede42303f41",
-            "blockNumber": 667326,
-            "cumulativeGasUsed": 118552,
-            "gasUsed": 118552,
-            "contractAddress": null,
-            "logs": [
-                {
-                    "address": "0x4175a3EE7fbD167EAd1abef7EA410EdE42303F41",
-                    "topics": [
-                        "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
-                        "0x0000000000000000000000000000000000000000000000000000000000000000",
-                        "0x000000000000000000000000bd8992f758b4429b92d1afc1b53ab5bc16bd8475"
-                    ],
-                    "data": "0x0000000000000000000000000000000000000000000000000000002e90edd000",
-                    "blockHash": "0x4b89e9c33ceaa0a3025168db65f2d86316844ee3cdafd9ef64e06e8d3dd08ebc",
-                    "blockNumber": 667326,
-                    "transactionHash": "0xe0f915f728f0ffd4b280efddcf171908acd95fe295a8affcafa8993644e05916",
-                    "transactionIndex": 0,
-                    "logIndex": 0,
-                    "transactionLogIndex": "0x0",
-                    "removed": false,
-                    "id": "log_30caa01f"
-                }
-            ],
-            "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000100000000000000000000000000000000000000000020000000000000000000800000000000000000000000010200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000002000800000000000000100000000000010000000000000000000020000000000000000000000000000000000000000000000000000000000000000000",
-            "status": true,
-            "effectiveGasPrice": 500000000,
-            "type": "0x0"
-        }
+        "transactionHash": "0xf519ba69ba0...",
+        "nonce": 752,
+        "from": "0x147f20a28...",
+        "status": "pending"
     }
 }
 ```
+
+```js title="Sample Callback Success response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "status": "success"
+        "receipt" : { Transaction Receipt Object }
+    }
+}
+```
+
+```js title="Sample Callback Fail response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "status": "failed"
+        "message": "Error message"
+    }
+}
+```
+
+
 <br/>
 
 ## Burn Tokens
