@@ -173,7 +173,7 @@ Activate entity category by id.
 >**PUT** 
 
 ```
-API_URL/api/wallet/activate-entity-category/{id}
+API_URL/api/wallet/entity-category/{id}/activate
 ```
 #### HEADERS
 
@@ -208,7 +208,7 @@ Deactivate entity category by id.
 >**PUT** 
 
 ```
-API_URL/api/wallet/deactivate-entity-category/{id}
+API_URL/api/wallet/entity-category/{id}/deactivate
 ```
 #### HEADERS
 

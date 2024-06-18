@@ -170,7 +170,7 @@ Activate category by id.
 >**PUT** 
 
 ```
-API_URL/api/audit/activate-category/{id}
+API_URL/api/audit/category/{id}/activate
 ```
 #### HEADERS
 
@@ -203,7 +203,7 @@ Deactivate category by id.
 >**PUT** 
 
 ```
-API_URL/api/audit/deactivate-category/{id}
+API_URL/api/audit/category/{id}/deactivate
 ```
 #### HEADERS
 

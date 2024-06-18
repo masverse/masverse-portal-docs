@@ -163,7 +163,7 @@ Activate tags by id.
 >**PUT** 
 
 ```
-API_URL/api/audit/activate-tag/{id}
+API_URL/api/audit/tag/{id}/activate
 ```
 #### HEADERS
 
@@ -196,7 +196,7 @@ Deactivate tags by id.
 >**PUT** 
 
 ```
-API_URL/api/audit/deactivate-tag/{id}
+API_URL/api/audit/tag/{id}/deactivate
 ```
 #### HEADERS
 
@@ -229,7 +229,7 @@ Delete tags by id.
 >**DELETE** 
 
 ```
-API_URL/api/audit/delete-tag/{id}
+API_URL/api/audit/delete/{id}
 ```
 #### HEADERS
 

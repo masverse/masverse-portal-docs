@@ -236,7 +236,7 @@ Activate wallet by id.
 >**PUT** 
 
 ```
-API_URL/api/wallet/activate-wallet/{id}
+API_URL/api/wallet/wallet/{id}/activate
 ```
 #### HEADERS
 
@@ -269,7 +269,7 @@ Deactivate wallet by id.
 >**PUT** 
 
 ```
-API_URL/api/wallet/deactivate-wallet/{id}
+API_URL/api/wallet/wallet/{id}/deactivate
 ```
 #### HEADERS
 
