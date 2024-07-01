@@ -120,7 +120,7 @@ API_URL/api/certificate/create-smartcontract
     "field":{
         "wallet_address_owner":"0x3423BF219008A8D6b644b79.....", //Owner of the Certificate contract
         "max_supply":1000, //Maximum supply 
-        "name":"Maschain", //Name of Certificate
+        "name":"MasChain", //Name of Certificate
         "symbol":"MT" //Certificate Symbol
     },
     "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA..."
