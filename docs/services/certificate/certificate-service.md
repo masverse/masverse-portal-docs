@@ -184,7 +184,7 @@ API_URL/api/certificate/mint-certificate
     | file                 | file            | Yes                 |
     | attributes           | json            | No                  |
     | name                 | string          | Yes                 |
-    | decription           | string          | Yes                 |
+    | description           | string         | Yes                 |
     | callbackUrl          | string          | No                  |
 
 
@@ -220,8 +220,8 @@ callbackUrl           : https://your.domain/
         "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
         "receiver_wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
         "organisation_id": 2,
-        "certificate": "https://maschain-staging.obs.ap-southeast-3.myhuaweicloud.com/15e7ce3a2fa248889ce17320dcf26676/metadata/17.json",
-        "certificate_image": "https://maschain-staging.obs.ap-southeast-3.myhuaweicloud.com/15e7ce3a2fa248889ce17320dcf26676/image/4643ce2433774554aeeda92d0851133420240411074630.pdf",
+        "certificate": "https://storage.maschain.con/....../metadata/1.json",
+        "certificate_image": "https://storage.maschain.con/....../image/example_image.pdf",
         "status": "pending"
     }
 }
