@@ -5,7 +5,9 @@ sidebar_class_name: hidden
 
 ---
 
-## Transaction Fee
+# Transaction Fee
+
+# Get Transaction Fee
 
 Get the transaction fee base on desire payment token
 
