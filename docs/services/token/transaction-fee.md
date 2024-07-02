@@ -7,8 +7,6 @@ sidebar_class_name: hidden
 
 ## Transaction Fee
 
-## Pause Token
-
 Get the transaction fee base on desire payment token
 
 >**POST** 
