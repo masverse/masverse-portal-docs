@@ -19,8 +19,8 @@ API_URL/api/token/get-transaction-fee
 #### HEADERS
 
 <pre>
-**client_id**      : 9b16ae5638534ae1961fb370f874b6cc*
-**client_secret**  : sk_9b16ae5638534ae1961fb370f874b6cc* 
+**client_id**      : 9b16ae5638534ae19...*
+**client_secret**  : sk_9b16ae5638534ae...* 
 **content-type**   : application/json
 </pre>
 
