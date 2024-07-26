@@ -130,14 +130,14 @@ API_URL/api/audit/audit
 <br/>
 
 
-## Update Audit Trail
+## Update Audit Trail by Transaction ID
 
 UPDATE an audit trail with category and tags
 
->**POST** 
+>**PUT** 
 
 ```
-API_URL/api/audit/audit
+API_URL/api/audit/audit/{id}
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -160,8 +160,6 @@ API_URL/api/audit/audit
 {
     "category_id":[1,5],
     "tag_id":[5,6],
-    "contract_address":"0xc02161D9e08E620dD1B9a243Fa8BdA82acCB9df4",
-    "wallet_address":"0x40095850F2bb577b364414af444EdFcCa3324322",
 }
 ```
 
