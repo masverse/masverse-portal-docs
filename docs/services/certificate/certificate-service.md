@@ -312,6 +312,63 @@ tx_id                 : 0x3b1d66bd24a7614db9....
 
 <br/>
 
+## Get Certificate Transactions
+
+Get Certificate Transactions
+
+>**GET** 
+
+```
+API_URL/api/token/get-certificate-transaction
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+#### Params
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | filter               | string          | to or from          |
+
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": [
+        {
+            "to": "0xED7cfE6FaBA7070Ae4ed2A...",
+            "from": "0x6C8C08029D80445DF1...",
+            "blockNumber": 2769746,
+            "transactionHash": "0x1165c4353bc030205a203f100b6...",
+            "method": "mint",
+            "token": {
+                "contract_address": "0x0d4987628e0a736...",
+                "name": "Certificate",
+                "symbol": "CERT"
+            },
+            "timestamp": "2024-07-24T19:20:09.000000Z"
+        }
+    ],
+    "pagination": {
+        "current_page": 1,
+        "first_page_url": "/api/get-token-transaction?page=1",
+        "last_page": 1,
+        "last_page_url": "/api/get-token-transaction?page=1",
+        "next_page_url": null,
+        "per_page": 20,
+        "prev_page_url": null,
+        "total": 1
+    }
+}
+```
+<br/>
+
+
 ## Transfer Ownership
 
 Transfer ownership to another wallet address
@@ -360,57 +417,3 @@ API_URL/api/certificate/owner-transfer
 ```
 
 <br/>
-## GET Certificate Transactions
-
-GET Certificate Transactions
-
->**GET** 
-
-```
-API_URL/api/token/get-certificate-transaction
-```
-#### HEADERS
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
-
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
-
-**content-type &emsp; application/json**
-
-#### Params
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | wallet_address       | string          | Yes                 |
-    | contract_address     | string          | Yes                 |
-    | filter               | string          | to or from          |
-
-
-```js title="Sample result"
-{
-    "status": 200,
-    "result": [
-        {
-            "to": "0xED7cfE6FaBA7070Ae4ed2A8f61BF2Ced29685ec6",
-            "from": "0x6C8C08029D80445DF13a0e66d48D4413138f90EF",
-            "blockNumber": 2769746,
-            "transactionHash": "0x1165c4353bc030205a203f1005c5ae37d4638c86a49a70faf4b6e5e4871f2cb6",
-            "method": "mint",
-            "token": {
-                "contract_address": "0x0d4987628e0a736Ad7777bfc856e3150f82E834e",
-                "name": "Certificate",
-                "symbol": "CERT"
-            },
-            "timestamp": "2024-07-24T19:20:09.000000Z"
-        }
-    ],
-    "pagination": {
-        "current_page": 1,
-        "first_page_url": "http://127.0.0.1:8555/api/get-token-transaction?page=1",
-        "last_page": 1,
-        "last_page_url": "http://127.0.0.1:8555/api/get-token-transaction?page=1",
-        "next_page_url": null,
-        "per_page": 20,
-        "prev_page_url": null,
-        "total": 1
-    }
-}
-```
