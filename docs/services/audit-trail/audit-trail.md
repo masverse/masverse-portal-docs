@@ -59,15 +59,12 @@ API_URL/api/audit/audit/{id}
 {
     "status": 200,
     "result": {
-        "id": 14,
-        "organisation_id": 1,
-        "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
-        "file": "file",
-        "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-        "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
-        "created_at": "2024-03-01T03:34:32.000000Z",
-        "updated_at": "2024-03-01T03:34:32.000000Z",
-        "deleted_at": null
+        "transactionHash": "0x2da075d49a7ffb9ae491abbdfea32e4b....",
+        "nonce": 39,
+        "status": "pending",
+        "metadatahash": "$2y$12$2OHVfoc/2ZdZSwEU.1mzEe2LUrexmlGBh8.E295LJqPs2KrihfAT.",
+        "metadata": "{\"name\" : \"xxxxxxxx\",\"data\" : \"yyyyyyyy\",\"entity_id\" : \"zzzzzzzzz\",\"content\" : \"wwwwwwwwwwww\"}",
+        "form": "0x40095850F2bb577b364..."
     }
 }
 ```
