@@ -185,7 +185,7 @@ API_URL/api/certificate/mint-certificate
     | attributes           | json            | No                  |
     | name                 | string          | Yes                 |
     | description           | string         | Yes                 |
-    | callback_url          | string          | No                  |
+    | callback_url          | string         | Yes                  |
 
 
 `NOTE : Attributes fields can be empty or many`
