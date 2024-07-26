@@ -93,7 +93,10 @@ API_URL/api/audit/audit
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-**content-type &emsp; application/json**
+**content-type &emsp; application/json***
+
+With File <br/>
+**content-type &emsp; multipart/form-data***
 
 #### BODY
 | Name  | Type  | Required |
