@@ -556,20 +556,13 @@ API_URL/api/token/get-token-transaction
 
 **content-type &emsp; application/json**
 
-#### BODY
+#### Params
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |
     | contract_address     | string          | Yes                 |
     | filter               | string          | to or from          |
 
-```
-{
-    "wallet_address":"0x147f20a28739da15419Ad...",
-    "contract_address":"0x4175a3EE7fbD167E...",
-    "filter": "to | from"
-}
-```
 
 ```js title="Sample result"
 {
