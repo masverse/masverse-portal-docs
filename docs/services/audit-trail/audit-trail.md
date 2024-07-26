@@ -29,7 +29,7 @@ API_URL/api/audit/audit
             "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
             "file": "file",
             "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-            "transactionhashId": "0x53943ca80435fff4f155b0d0beef17808c9b10c9d5ac88756cbb67abede48486",
+            "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
             "created_at": "2024-03-01T03:34:32.000000Z",
             "updated_at": "2024-03-01T03:34:32.000000Z",
             "deleted_at": null
@@ -40,7 +40,7 @@ API_URL/api/audit/audit
 
 <br/>
 
-## Get Audit Trial by ID
+## Get Audit Trial by Transaction ID
 
 Retrieves a specific audit trail record by its ID from the database.
 
@@ -64,7 +64,7 @@ API_URL/api/audit/audit/{id}
         "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
         "file": "file",
         "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-        "transactionhashId": "0x53943ca80435fff4f155b0d0beef17808c9b10c9d5ac88756cbb67abede48486",
+        "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
         "created_at": "2024-03-01T03:34:32.000000Z",
         "updated_at": "2024-03-01T03:34:32.000000Z",
         "deleted_at": null
@@ -96,10 +96,10 @@ API_URL/api/audit/audit
 |  wallet_address | string  | Yes|
 |  contract_address | string  | Yes|
 |  metadata |  any | Yes |
+|  callbackUrl | url  | Yes |
 |  category_id | array  | No |
 |  tag_id |  array | No |
 |  file |  file | No |
-|  callbackUrl | url  | No |
 
 
 
@@ -122,7 +122,7 @@ API_URL/api/audit/audit
         "organisation_id": 1,
         "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
         "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-        "transactionhashId": "0x53943ca80435fff4f155b0d0beef17808c9b10c9d5ac88756cbb67abede48486",
+        "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
         "file": "file",
         "updated_at": "2024-03-01T03:34:32.000000Z",
         "created_at": "2024-03-01T03:34:32.000000Z",
@@ -175,7 +175,7 @@ API_URL/api/audit/audit
         "organisation_id": 1,
         "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
         "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-        "transactionhashId": "0x53943ca80435fff4f155b0d0beef17808c9b10c9d5ac88756cbb67abede48486",
+        "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
         "file": "file",
         "updated_at": "2024-03-01T03:34:32.000000Z",
         "created_at": "2024-03-01T03:34:32.000000Z",
@@ -183,35 +183,4 @@ API_URL/api/audit/audit
     }
 }
 ```
-<br/>
-
-## Get Audit Trail Metadata
-
-Reads metadata from MasChain.
-
->**GET** 
-
-```
-API_URL/api/audit/audit-tx
-```
-#### HEADERS
-
-**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
-
-**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
-
-#### BODY
-```
-{
-    "transactionhashId":"0x53943ca80435fff4f155b0d0beef17808c9b10c9d5ac88756cbb67abede48486"
-}
-```
-
-```js title="Sample result"
-{
-    "status": 200,
-    "result": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi"
-}
-```
-
 <br/>

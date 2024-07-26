@@ -32,3 +32,15 @@
 .hidden {
   display: none !important;
 }
+
+a[href^="/services/token/blockchain-api"] {
+  display: none;
+}
+
+a[href^="/services/token/transaction-fee"] {
+  display: none;
+}
+
+a[href^="/services/certificate/transaction-fee"] {
+  display: none;
+}

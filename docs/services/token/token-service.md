@@ -506,7 +506,7 @@ API_URL/api/token/balance
 {
     "status": 200,
     "result": {
-        "transactionHash": "0xb9c5a6aa121edfafda8802eda33dfd2af44db1e9f4fec9ab8c2023fc1dbd51d8",
+        "transactionHash": "0xb9c5a6aa121edfafda8802eda33...",
         "transactionIndex": 0,
         "blockHash": "0x9dd481cff735ceb7cb76b1009eea6c4ef03666e14d2e212e5f2803918dcbc136",
         "from": "0x147f20a28739da15419ad...",
@@ -524,7 +524,7 @@ API_URL/api/token/balance
                 "data": "0x0000000000000000000000000000000000000000000000000000002e90edd000",
                 "blockHash": "0x9dd481cff735ceb7cb76b1009eea6c4ef03666e14d2e212e5f2803918dcbc136",
                 "blockNumber": 669619,
-                "transactionHash": "0xb9c5a6aa121edfafda8802eda33dfd2af44db1e9f4fec9ab8c2023fc1dbd51d8",
+                "transactionHash": "0xb9c5a6aa121edfafda8802eda33...",
                 "transactionIndex": 0,
                 "logIndex": 0,
                 "transactionLogIndex": "0x0",
