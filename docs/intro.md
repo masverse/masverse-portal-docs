@@ -55,4 +55,6 @@ API URL: https://service.maschain.com
 
 ### MasChain Explorer
 
-URL: https://explorer.maschain.com/
+Testnet URL: https://explorer-testnet.maschain.com/
+
+Mainnet URL: https://explorer.maschain.com/
