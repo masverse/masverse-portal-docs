@@ -104,7 +104,7 @@ With File <br/>
 |  wallet_address | string  | Yes|
 |  contract_address | string  | Yes|
 |  metadata |  any | Yes |
-|  callbackUrl | url  | Yes |
+|  callback_url | url  | Yes |
 |  category_id | array  | No |
 |  tag_id |  array | No |
 |  file |  file | No |
@@ -119,7 +119,7 @@ With File <br/>
     "metadata":{"name" : "xxxxxxxx","data" : "yyyyyyyy","entity_id" : "zzzzzzzzz","content" : "wwwwwwwwwwww"},
     "wallet_address":"0x40095850F2bb577b364414af444EdFcCa3324322",
     "file":"file",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 

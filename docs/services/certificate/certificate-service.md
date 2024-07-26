@@ -98,7 +98,7 @@ API_URL/api/certificate/create-smartcontract
     | wallet_address       | string          | Yes                 |
     | name                 | string          | Yes                 |
     | field                | object          | Yes                 |
-    | callbackUrl          | string          | No                  |
+    | callback_url          | string          | No                  |
     | image                | string          | No                  |
 
 * ***wallet_address*** is used to deploy this smart contract and it can set a different or separate owner for this contract in the **ownerAddress** field. Be careful to set a proper owner address.
@@ -109,7 +109,7 @@ API_URL/api/certificate/create-smartcontract
     * **name** : Name of the certificate 
     * **symbol** : Symbol of the certificate
 * ***image*** A base64 image with max size of 0.5mb
-* ***callbackUrl*** response after data is minted into blockchain
+* ***callback_url*** response after data is minted into blockchain
 
 >****IMPORTANT : Only Owner can mint certificates**
 
@@ -124,7 +124,7 @@ API_URL/api/certificate/create-smartcontract
         "symbol":"MT" //Certificate Symbol
     },
     "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA..."
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -185,7 +185,7 @@ API_URL/api/certificate/mint-certificate
     | attributes           | json            | No                  |
     | name                 | string          | Yes                 |
     | description           | string         | Yes                 |
-    | callbackUrl          | string          | No                  |
+    | callback_url          | string          | No                  |
 
 
 `NOTE : Attributes fields can be empty or many`
@@ -198,7 +198,7 @@ file                  : upload an image
 attributes            : [{"trait":"New Cert","value":"10001"},{"Student":"yes","value":"Chan"}]
 name                  : NFT CERT
 description           : NFT CERT
-callbackUrl           : https://your.domain/
+callback_url           : https://your.domain/
 ```
 * ***wallet_address*** must be the owner of the smart contract.
 * ***to*** is the receiver of the certificate.
@@ -206,7 +206,7 @@ callbackUrl           : https://your.domain/
 * ***attributes*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
 * ***name*** name of the certificate being minted.
 * ***description*** description of the certificate being minted.
-* ***callbackUrl*** response after data is minted into blockchain
+* ***callback_url*** response after data is minted into blockchain
 
 <br/>
 
@@ -392,14 +392,14 @@ API_URL/api/certificate/owner-transfer
     | wallet_address       | string          | Yes                 |
     | to                   | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callbackUrl          | string          | No                  |
+    | callback_url          | string          | No                  |
 
 ```js title="Sample request"
 {
     "wallet_address":"0x147f20a28739da1.....",
     "to":"0xbD8992F758B4429b92D1Af....",
     "contract_address":"0x4175a3EE7fbD167EAd1a.....",
-    "callbackUrl": "https://postman-echo.com/post?"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
