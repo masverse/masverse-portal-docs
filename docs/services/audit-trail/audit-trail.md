@@ -35,10 +35,10 @@ API_URL/api/audit/audit?category={id}&tag={id}
             "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
             "file": "file",
             "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-            "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
+            "transactionHash": "0x53943ca80435fff4f155b0d0bee...",
             "created_at": "2024-03-01T03:34:32.000000Z",
-            "updated_at": "2024-03-01T03:34:32.000000Z",
-            "deleted_at": null
+            "categories": [],
+            "tags": []
         }
     ]
 }
@@ -127,14 +127,13 @@ With File <br/>
 {
     "status": 200,
     "result": {
-        "organisation_id": 1,
-        "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
-        "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-        "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
-        "file": "file",
-        "updated_at": "2024-03-01T03:34:32.000000Z",
-        "created_at": "2024-03-01T03:34:32.000000Z",
-        "id": 14
+        "transactionHash": "0xa0cc4dbc19a28ef46cd1cfdd.....",
+        "nonce": 40,
+        "status": "pending",
+        "metadatahash": "$2y$12$6rZ/lZXIMdHcTKrF5q6Ci.VCqkBEdoZQqIntv0MKnQb8iLPONYm9W",
+        "metadata": "{\"name\" : \"xxxxxxxx\",\"data\" : \"yyyyyyyy\",\"entity_id\" : \"zzzzzzzzz\",\"content\" : \"wwwwwwwwwwww\"}",
+        "form": "0x40095850F2bb577b3..."
+
     }
 }
 ```
@@ -226,14 +225,15 @@ API_URL/api/audit/audit/{id}
 {
     "status": 200,
     "result": {
-        "organisation_id": 1,
-        "metadata": "{\"name\":\"xxxxxxxx\",\"data\":\"yyyyyyyy\",\"entity_id\":\"zzzzzzzzz\",\"content\":\"wwwwwwwwwwww\"}",
-        "metadatahash": "$2y$12$FRatvUHwhnpagErZdlpg4uRYYQ5np4o9xep0.AiqEMhzEvJRRE2Qi",
-        "transactionhashId": "0x53943ca80435fff4f155b0d0bee...",
-        "file": "file",
-        "updated_at": "2024-03-01T03:34:32.000000Z",
-        "created_at": "2024-03-01T03:34:32.000000Z",
-        "id": 14
+        "id": 11,
+        "organisation_id": 2,
+        "metadata": "{\"name\" : \"xxxxxxxx\",\"data\" : \"yyyyyyyy\",\"entity_id\" : \"zzzzzzzzz\",\"content\" : \"wwwwwwwwwwww\"}",
+        "file": null,
+        "metadatahash": "$2y$12$6rZ/lZXIMdHcTKrF5q6Ci.VCqkBEdoZQqIntv0MKnQb8iLPONYm9W",
+        "transactionHash": "0xa0cc4dbc19a28ef46cd1cfdd...",
+        "created_at": "2024-07-26T17:25:17.000000Z",
+        "categories": [],
+        "tags": []
     }
 }
 ```

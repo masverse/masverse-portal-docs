@@ -129,26 +129,34 @@ API_URL/api/certificate/create-smartcontract
 {
     "status": 200,
     "result": {
-        "status": "success",
+        "status": "pending",
         "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...."
     }
 }
 ```
 ```js title="Sample Callback Success response"
 {
-    "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1....",
-    "wallet_address": "0x147f20a28739da15419AdC04e61....",
-    "block_number" : 1001
-    'contract_address' : "0xf519ba69ba0e6035.....",
-    "status": "success"
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "status": "success"
+        "receipt" : { Transaction Receipt Object }
+    }
 }
 ```
 
 ```js title="Sample Callback Fail response"
 {
-    "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1....",
-    "status": "failed"
-    "message": "Error message"
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "status": "failed"
+        "message": "Error message"
+    }
 }
 ```
 <br/>
@@ -258,7 +266,7 @@ Get Certificate details. Parameter can be null.
 >**GET** 
 
 ```
-API_URL/api/certificate/get-certificate?wallet_address={address}&contract_address={address}&transaction_id={tx_id}
+API_URL/api/certificate/get-certificate?from={address}&to={address}&contract_address={address}&transaction_id={tx_id}
 ```
 #### HEADERS
 
@@ -271,7 +279,8 @@ API_URL/api/certificate/get-certificate?wallet_address={address}&contract_addres
 #### Params 
     | Name                 | Required            |
     |:--------------------:|:-------------------:|
-    | wallet_address       | No                 |
+    | from                 | No                 |
+    | to                   | No                 |
     | contract_address     | No                 |
     | tx_id                | No                 |
 
@@ -297,7 +306,7 @@ tx_id                 : 0x3b1d66bd24a7614db9....
             "nft_token_id": 16,
             "transaction_id": "0x4321e57df1f3fbebaaf82be22cb68ab...",
             "certificate_file": "ds21342eds2f3af8b0-3094-4337-aa76-9da12ed3c9ac20240402073524.jpeg",
-            "block_number": 1130699,
+            "blockNumber": 1130699,
             "is_mint": 1,
             "created_at": "2024-04-02T07:35:25.000000Z",
             "updated_at": "2024-04-02T07:35:30.000000Z",
