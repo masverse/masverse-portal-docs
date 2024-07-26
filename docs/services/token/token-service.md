@@ -500,9 +500,9 @@ API_URL/api/token/balance
 ```
 <br/>
 
-## GET Token Transactions
+## Get Token Transactions
 
-GET Token Transactions
+Get Token Transactions
 
 >**GET** 
 
