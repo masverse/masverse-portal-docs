@@ -566,7 +566,7 @@ API_URL/api/token/get-token-transaction
     "result": {
         "transactionHash": "0xb9c5a6aa121edfafda8802eda33...",
         "transactionIndex": 0,
-        "blockHash": "0x9dd481cff735ceb7cb76b1009eea6c4ef03666e14d2e212e5f2803918dcbc136",
+        "blockHash": "0x9dd481cff735ceb7cb76b1009eea6c4e...",
         "from": "0x147f20a28739da15419ad...",
         "to": "0x4175a3ee7fbd167e...",
         "blockNumber": 669619,

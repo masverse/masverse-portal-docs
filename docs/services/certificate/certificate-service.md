@@ -11,7 +11,7 @@ Retrieves all smart contract records for an organization.
 >**GET** 
 
 ```
-API_URL/api/certificate/get-all-sc-list
+API_URL/api/certificate/get-smart-contract
 ```
 #### HEADERS
 
@@ -26,16 +26,12 @@ API_URL/api/certificate/get-all-sc-list
     "status": 200,
     "result": [
         {
-            "transactionHash" : "0xf519ba69ba0e603583e0e885786f5ad1...."
-            "contract_address": "0xab3379af6e256063b92B82071D57AB082A2b51bA",
-            "name": "Certificate",
-            "limit_to_org": 1
+            "transactionHash" : "0xf519ba69ba0e60351...."
+            "contract_address": "0xab3379af6e256063b....",
         },
         {
-            "transactionHash" : "0xf519ba69ba0e603583e0e885786f5ad1...."
-            "contract_address": "0x49DbCCC560CE46A582436e195576D3ea55DE72D4",
-            "name": "Certificate",
-            "limit_to_org": 1
+            "transactionHash" : "0xf519ba6s85786f5ad1..."
+            "contract_address": "0x49DbCCC560CE46A582...",
         }
     ]
 }
@@ -50,7 +46,7 @@ Retrieves all smart contract records for an organization.
 >**GET** 
 
 ```
-API_URL/api/certificate/contract/{id}
+API_URL/api/certificate/get-smart-contract/{id}
 ```
 #### HEADERS
 
@@ -64,10 +60,10 @@ API_URL/api/certificate/contract/{id}
 {
     "status": 200,
     "result": {
-        "transactionHash" : "0xf519ba69ba0e603583e0e885786f5ad1...."
-        "contract_address": "0xab3379af6e256063b92B82071D57AB082A2b51bA",
-        "name": "Certificate",
-        "limit_to_org": 1
+        "transactionHash" : "0xf519ba69ba0e603583e0e...."
+        "contract_address": "0xab3379af6e256063b92B8...",
+        "name": "Maschain",
+        "symbol": "MEI"
     },
 }
 ```
@@ -299,7 +295,7 @@ tx_id                 : 0x3b1d66bd24a7614db9....
             "organisation_id": 2,
             "token_id": 36,
             "nft_token_id": 16,
-            "transaction_id": "0x4321e57df1f3fbebaaf82be22cb68abc13cd752f83c572a73cf2c3b1a58a30f1",
+            "transaction_id": "0x4321e57df1f3fbebaaf82be22cb68ab...",
             "certificate_file": "ds21342eds2f3af8b0-3094-4337-aa76-9da12ed3c9ac20240402073524.jpeg",
             "block_number": 1130699,
             "is_mint": 1,
