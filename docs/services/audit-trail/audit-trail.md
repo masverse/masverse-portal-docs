@@ -11,13 +11,19 @@ Retrieves all audit trail records for an organization from the database.
 >**GET** 
 
 ```
-API_URL/api/audit/audit
+API_URL/api/audit/audit?category={id}&tag={id}
 ```
 #### HEADERS
 
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+#### Params 
+    | Name                 | Required            |
+    |:--------------------:|:-------------------:|
+    | category       | No                 |
+    | tag     | No                 |
 
 ```js title="Sample result"
 {
@@ -54,6 +60,8 @@ API_URL/api/audit/audit/{id}
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+
 
 ```js title="Sample result"
 {

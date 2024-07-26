@@ -261,7 +261,7 @@ Get Certificate details. Parameter can be null.
 >**GET** 
 
 ```
-API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79.....&contract_address=0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c&transaction_id=ds21342eds90f71fe1-6f7b-4edf-8cdd-77ce7d1afc7720240402073926.jpeg
+API_URL/api/certificate/get-certificate?wallet_address={address}&contract_address={address}&transaction_id={tx_id}
 ```
 #### HEADERS
 
@@ -274,9 +274,9 @@ API_URL/api/certificate/get-certificate?wallet_address=0x3423BF219008A8D6b644b79
 #### Params 
     | Name                 | Required            |
     |:--------------------:|:-------------------:|
-    | wallet_address       | Yes                 |
-    | contract_address     | Yes                 |
-    | tx_id                | Yes                 |
+    | wallet_address       | No                 |
+    | contract_address     | No                 |
+    | tx_id                | No                 |
 
 ```
 wallet_address        : 0x3423BF219008A8D6b644b79.....
