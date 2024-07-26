@@ -39,7 +39,7 @@ API_URL/api/certificate/get-smart-contract
 
 <br/>
 
-## Get Smart Contract by transaction hash
+## Get Smart Contract by contract address
 
 Retrieves all smart contract records for an organization.
 
