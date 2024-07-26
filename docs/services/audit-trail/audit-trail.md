@@ -149,8 +149,6 @@ API_URL/api/audit/audit/{id}
 #### BODY
 | Name  | Type  | Required |
 | :----: | :----: | :-----------: |
-|  wallet_address | string  | Yes|
-|  contract_address | string  | Yes|
 |  category_id | array  | No |
 |  tag_id |  array | No |
 
