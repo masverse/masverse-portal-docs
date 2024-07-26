@@ -1,3 +1,4 @@
+
 ---
 sidebar_position: 1
 slug: /
@@ -47,14 +48,12 @@ Enterprise Portal : [https://portal-testnet.maschain.com](https://portal-testnet
 
 API URL: https://service-testnet.maschain.com
 
+MasChain Explorer: https://explorer-testnet.maschain.com
+
 ### Mainnet
 
 Enterprise Portal : [https://portal.maschain.com](https://portal.maschain.com)
 
 API URL: https://service.maschain.com
 
-### MasChain Explorer
-
-Testnet URL: https://explorer-testnet.maschain.com/
-
-Mainnet URL: https://explorer.maschain.com/
+MasChain Explorer: https://explorer.maschain.com
