@@ -205,6 +205,7 @@ callback_url           : https://your.domain/
 * ***contract_address*** is the certificate contract address.
 * ***attributes*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
 * ***name*** name of the certificate being minted.
+* ***file*** max size of 1mb
 * ***description*** description of the certificate being minted.
 * ***callback_url*** response after data is minted into blockchain
 
@@ -215,10 +216,10 @@ callback_url           : https://your.domain/
     "status": 200,
     "result": {
         "nft_token_id": 17,
-        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
         "nonce": 752,
-        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
-        "receiver_wallet_address": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "from": "0x147f20a28739da15419AdC0...",
+        "receiver_wallet_address": "0x147f20a28739da15419AdC0...",
         "organisation_id": 2,
         "certificate": "https://storage.maschain.con/....../metadata/1.json",
         "certificate_image": "https://storage.maschain.con/....../image/example_image.pdf",
@@ -231,9 +232,9 @@ callback_url           : https://your.domain/
 {
     "status": 200,
     "result": {
-        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
         "nonce": 752,
-        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "from": "0x147f20a28739da15419AdC0...",
         "status": "success"
         "receipt" : { Transaction Receipt Object }
     }
@@ -244,9 +245,9 @@ callback_url           : https://your.domain/
 {
     "status": 200,
     "result": {
-        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad19dbc0c295d09b4027fd3406d30759df8",
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
         "nonce": 752,
-        "from": "0x147f20a28739da15419AdC04e61fd83e60962683",
+        "from": "0x147f20a28739da15419AdC0...",
         "status": "failed"
         "message": "Error message"
     }
