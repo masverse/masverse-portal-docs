@@ -141,7 +141,7 @@ With File <br/>
 
 ## Get Audit Transactions
 
-Get Audit Transactions
+Get success Audit Transactions
 
 >**GET** 
 

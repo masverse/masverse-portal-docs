@@ -502,7 +502,7 @@ API_URL/api/token/balance
 
 ## Get Token Transactions
 
-Get Token Transactions
+Get success Token Transactions
 
 >**GET** 
 

@@ -321,7 +321,7 @@ tx_id                 : 0x3b1d66bd24a7614db9....
 
 ## Get Certificate Transactions
 
-Get Certificate Transactions
+Get success Certificate Transactions
 
 >**GET** 
 
