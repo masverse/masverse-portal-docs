@@ -41,6 +41,11 @@ a[href^="/services/token/transaction-fee"] {
   display: none;
 }
 
+
+a[href^="/services/token/wallet-tokens"] {
+  display: none;
+}
+
 a[href^="/services/certificate/transaction-fee"] {
   display: none;
 }
