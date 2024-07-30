@@ -50,7 +50,7 @@ a[href^="/services/certificate/transaction-fee"] {
   display: none;
 }
 
-a[href^="/services/wallet-management/wallet-hidden"]
+a[href^="/services/wallet-management/wallet-extra"]
 {
   display: none;
 }
