@@ -49,3 +49,8 @@ a[href^="/services/token/wallet-tokens"] {
 a[href^="/services/certificate/transaction-fee"] {
   display: none;
 }
+
+a[href^="/services/wallet-management/wallet-hidden"]
+{
+  display: none;
+}
