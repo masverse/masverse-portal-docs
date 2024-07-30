@@ -29,7 +29,7 @@ API_URL/api/wallet/create-self-custodian-user
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | email                | string          | Yes                 |
-    | ic                   | string          | Yes                 |
+    | ic                   | string          | no                  |
     | wallet_address       | string          | Yes                 |
     | wallet_name          | string          | No                  |
     | phone                | string          | No                  |
