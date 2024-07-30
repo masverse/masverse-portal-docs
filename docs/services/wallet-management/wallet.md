@@ -118,7 +118,7 @@ API_URL/api/wallet/wallet
         "wallet_type": "organisation",
         "is_active": 1,
         "entity_id": null,
-        "entity_category_id": null
+        "entity_category_id": null,
     }
 }
 ```
@@ -145,7 +145,7 @@ API_URL/api/wallet/create-user
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
     | email                | string          | Yes                 |
-    | ic                   | string          | no                  |
+    | ic                   | string          | Yes                 |
     | wallet_name          | string          | No                  |
     | phone                | string          | No                  |
     | entity_id            | int             | No                  |
@@ -157,7 +157,7 @@ API_URL/api/wallet/create-user
     "email":"testemail9@gmail.com",
     "ic":"test ic",
     "phone":"test ic",
-    "entity_id":1
+    "entity_id":1,
 }
 ```
 
@@ -177,7 +177,7 @@ API_URL/api/wallet/create-user
         "wallet_type": "user",
         "is_active": 1,
         "entity_id": null,
-        "entity_category_id": null
+        "entity_category_id": null,
     }
 }
 ```
