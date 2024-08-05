@@ -27,9 +27,9 @@ API_URL/api/token/contract-execute
 #### Body
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
-    | wallet_address     | string          | Yes                  |
-    | contract_address     | string          | Yes                  |
-    | callback_url     | string          | Yes                  |
+    | wallet_address       | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callback_url         | string          | Yes                 |
 
 
 if no contract_address pass will use MasToken as Default <br/>
