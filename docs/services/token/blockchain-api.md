@@ -30,6 +30,7 @@ API_URL/api/token/contract-execute
     | wallet_address     | string          | Yes                  |
     | contract_address     | string          | Yes                  |
     | callback_url     | string          | Yes                  |
+    | signed_data     | string          | Yes                  |
 
 
 if no contract_address pass will use MasToken as Default <br/>
