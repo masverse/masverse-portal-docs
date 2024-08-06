@@ -266,7 +266,7 @@ Get Certificate details. Parameter can be null.
 >**GET** 
 
 ```
-API_URL/api/certificate/get-certificate?from={address}&to={address}&contract_address={address}&transaction_id={tx_id}
+API_URL/api/certificate/get-certificate?from={address}&to={address}&contract_address={address}&transaction_id={tx_id}&status={status}
 ```
 #### HEADERS
 
@@ -283,13 +283,14 @@ API_URL/api/certificate/get-certificate?from={address}&to={address}&contract_add
     | to                   | No                 |
     | contract_address     | No                 |
     | tx_id                | No                 |
+    | status               | No                 |
 
 ```
 from                  : 0x3PLABF2maSAE8D6Fb6g4edf.....
 to                    : 0x3423BF219008A8D6b644b79.....
 contract_address      : 0xb988C69344505faf....
 tx_id                 : 0x3b1d66bd24a7614db9....
-
+status                : success or fail or pending , default success
 ```
 
 
@@ -299,20 +300,22 @@ tx_id                 : 0x3b1d66bd24a7614db9....
     "status": 200,
     "result": [
         {
-            "id": 16,
-            "wallet_id": 3,
-            "wallet_address": '0x40848317995B5702.....',
-            "organisation_id": 2,
-            "token_id": 36,
-            "nft_token_id": 16,
-            "transaction_id": "0x4321e57df1f3fbebaaf82be22cb68ab...",
-            "certificate_file": "ds21342eds2f3af8b0-3094-4337-aa76-9da12ed3c9ac20240402073524.jpeg",
-            "blockNumber": 1130699,
+            "from_wallet": "0xeC986877959353dD4...",
+            "to_wallet": "0xD6C0868b79A0Fcb50...",
             "is_mint": 1,
-            "created_at": "2024-04-02T07:35:25.000000Z",
-            "updated_at": "2024-04-02T07:35:30.000000Z",
-            "deleted_at": null
-        }
+            "blockNumber": 2805251,
+            "nft_token_id": 1,
+            "transactionHash": "0x19801b1d1fad1ce549b9a8af239ed865cd1a0ecb1bf65824651c26735e82d1c2",
+            "certificate_image_file": null,
+            "certificate_file": "1.json",
+            "created_at": "2024-07-27T06:30:40.000000Z",
+            "token": {
+                "contract_address": "0x5DFE5cbC5E56E7....",
+                "name": "Chain",
+                "symbol": "CC",
+                "logo": "0e8951ba31014bdfbb9fa62e4b6b8ad720240727212548.png"
+            }
+        },
     ]
 }
 ```
