@@ -259,6 +259,203 @@ callback_url           : https://your.domain/
 ```
 <br/>
 
+## Mint Certificate With 10MB
+
+Mint Certificate by contract_address and storing it in MasChain.
+
+>**POST** 
+
+```
+API_URL/api/certificate/mint-certificate-10mb
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; multipart/form-data**
+
+**body &emsp; form-data**
+
+#### BODY ( form-data )
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | file                 | file            | Yes                 |
+    | attributes           | json            | No                  |
+    | name                 | string          | Yes                 |
+    | description          | string          | Yes                 |
+    | callback_url         | string         | Yes                  |
+
+
+`NOTE : Attributes fields can be empty or many`
+
+```
+wallet_address        : 0x3423BF219008A8D6b644b79.....
+to                    : 0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475
+contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
+file                  : upload an image
+attributes            : [{"trait":"New Cert","value":"10001"},{"Student":"yes","value":"Chan"}]
+name                  : NFT CERT
+description           : NFT CERT
+callback_url           : https://your.domain/
+```
+* ***wallet_address*** must be the owner of the smart contract.
+* ***to*** is the receiver of the certificate.
+* ***contract_address*** is the certificate contract address.
+* ***attributes*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
+* ***name*** name of the certificate being minted.
+* ***file*** max size of 1mb
+* ***description*** description of the certificate being minted.
+* ***callback_url*** response after data is minted into blockchain
+
+<br/>
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "nft_token_id": 17,
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "receiver_wallet_address": "0x147f20a28739da15419AdC0...",
+        "organisation_id": 2,
+        "certificate": "https://storage.maschain.con/....../metadata/1.json",
+        "certificate_image": "https://storage.maschain.con/....../image/example_image.pdf",
+        "status": "pending"
+    }
+}
+```
+
+```js title="Sample Callback Success response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "status": "success"
+        "receipt" : { Transaction Receipt Object }
+    }
+}
+```
+
+```js title="Sample Callback Fail response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "status": "failed"
+        "message": "Error message"
+    }
+}
+```
+<br/>
+
+## Mint Certificate With 100MB
+
+Mint Certificate by contract_address and storing it in MasChain.
+
+>**POST** 
+
+```
+API_URL/api/certificate/mint-certificate-100mb
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; multipart/form-data**
+
+**body &emsp; form-data**
+
+#### BODY ( form-data )
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | file                 | file            | Yes                 |
+    | attributes           | json            | No                  |
+    | name                 | string          | Yes                 |
+    | description          | string          | Yes                 |
+    | callback_url         | string         | Yes                  |
+
+
+`NOTE : Attributes fields can be empty or many`
+
+```
+wallet_address        : 0x3423BF219008A8D6b644b79.....
+to                    : 0xbD8992F758B4429b92D1Afc1b53aB5Bc16bD8475
+contract_address      : 0xb988C69344505faf6F804A7bfcC7c81FdFb59B4c
+file                  : upload an image
+attributes            : [{"trait":"New Cert","value":"10001"},{"Student":"yes","value":"Chan"}]
+name                  : NFT CERT
+description           : NFT CERT
+callback_url           : https://your.domain/
+```
+* ***wallet_address*** must be the owner of the smart contract.
+* ***to*** is the receiver of the certificate.
+* ***contract_address*** is the certificate contract address.
+* ***attributes*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
+* ***name*** name of the certificate being minted.
+* ***file*** max size of 1mb
+* ***description*** description of the certificate being minted.
+* ***callback_url*** response after data is minted into blockchain
+
+<br/>
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "nft_token_id": 17,
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "receiver_wallet_address": "0x147f20a28739da15419AdC0...",
+        "organisation_id": 2,
+        "certificate": "https://storage.maschain.con/....../metadata/1.json",
+        "certificate_image": "https://storage.maschain.con/....../image/example_image.pdf",
+        "status": "pending"
+    }
+}
+```
+
+```js title="Sample Callback Success response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "status": "success"
+        "receipt" : { Transaction Receipt Object }
+    }
+}
+```
+
+```js title="Sample Callback Fail response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x147f20a28739da15419AdC0...",
+        "status": "failed"
+        "message": "Error message"
+    }
+}
+```
+<br/>
+
+
 ## Get Certificate
 
 Get Certificate details. Parameter can be null.
