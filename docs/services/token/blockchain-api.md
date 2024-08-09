@@ -101,6 +101,7 @@ API_URL/api/token/contract-call
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address     | string          | Yes                  |
     | contract_address     | string          | Yes                  |
+    | to     | string          | No                  |
     | method_name     | string          | Yes                  |
     | method_params     | array          | No                  |
 
