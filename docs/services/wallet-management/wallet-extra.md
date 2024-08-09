@@ -128,3 +128,163 @@ API_URL/api/wallet/get-wallet-transactions?address={address}
 }
 ```
 <br/>
+
+
+## Get Transaction Details
+
+Get Transaction Details
+
+>**GET** 
+
+```
+API_URL/api/wallet/get-transaction-details/{tx_id}
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "timestamp": "2024-07-27T14:01:06.000000Z",
+        "fee": {
+            "type": "actual",
+            "value": "0"
+        },
+        "gas_limit": "6000000",
+        "block": 2804955,
+        "status": "ok",
+        "method": "mint",
+        "confirmations": 183347,
+        "type": 0,
+        "exchange_rate": null,
+        "to": {
+            "ens_domain_name": null,
+            "hash": "0x7DC2F54255E05394b2AB43FF925Dc40f442d6CB6",
+            "implementation_name": null,
+            "implementations": [],
+            "is_contract": true,
+            "is_verified": false,
+            "metadata": null,
+            "name": "USD",
+            "private_tags": [],
+            "public_tags": [],
+            "watchlist_names": []
+        },
+        "tx_burnt_fee": null,
+        "max_fee_per_gas": null,
+        "result": "success",
+        "hash": "0x184572f0d7613bb0f9995f93bb97ad5df0e6c023560d069090fbe7e8f57a4c09",
+        "gas_price": "0",
+        "priority_fee": null,
+        "base_fee_per_gas": "0",
+        "from": {
+            "ens_domain_name": null,
+            "hash": "0x1a0BA2b4d8830496Beb84696E3E278D1eb8fE046",
+            "implementation_name": null,
+            "implementations": [],
+            "is_contract": false,
+            "is_verified": null,
+            "metadata": null,
+            "name": null,
+            "private_tags": [],
+            "public_tags": [],
+            "watchlist_names": []
+        },
+        "token_transfers": [
+            {
+                "block_hash": "0x94ab6579c391cafd4a7fc15e1b6cb5d67716b79507cc49cf6fd4e512106bf1bb",
+                "from": {
+                    "ens_domain_name": null,
+                    "hash": "0x0000000000000000000000000000000000000000",
+                    "implementation_name": null,
+                    "implementations": [],
+                    "is_contract": false,
+                    "is_verified": false,
+                    "metadata": null,
+                    "name": null,
+                    "private_tags": [],
+                    "public_tags": [],
+                    "watchlist_names": []
+                },
+                "log_index": "0",
+                "method": null,
+                "timestamp": null,
+                "to": {
+                    "ens_domain_name": null,
+                    "hash": "0x1a0BA2b4d8830496Beb84696E3E278D1eb8fE046",
+                    "implementation_name": null,
+                    "implementations": [],
+                    "is_contract": false,
+                    "is_verified": false,
+                    "metadata": null,
+                    "name": null,
+                    "private_tags": [],
+                    "public_tags": [],
+                    "watchlist_names": []
+                },
+                "token": {
+                    "address": "0x7DC2F54255E05394b2AB43FF925Dc40f442d6CB6",
+                    "circulating_market_cap": null,
+                    "decimals": "18",
+                    "exchange_rate": null,
+                    "holders": "2",
+                    "icon_url": null,
+                    "name": "USD",
+                    "symbol": "USD",
+                    "total_supply": "74999989980",
+                    "type": "ERC-20",
+                    "volume_24h": null
+                },
+                "total": {
+                    "decimals": "18",
+                    "value": "100000000"
+                },
+                "tx_hash": "0x184572f0d7613bb0f9995f93bb97ad5df0e6c023560d069090fbe7e8f57a4c09",
+                "type": "token_minting"
+            }
+        ],
+        "tx_types": [
+            "contract_call",
+            "token_transfer"
+        ],
+        "gas_used": "93842",
+        "created_contract": null,
+        "position": 0,
+        "nonce": 81,
+        "has_error_in_internal_txs": null,
+        "actions": [],
+        "decoded_input": {
+            "method_call": "mint(address to, uint256 amount)",
+            "method_id": "40c10f19",
+            "parameters": [
+                {
+                    "name": "to",
+                    "type": "address",
+                    "value": "0x1a0ba2b4d8830"
+                },
+                {
+                    "name": "amount",
+                    "type": "uint256",
+                    "value": "100000000"
+                }
+            ]
+        },
+        "token_transfers_overflow": false,
+        "raw_input": "0x40c10f190000000000000000000000001a0ba2b4d8830496beb84696e3e278d1eb8fe0460000000000000000000000000000000000000000000000000000000005f5e100",
+        "value": "0",
+        "max_priority_fee_per_gas": null,
+        "revert_reason": null,
+        "confirmation_duration": [
+            0,
+            6000
+        ],
+        "tx_tag": null
+    }
+}
+```
+<br/>
