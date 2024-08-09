@@ -77,7 +77,7 @@ Get Wallet Transaction
 >**GET** 
 
 ```
-API_URL/api/token/get-wallet-transactions?address={address}
+API_URL/api/wallet/get-wallet-transactions?address={address}
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
