@@ -68,3 +68,63 @@ API_URL/api/wallet/create-self-custodian-user
 }
 ```
 <br/>
+
+
+## Get Wallet Transactions
+
+Get Wallet Transaction
+
+>**GET** 
+
+```
+API_URL/api/token/get-wallet-transactions?address={address}
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+#### Params
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | address              | string          | Yes                 |
+
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": [
+        {
+            "transactionHash": "0x2a58d0af69ade0434ebd...",
+            "from": "0x1a0BA2b4d8830496B...",
+            "to": "0x1a0BA2b4d883049..",
+            "status": "Success"
+        },
+        {
+            "transactionHash": "0x3758c5f7e49c617070beae15...",
+            "from": "0x1a0BA2b4d8830496B...",
+            "to": null,
+            "status": "Pending"
+        },
+        {
+            "transactionHash": "0x3758c5f7e49c617070beae15...",
+            "from": "0x1a0BA2b4d8830496B...",
+            "to": null,
+            "status": "Fail"
+        },
+    ]
+    "pagination": {
+        "current_page": 1,
+        "first_page_url": "api/wallet/get-wallet-transactions?page=1",
+        "last_page": 1,
+        "last_page_url": "api/wallet/get-wallet-transactions?page=1",
+        "next_page_url": null,
+        "per_page": 20,
+        "prev_page_url": null,
+        "total": 8
+    }
+}
+```
+<br/>
