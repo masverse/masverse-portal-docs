@@ -28,6 +28,7 @@ API_URL/api/token/contract-execute
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address     | string          | Yes                  |
+    | to     | string          | No                  |
     | contract_address     | string          | Yes                  |
     | callback_url     | string          | Yes                  |
     | signed_data     | string          | Yes                  |
@@ -101,7 +102,6 @@ API_URL/api/token/contract-call
     |:--------------------:|:---------------:|:-------------------:|
     | wallet_address     | string          | Yes                  |
     | contract_address     | string          | Yes                  |
-    | to     | string          | No                  |
     | method_name     | string          | Yes                  |
     | method_params     | array          | No                  |
 
