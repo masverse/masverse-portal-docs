@@ -10,17 +10,17 @@ sidebar_position: 2
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
 | 1 - 30          | FREE                         | FREE                         |
-| 31 - 100        | 0.21                        | 1.00                         |
-| 101 - 500       | 0.2                         | 0.95                         |
-| 501 - 1000      | 0.19                        | 0.90                         |
-| 1,001 - 2,000   | 0.18                        | 0.85                         |
-| > 2,001         | 0.17                        | 0.80                         |
+| 31 - 100        | 0.21                         | 1.00                         |
+| 101 - 500       | 0.2                          | 0.95                         |
+| 501 - 1000      | 0.19                         | 0.90                         |
+| 1,001 - 2,000   | 0.18                         | 0.85                         |
+| > 2,001         | 0.17                         | 0.80                         |
 
 ### Calculation example
 
-The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 10,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
+The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
 
-**Total Calls made = 10,000**
+**Total Calls made = 2,000**
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )       |
 | :-------------------: | :--------------------------: | :-------------------------:  |
@@ -48,9 +48,9 @@ The table above represents the usage fees for the service. The amount will be ch
 
 ### Calculation example
 
-The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 10,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
+The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 5.00 and so on. Another clearer example can be found below.
 
-**Total Calls made = 10,000**
+**Total Calls made = 2,000**
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )       |
 | :-------------------: | :--------------------------: | :-------------------------:  |
@@ -77,9 +77,9 @@ The table above represents the usage fees for the service. The amount will be ch
 
 ### Calculation example
 
-The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 10,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
+The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 20.00 and so on. Another clearer example can be found below.
 
-**Total Calls made = 10,000**
+**Total Calls made = 2,000**
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )       |
 | :-------------------: | :--------------------------: | :-------------------------:  |
