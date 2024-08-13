@@ -129,6 +129,49 @@ API_URL/api/wallet/get-wallet-transactions?address={address}
 ```
 <br/>
 
+## Get Smart contracs
+
+Get Smart contracs
+
+>**GET** 
+
+```
+API_URL/api/wallet/wallet/get-smart-contracts
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result":  [
+        {
+            "contract_address": "0x6326aFF363CcCdF4404450c24B48b926dDCeC88C",
+            "contract_name": "TK4",
+            "logo": null,
+            "name": "TK14",
+            "symbol": "TK4"
+        },
+    ]
+    "pagination": {
+        "current_page": 1,
+        "first_page_url": "api/wallet/get-wallet-transactions?page=1",
+        "last_page": 1,
+        "last_page_url": "api/wallet/get-wallet-transactions?page=1",
+        "next_page_url": null,
+        "per_page": 20,
+        "prev_page_url": null,
+        "total": 8
+    }
+}
+```
+<br/>
+
 
 ## Get Transaction Details
 
