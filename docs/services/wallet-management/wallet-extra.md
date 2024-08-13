@@ -136,7 +136,7 @@ Get Smart contracts
 >**GET** 
 
 ```
-API_URL/api/wallet/wallet/get-smart-contracts
+API_URL/api/wallet/get-smart-contracts
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
