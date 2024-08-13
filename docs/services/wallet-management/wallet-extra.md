@@ -129,9 +129,9 @@ API_URL/api/wallet/get-wallet-transactions?address={address}
 ```
 <br/>
 
-## Get Smart contracs
+## Get Smart contracts
 
-Get Smart contracs
+Get Smart contracts
 
 >**GET** 
 
