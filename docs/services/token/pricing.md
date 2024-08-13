@@ -20,7 +20,7 @@ sidebar_position: 2
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 200,000 calls, the first 1000 calls will be free of charge per transaction and any subsequent calls will be charged as 0.10 and so on. Another clearer example can be found below.
 
-**Total Calls made = 1,400,00**
+**Total Calls made = 2,000,00**
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )      |
 | :-------------------: | :--------------------------: | :-------------------------: |

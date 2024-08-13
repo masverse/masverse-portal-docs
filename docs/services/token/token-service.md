@@ -183,7 +183,6 @@ API_URL/api/token/mint
     | amount               | string          | Yes                 |
     | contract_address     | string          | Yes                 |
     | callback_url         | string          | Yes                 |
-    | signed_data          | string          | No                  |
 
 ```js title="Sample request"
 {
@@ -192,7 +191,6 @@ API_URL/api/token/mint
     "amount":"2000",
     "contract_address":"0x4175a3EE7fbD167E...",
     "callback_url": "https://postman-echo.com/post?",
-    "signed_data": ""
 }
 ```
 
