@@ -515,11 +515,12 @@ API_URL/api/token/get-token-transaction
 **content-type &emsp; application/json**
 
 #### Params
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | wallet_address       | string          | Yes                 |
-    | contract_address     | string          | Yes                 |
-    | filter               | string          | to or from          |
+    | Name                 | Type            | Required            | Description         |
+    |:--------------------:|:---------------:|:-------------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |                     |
+    | contract_address     | string          | Yes                 |                     |
+    | filter               | string          | Yes                  | "to" , "from" or "to|from"      |
+    | status               | string          | No                  | "success" , "pending" or "fail" , default return all status       |
 
 
 ```js title="Sample result"

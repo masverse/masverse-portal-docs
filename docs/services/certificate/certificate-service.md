@@ -64,6 +64,7 @@ API_URL/api/certificate/get-smart-contract/{id}
         "contract_address": "0xab3379af6e256063b92B8...",
         "name": "Maschain",
         "symbol": "MEI"
+        "logo" : "image.pdf"
     },
 }
 ```
@@ -339,11 +340,12 @@ API_URL/api/token/get-certificate-transaction
 **content-type &emsp; application/json**
 
 #### Params
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | wallet_address       | string          | Yes                 |
-    | contract_address     | string          | Yes                 |
-    | filter               | string          | to or from          |
+    | Name                 | Type            | Required            | Description         |
+    |:--------------------:|:---------------:|:-------------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |                     |
+    | contract_address     | string          | Yes                 |                     |
+    | filter               | string          | Yes                  | "to" , "from" or "to|from"      |
+    | status               | string          | No                  | "success" , "pending" or "fail" , default return all status       |
 
 
 ```js title="Sample result"
