@@ -160,7 +160,7 @@ API_URL/api/token/get-audit-transaction
     |:--------------------:|:---------------:|:-------------------:|:-------------------:|
     | wallet_address       | string          | Yes                 |                     |
     | contract_address     | string          | Yes                 |                     |
-    | filter               | string          | Yes                  | "to" , "from" or "to|from"      |
+    | filter               | string          | Yes                  | "to" , "from" or "to\|from"      |
     | status               | string          | No                  | "success" , "pending" or "fail" , default return all status       |
 
 
