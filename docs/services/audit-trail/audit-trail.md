@@ -146,7 +146,7 @@ Get success Audit Transactions
 >**GET** 
 
 ```
-API_URL/api/token/get-audit-transaction
+API_URL/api/audit/get-audit-transaction
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
