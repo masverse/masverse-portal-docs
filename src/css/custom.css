@@ -54,3 +54,10 @@ a[href^="/services/wallet-management/wallet-extra"]
 {
   display: none;
 }
+
+a[href^="/services/ekyc"]
+{
+  display: none;
+}
+
+
