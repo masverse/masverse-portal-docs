@@ -62,28 +62,25 @@ API_URL/api/ekyc/verifications/{token}
 {
     "status": 200,
     "result" : {
-        "is_success": true,
-        "verification": {
-            "id": 8,
-            "organisation_id": 31,
-            "type": "00",
-            "token": "4KK6FYHVZVN1OD9ZZK219XM0W57UD6",
-            "url": "http://localhost:3001?token=4KK6FYHVZVN1OD9ZZK219XM0W57UD6",
-            "redirect_url": "https://localhost",
-            "medias": null,
-            "ocr_country": "MYS",
-            "ocr_type": "ID_CARD",
-            "ocr_success": 0,
-            "ocr_result": null,
-            "face_id_success": 0,
-            "face_id_result": null,
-            "is_success": 0,
-            "latest_error": null,
-            "retries": 0,
-            "expire_at": "2024-09-10T08:16:31.000Z",
-            "created_at": "2024-09-10T08:01:31.000Z",
-            "updated_at": "2024-09-10T08:01:31.000Z"
-        }
+        "id": 8,
+        "organisation_id": 31,
+        "type": "00",
+        "token": "4KK6FYHVZVN1OD9ZZK219XM0W57UD6",
+        "url": "http://localhost:3001?token=4KK6FYHVZVN1OD9ZZK219XM0W57UD6",
+        "redirect_url": "https://localhost",
+        "medias": null,
+        "ocr_country": "MYS",
+        "ocr_type": "ID_CARD",
+        "ocr_success": 0,
+        "ocr_result": null,
+        "face_id_success": 0,
+        "face_id_result": null,
+        "is_success": 0,
+        "latest_error": null,
+        "retries": 0,
+        "expire_at": "2024-09-10T08:16:31.000Z",
+        "created_at": "2024-09-10T08:01:31.000Z",
+        "updated_at": "2024-09-10T08:01:31.000Z"
     }
 }
 ```
