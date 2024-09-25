@@ -36,11 +36,11 @@ API_URL/api/token/contract-execute
     | extra_info     | string          | no                  |
 
 #### extra_info field
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | method     | string          | no                  |
-    | amount     | string          | no                  |
-    | params     | string          | no                  |
+    | Name                 | Type            | Required            | Description |
+    |:--------------------:|:---------------:|:-------------------:|:-------------------:|
+    | method     | string          | no                  | method use to execute  |
+    | amount     | string          | no                  | amount transfer |
+    | params     | string          | no                  | Additional data that will be passed back |
 
 
 

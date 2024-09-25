@@ -164,20 +164,22 @@ API_URL/api/wallet/create-user
 ```js title="Sample result"
 {
     "status": 200,
-    "user": {
+    "result": {
+        "user": {
             "name": "Bob",
             "email": "test@gmail.com",
             "ic": "123131231",
             "phone": null
-    },
-    "wallet": {
-        "wallet_id": 1,
-        "wallet_name": "bob wallet",
-        "wallet_address": "0x556283a26F5C3d7bcB9a...",
-        "wallet_type": "user",
-        "is_active": 1,
-        "entity_id": null,
-        "entity_category_id": null,
+        },
+        "wallet": {
+            "wallet_id": 1,
+            "wallet_name": "bob wallet",
+            "wallet_address": "0x556283a26F5C3d7bcB9a...",
+            "wallet_type": "user",
+            "is_active": 1,
+            "entity_id": null,
+            "entity_category_id": null,
+        }
     }
 }
 ```
