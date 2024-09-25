@@ -77,7 +77,7 @@ Get Wallet Transaction
 >**GET** 
 
 ```
-API_URL/api/wallet/get-wallet-transactions?address={address}
+API_URL/api/wallet/get-wallet-transactions?address={address}?show_fee=0
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -90,7 +90,7 @@ API_URL/api/wallet/get-wallet-transactions?address={address}
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | address              | string          | Yes                 |
-
+    | show_fee              | string          | No , 0 or 1 default 1              |
 
 ```js title="Sample result"
 {
@@ -101,18 +101,35 @@ API_URL/api/wallet/get-wallet-transactions?address={address}
             "from": "0x1a0BA2b4d8830496B...",
             "to": "0x1a0BA2b4d883049..",
             "status": "Success"
+            "extra_method": "mint",
+            "extra_amount": "1000",
+            "extra_params": null,
+            "is_fee": null,
+            "created_at": "2024-08-22 09:59:24"
         },
         {
             "transactionHash": "0x3758c5f7e49c617070beae15...",
             "from": "0x1a0BA2b4d8830496B...",
             "to": null,
-            "status": "Pending"
+            "status": "Pending",
+            "extra_method": "transfer",
+            "extra_amount": "1000",
+            "extra_params": null,
+            "is_fee": 1,
+            "created_at": "2024-08-22 09:59:24"
+
         },
         {
             "transactionHash": "0x3758c5f7e49c617070beae15...",
             "from": "0x1a0BA2b4d8830496B...",
             "to": null,
-            "status": "Fail"
+            "status": "Fail",
+            "extra_method": null,
+            "extra_amount": null,
+            "extra_params": null,
+            "is_fee": null,
+            "created_at": "2024-08-22 09:59:24"
+
         },
     ]
     "pagination": {

@@ -32,6 +32,16 @@ API_URL/api/token/contract-execute
     | contract_address     | string          | Yes                  |
     | callback_url     | string          | Yes                  |
     | signed_data     | string          | Yes                  |
+        | is_fee     | int          | no                  |
+    | extra_info     | string          | no                  |
+
+#### extra_info field
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | method     | string          | no                  |
+    | amount     | string          | no                  |
+    | params     | string          | no                  |
+
 
 
 if no contract_address pass will use MasToken as Default <br/>
