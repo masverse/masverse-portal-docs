@@ -54,8 +54,8 @@ The table above represents the usage fees for the service. The amount will be ch
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )       |
 | :-------------------: | :--------------------------: | :-------------------------:  |
-| 1 - 30                | FREE                         | 0                            |
-| 31 - 100              | 5.00                         | 70 x 5.00 = 350              |
+| 1 - 10                | FREE                         | 0                            |
+| 11 - 100              | 5.00                         | 70 x 5.00 = 350              |
 | 101 - 500             | 4.75                         | 400 x 4.75 = 1,900           |
 | 501 - 1,000           | 4.50                         | 500 x 4.50 = 2,250           |
 | 1,001 - 2,000         | 4.25                         | 1,000 x 4.25 = 4,250         |
@@ -83,8 +83,8 @@ The table above represents the usage fees for the service. The amount will be ch
 
 | Range                 | Fees per Transaction ( MYR ) | Cost Breakdown ( MYR )       |
 | :-------------------: | :--------------------------: | :-------------------------:  |
-| 1 - 30                | FREE                         | 0                            |
-| 31 - 100              | 20.00                        | 70 x 20.00 = 1,400           |
+| 1 - 5                | FREE                         | 0                            |
+| 6 - 100              | 20.00                        | 70 x 20.00 = 1,400           |
 | 101 - 500             | 19.00                        | 400 x 19.00 = 7,600          |
 | 501 - 1,000           | 18.00                        | 500 x 18.00 = 9,000          |
 | 1,001 - 2,000         | 17.00                        | 1,000 x 17.00 = 17,000       |
