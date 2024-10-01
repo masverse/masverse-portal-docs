@@ -39,8 +39,8 @@ The table above represents the usage fees for the service. The amount will be ch
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
-| 1 - 30          | FREE                         | FREE                         |
-| 31 - 100        | 1.05                         | 5.00                         |
+| 1 - 10          | FREE                         | FREE                         |
+| 11 - 100        | 1.05                         | 5.00                         |
 | 101 - 500       | 1.00                         | 4.75                         |
 | 501 - 1000      | 0.95                         | 4.50                         |
 | 1,001 - 2,000   | 0.90                         | 4.25                         |
@@ -68,8 +68,8 @@ The table above represents the usage fees for the service. The amount will be ch
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
-| 1 - 30          | FREE                         | FREE                         |
-| 31 - 100        | 4.2                          | 20.00                        |
+| 1 - 5          | FREE                         | FREE                         |
+| 6 - 100        | 4.2                          | 20.00                        |
 | 101 - 500       | 4.0                          | 19.00                        |
 | 501 - 1000      | 3.78                         | 18.00                        |
 | 1,001 - 2,000   | 3.57                         | 17.00                        |
