@@ -14,7 +14,7 @@ sidebar_position: 2
 | 101 - 500       | 0.2                          | 0.95                         |
 | 501 - 1000      | 0.19                         | 0.90                         |
 | 1,001 - 2,000   | 0.18                         | 0.85                         |
-| > 2,001         | 0.17                         | 0.80                         |
+| > 2,000         | 0.17                         | 0.80                         |
 
 ### Calculation example
 
@@ -29,7 +29,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 101 - 500             | 0.95                         | 400 x 0.95 = 380             |
 | 501 - 1,000           | 0.90                         | 500 x 0.90 = 450             |
 | 1,001 - 2,000         | 0.85                         | 1,000 x 0.85 = 850           |
-| > 2,001               | 0.80                         | 0                            |
+| > 2,000               | 0.80                         | 0                            |
 |                       | Total                        | 1,750                        |
 
 <br/>
@@ -44,7 +44,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 101 - 500       | 1.00                         | 4.75                         |
 | 501 - 1000      | 0.95                         | 4.50                         |
 | 1,001 - 2,000   | 0.90                         | 4.25                         |
-| > 2,001         | 0.84                         | 4.00                         |
+| > 2,000         | 0.84                         | 4.00                         |
 
 ### Calculation example
 
@@ -59,7 +59,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 101 - 500             | 4.75                         | 400 x 4.75 = 1,900           |
 | 501 - 1,000           | 4.50                         | 500 x 4.50 = 2,250           |
 | 1,001 - 2,000         | 4.25                         | 1,000 x 4.25 = 4,250         |
-| > 2,001               | 4.00                         | 0                            |
+| > 2,000               | 4.00                         | 0                            |
 |                       | Total                        | 8,750                        |
 
 <br/>
@@ -73,7 +73,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 101 - 500       | 4.0                          | 19.00                        |
 | 501 - 1000      | 3.78                         | 18.00                        |
 | 1,001 - 2,000   | 3.57                         | 17.00                        |
-| > 2,001         | 3.36                         | 16.00                        |
+| > 2,000         | 3.36                         | 16.00                        |
 
 ### Calculation example
 
@@ -88,7 +88,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 101 - 500             | 19.00                        | 400 x 19.00 = 7,600          |
 | 501 - 1,000           | 18.00                        | 500 x 18.00 = 9,000          |
 | 1,001 - 2,000         | 17.00                        | 1,000 x 17.00 = 17,000       |
-| > 2,001               | 16.00                        | 0                            |
+| > 2,000               | 16.00                        | 0                            |
 |                       | Total                        | 35,000                       |
 
 <br/>
