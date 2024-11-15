@@ -1,13 +1,13 @@
 ---
-# sidebar_class_name: hidden
-sidebar_position: 1
+sidebar_position: 3
 ---
 
-# Ekyc
+
+# EKYC Service
 
 ## Generate H5 Verification links
 
-Generate H5  Ekyc link 
+Generate H5 Ekyc link 
 
 >**POST** 
 
@@ -27,7 +27,6 @@ API_URL/api/ekyc/verifications
     | id_country     | Yes             | Country Code ( ISO-3166 alpha-3 format) |     
     | id_type   | Yes | ID_CARD or PASSPORT |
     | redirect_url   | Yes | link to redirect after completion |
-    | wallet_address   | No | To update user wallet ekyc |
 
 ```js title="Sample result"
 {
