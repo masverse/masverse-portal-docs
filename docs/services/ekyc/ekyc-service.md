@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 
-# EKYC Service
+# EKYC
 
 ## Generate H5 Verification links
 
