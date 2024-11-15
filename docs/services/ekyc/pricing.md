@@ -6,7 +6,7 @@ sidebar_position: 2
 # Pricing
 ## Pay Per Use Fees
 
-#### OCR + Face Recognition 
+#### OCR + Face Recognition + Liveness Detection
 
 | Usage                 | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------------: | :--------------------------: | :--------------------------: |

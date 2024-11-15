@@ -23,10 +23,12 @@ API_URL/api/ekyc/verifications
 #### Params     
     | Name                 | Required            |  Description |
     |:--------------------:|:-------------------:|:-------------------:|
-    | type       | Yes                 |        00 (OCR + FACE) or 01 (OCR Only) |
+    | type       | Yes                 |        00 (OCR + FACE + LIVENESS ) or 01 (OCR Only) |
     | id_country     | Yes             | Country Code ( ISO-3166 alpha-3 format) |     
     | id_type   | Yes | ID_CARD or PASSPORT |
     | redirect_url   | Yes | link to redirect after completion |
+
+Note: The maximum number of retry attempts is limited to 2 for OCR and 1 for Face Recognition.
 
 ```js title="Sample result"
 {
