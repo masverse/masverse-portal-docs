@@ -440,9 +440,9 @@ API_URL/api/token/get-certificate-transaction
 <br/>
 
 
-## Transfer Ownership
+## Transfer Contract Ownership
 
-Transfer ownership to another wallet address
+Transfer smart contract ownership to another wallet address
 
 >**POST** 
 
