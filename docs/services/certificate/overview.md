@@ -8,6 +8,8 @@ Welcome to Certificate Management service, this service aims to manage your very
 
 - **Get Smart Contract List**
 - **Create Smart Contract**
-- **Mint**
+- **Mint Certificate**
+- **Transfer Certificate**
+- **Transfer Ownership**
 - **Get Certificate**
 - **Get Deployment Field**

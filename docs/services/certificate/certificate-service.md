@@ -260,6 +260,65 @@ callback_url           : https://your.domain/
 ```
 <br/>
 
+## Transfer Certificate
+
+Transfer your certificate to another wallet
+
+>**POST** 
+
+```
+API_URL/api/certificate/transfer-certificate
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; multipart/form-data**
+
+**body &emsp; form-data**
+
+
+#### BODY 
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | wallet_address       | string          | Yes                 |
+    | to                   | string          | Yes                 |
+    | nft_id               | string          | Yes                 |
+    | contract_address     | string          | Yes                 |
+    | callback_url          | string         | Yes                  |
+
+
+```js title="Sample request"
+{
+    "wallet_address":"0x147f20a28739da1.....",
+    "to":"0xbD8992F758B4429b92D1Af....",
+    "contract_address":"0x4175a3EE7fbD167EAd1a.....",
+    "nft_id": "1",
+    "callback_url": "https://postman-echo.com/post?"
+}
+```
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "nft_token_id": 17,
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 1,
+        "from": "0x147f20a28739da1...",
+        "receiver_wallet_address": "0xbD8992F758B4429b92D1Af...",
+        "organisation_id": 2,
+        "certificate": "https://storage.maschain.con/....../metadata/1.json",
+        "certificate_image": "https://storage.maschain.con/....../image/example_image.pdf",
+        "status": "pending"
+    }
+}
+```
+
+
+<br/>
+
 ## Get Certificate
 
 Get Certificate details. Parameter can be null.
