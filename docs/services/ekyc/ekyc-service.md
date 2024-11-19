@@ -3,11 +3,11 @@ sidebar_position: 3
 ---
 
 
-# EKYC
+# e-KYC
 
 ## Generate H5 Verification links
 
-Generate H5 Ekyc link 
+Generate H5 e-KYC link 
 
 >**POST** 
 
@@ -44,9 +44,9 @@ Note: The maximum number of retry attempts is limited to 2 for OCR and 1 for Fac
 
 <br/>
 
-## Get Ekyc Verification
+## Get e-KYC Verification
 
-Get the Ekyc Details
+Get the e-KYC Details
 
 >**GET** 
 
