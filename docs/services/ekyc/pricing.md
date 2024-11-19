@@ -44,7 +44,7 @@ Note: In cases where only the OCR process is successfully completed but facial r
 | 101 - 300       | 0.42                         | 2.00                         |
 | 301 - 500       | 0.39                         | 1.80                         |
 | 501 - 1000      | 0.32                         | 1.50                         |
-| > 1,001         | 0.21                         | 1.00                         |
+| > 1,000         | 0.21                         | 1.00                         |
 
 ### Calculation example
 
