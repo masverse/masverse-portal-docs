@@ -170,6 +170,8 @@ API_URL/api/wallet/get-smart-contracts
         {
             "contract_address": "0x6326aFF363CcCdF4404450c24B48b926dDCeC88C",
             "contract_name": "TK4",
+            "organisation_id": 3,
+            "is_public": 1,
             "logo": null,
             "name": "TK14",
             "symbol": "TK4"
