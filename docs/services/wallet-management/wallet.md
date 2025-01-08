@@ -185,14 +185,14 @@ API_URL/api/wallet/create-user
 ```
 <br/>
 
-## Update Wallet by ID
+## Update Wallet by address
 
-Update wallet by id and store to db.
+Update wallet by address and store to db.
 
 >**PUT** 
 
 ```
-API_URL/api/wallet/wallet/{id}
+API_URL/api/wallet/wallet/{address}
 ```
 #### HEADERS
 
@@ -231,14 +231,14 @@ API_URL/api/wallet/wallet/{id}
 
 <br/>
 
-## Activate Wallet by ID
+## Activate Wallet by address
 
-Activate wallet by id.
+Activate wallet by address.
 
 >**PUT** 
 
 ```
-API_URL/api/wallet/wallet/{id}/activate
+API_URL/api/wallet/wallet/{address}/activate
 ```
 #### HEADERS
 
@@ -264,14 +264,14 @@ API_URL/api/wallet/wallet/{id}/activate
 
 <br/>
 
-## Deactivate Wallet by ID
+## Deactivate Wallet by address
 
-Deactivate wallet by id.
+Deactivate wallet by address.
 
 >**PUT** 
 
 ```
-API_URL/api/wallet/wallet/{id}/deactivate
+API_URL/api/wallet/wallet/{address}/deactivate
 ```
 #### HEADERS
 
