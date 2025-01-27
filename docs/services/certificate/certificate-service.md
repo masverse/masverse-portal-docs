@@ -274,10 +274,7 @@ API_URL/api/certificate/transfer-certificate
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
 
-**content-type &emsp; multipart/form-data**
-
-**body &emsp; form-data**
-
+**content-type &emsp; application/json**
 
 #### BODY 
     | Name                 | Type            | Required            |
