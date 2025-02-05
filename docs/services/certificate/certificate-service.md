@@ -168,8 +168,17 @@ Mint Certificate by contract_address and storing it in MasChain.
 
 >**POST** 
 
+>**Maximum 1 MB**
 ```
 API_URL/api/certificate/mint-certificate
+```
+>**Maximum 10 MB**
+```
+API_URL/api/certificate/mint-certificate-medium
+```
+>**Maximum 100 MB**
+```
+API_URL/api/certificate/mint-certificate-large
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
