@@ -60,5 +60,12 @@ a[href^="/services/ekyc/ekyc-extra"]
   display: none;
 }
 
+/* Temporary hide smart contract docs */
+a[href^="/services/custom-smart-contract"],
+div.menu__list-item-collapsible:has(a[href^="/category/custom-smart-contract"])
+{
+  display: none;
+}
+
 
 
