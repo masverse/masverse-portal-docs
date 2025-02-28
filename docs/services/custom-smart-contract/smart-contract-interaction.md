@@ -270,7 +270,7 @@ The returned values will be in the format of
     |       signed_trx       |   Yes    |              The self-signed transaction for the contract execution              |
 
 
-```js title="Sample Request Body (Custodial Wallet)"
+```js title="Sample Request Body (Non-custodial Wallet)"
 {
     "wallet_options": {
         "type": "non_custodial",
@@ -283,7 +283,7 @@ The returned values will be in the format of
 
 The returned values will be in the format of
 
-```js title="Sample Result (Custodial Wallet)"
+```js title="Sample Result (Non-custodial Wallet)"
 {
     "message": "Success",
     "result": {
