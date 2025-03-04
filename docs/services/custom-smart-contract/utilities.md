@@ -3,6 +3,58 @@ sidebar_position: 6
 ---
 # Utilities Endpoint
 
+## Get Chain ID
+
+Get Chain ID
+
+>**GET** 
+
+```
+API_URL/api/contract/utils/chain-id
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+The returned values will be in the format of
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": 2207
+}
+```
+
+<br/>
+
+## Get Gas Price
+
+Get Gas Price
+
+>**GET** 
+
+```
+API_URL/api/contract/utils/gas-price
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+The returned values will be in the format of
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": 0
+}
+```
+
+<br/>
+
 ## List Supported Compiler Versions
 
 List Supported Compiler Versions
