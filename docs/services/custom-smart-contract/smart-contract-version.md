@@ -413,6 +413,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}
     | deployment_params.*.sc_artifact_id |                       Yes                       |   The contract artifact ID. Retrieved from project version details API    |
     |     deployment_params.*.params     | Required if contract have deployment parameters |  Key-value array list of parameters required for the contract deployment  |
     |     deployment_params.*.order      |                       Yes                       |         The order of deployment of smart contract(s) in the list          |
+    |            callback_url            |                       No                        |             Callback URL to receive deployment status update              |
 
 ```js title="Sample Request Body (Custodial Wallet)"
 {
@@ -523,6 +524,41 @@ The returned values will be in the format of
         "created_at": "2025-02-05T09:11:58.000000Z",
         "updated_at": "2025-02-05T09:11:58.000000Z"
     }
+}
+```
+
+### Callback Response Format
+
+The returned result for a callback response will be in the below format:
+
+**Note: The callback will only trigger once all contracts defined in the deployment jobs are completed, or if an error occured during deployment.
+
+```js title="Sample Callback Response"
+{
+  "status": "Completed", // Status of the deployment - Completed: Successfully deployed; Error: Erro occured when deploying
+  "message": "Success", // Will contains the error message in case of failure
+  "deployment_id": "test-project_11-3_1741248042", // The deployment id of the deployment job
+  "deployed_contract_addresses": [ // Contains information of deployed contracts. 
+    {
+      "sc_artifact_id": 148, 
+      "contract_address": "0xD07012Dca98267Bfed4Ac8e6FCC1096F8990bC6c", // Deployed contract address
+      "receipt": {
+        "to": null,
+        "from": "0xc7f59f4f9e9e490023576e33cabb9f9cf5c48ac6",
+        "logs": [],
+        "type": "0x0",
+        "status": true,
+        "gasUsed": 218294,
+        "blockHash": "0x7d303035d0c84463c9f5998d125345136ed34ce788dd0a31dfe16737e8f29768",
+        "logsBloom": "0x000000000000000...",
+        "blockNumber": 5998152,
+        "contractAddress": "0xD07012Dca98267Bfed4Ac8e6FCC1096F8990bC6c",
+        "transactionHash": "0xa46f74a4b0f3fd9d9c23a4b5ea5b430df0323473fc9d28e8d6b9a66c526ed18f",
+        "transactionIndex": 0
+      }
+    },
+    ...
+  ]
 }
 ```
 

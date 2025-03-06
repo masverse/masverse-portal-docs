@@ -200,6 +200,7 @@ API_URL/api/contract/smart-contracts/{address}/execute
     | wallet_options.address |                  Yes                  |                    Wallet address to be used for contract execution                    |
     |      method_name       |                  Yes                  |                       The method name of the function to execute                       |
     |         params         | Required if method requires parameter |          Key-value array list of parameters required for the method execution          |
+    |      callback_url      |                  No                   |            Callback URL to receive transaction receipt when it is available            |
 
 
 ```js title="Sample Request Body (Custodial Wallet)"
@@ -222,39 +223,7 @@ The returned values will be in the format of
 {
     "message": "Success",
     "result": {
-        "requestId": 4003,
-        "nonce": 50,
-        "status": 2,
-        "receipt": {
-            "transactionHash": "0xb2a906eeddd6ec1e1ba3c8a9337bcfb35c48583abcf9c6be128546953d94f4ca",
-            "transactionIndex": 0,
-            "blockHash": "0x67358a6822992c126719ffee1ef2963ad03d5f2b19774a10030fcf3937df3df0",
-            "from": "0xc7f59f4f9e9e490023576e33cabb9f9cf5c48ac6",
-            "to": "0x22e726f2d2049bd6b7af65115590c157450f738c",
-            "blockNumber": 5679452,
-            "gasUsed": 27659,
-            "contractAddress": null,
-            "logs": [
-                {
-                    "address": "0x22E726F2d2049BD6b7af65115590C157450F738c",
-                    "topics": [
-                        "0x7ca2ca9527391044455246730762df008a6b47bbdb5d37a890ef78394535c040"
-                    ],
-                    "data": "0x0000000000000000000000000000000000000000000000000000000000000010",
-                    "blockHash": "0x67358a6822992c126719ffee1ef2963ad03d5f2b19774a10030fcf3937df3df0",
-                    "blockNumber": 5679452,
-                    "transactionHash": "0xb2a906eeddd6ec1e1ba3c8a9337bcfb35c48583abcf9c6be128546953d94f4ca",
-                    "transactionIndex": 0,
-                    "logIndex": 0,
-                    "transactionLogIndex": "0x0",
-                    "removed": false,
-                    "id": "log_19a73487"
-                }
-            ],
-            "logsBloom": "0x000000000000...",
-            "status": true,
-            "type": "0x0"
-        }
+        "transaction_hash": "0x26d6fa69315459f1bc2bce83047c9ef047a3d10aa937282a8fcd454a55662c57"
     }
 }
 ```
@@ -268,6 +237,7 @@ The returned values will be in the format of
     | wallet_options.address |   Yes    |                 Wallet address to be used for contract execution                 |
     |      method_name       |   Yes    |                    The method name of the function to execute                    |
     |       signed_trx       |   Yes    |              The self-signed transaction for the contract execution              |
+    |      callback_url      |    No    |         Callback URL to receive transaction receipt when it is available         |
 
 
 ```js title="Sample Request Body (Non-custodial Wallet)"
@@ -287,41 +257,51 @@ The returned values will be in the format of
 {
     "message": "Success",
     "result": {
-        "requestId": 4002,
-        "transactionHash": "0xbf3ee3ccc6fa9dbac294cee461f9b5803479b3f54338711ef031899de6526704",
-        "from": "0x6BCEB78D049FFE517b060fbD6DC1eA11b8e3f4f7",
-        "status": 2,
-        "receipt": {
-            "transactionHash": "0xbf3ee3ccc6fa9dbac294cee461f9b5803479b3f54338711ef031899de6526704",
-            "transactionIndex": 0,
-            "blockHash": "0xda22cab1111bb5008dc25c7eda5ab9e557e35fe76ee073042b118a3f9f73f1b5",
-            "from": "0x6bceb78d049ffe517b060fbd6dc1ea11b8e3f4f7",
-            "to": "0x8daae2e5bf2ac0833b2287864a15fa860b98ebdd",
-            "blockNumber": 5581339,
-            "gasUsed": 27659,
-            "contractAddress": null,
-            "logs": [
-                {
-                    "address": "0x8dAaE2E5bf2AC0833B2287864A15Fa860B98EbDd",
-                    "topics": [
-                        "0x7ca2ca9527391044455246730762df008a6b47bbdb5d37a890ef78394535c040"
-                    ],
-                    "data": "0x0000000000000000000000000000000000000000000000000000000000000008",
-                    "blockHash": "0xda22cab1111bb5008dc25c7eda5ab9e557e35fe76ee073042b118a3f9f73f1b5",
-                    "blockNumber": 5581339,
-                    "transactionHash": "0xbf3ee3ccc6fa9dbac294cee461f9b5803479b3f54338711ef031899de6526704",
-                    "transactionIndex": 0,
-                    "logIndex": 0,
-                    "transactionLogIndex": "0x0",
-                    "removed": false,
-                    "id": "log_c521d40c"
-                }
-            ],
-            "logsBloom": "0x000000000000...",
-            "status": true,
-            "type": "0x0"
-        }
+        "transaction_hash": "0x26d6fa69315459f1bc2bce83047c9ef047a3d10aa937282a8fcd454a55662c57"
     }
+}
+```
+
+### Callback Response Format
+
+The returned result for a callback response will be in the below format:
+
+**Note: The callback will only trigger once the transaction receipt is available, or if an error occured during contract execution.
+
+```js title="Sample Callback Response"
+{
+  "status": "Success", // Returns Error if any error occured
+  "transactionHash": "0x26d6fa69315459f1bc2bce83047c9ef047a3d10aa937282a8fcd454a55662c57",
+  "receipt": {
+    "transactionHash": "0x26d6fa69315459f1bc2bce83047c9ef047a3d10aa937282a8fcd454a55662c57",
+    "transactionIndex": 0,
+    "blockHash": "0xaa473178b5120e42a31de6a882344903ffaeb54ccb01a63a897654c43d2f7fba",
+    "from": "0xc7f59f4f9e9e490023576e33cabb9f9cf5c48ac6",
+    "to": "0x22e726f2d2049bd6b7af65115590c157450f738c",
+    "blockNumber": 5998304,
+    "gasUsed": 27659,
+    "contractAddress": null,
+    "logs": [
+      {
+        "address": "0x22E726F2d2049BD6b7af65115590C157450F738c",
+        "topics": [
+          "0x7ca2ca9527391044455246730762df008a6b47bbdb5d37a890ef78394535c040"
+        ],
+        "data": "0x0000000000000000000000000000000000000000000000000000000000000019",
+        "blockHash": "0xaa473178b5120e42a31de6a882344903ffaeb54ccb01a63a897654c43d2f7fba",
+        "blockNumber": 5998304,
+        "transactionHash": "0x26d6fa69315459f1bc2bce83047c9ef047a3d10aa937282a8fcd454a55662c57",
+        "transactionIndex": 0,
+        "logIndex": 0,
+        "transactionLogIndex": "0x0",
+        "removed": false,
+        "id": "log_c554cb45"
+      }
+    ],
+    "logsBloom": "0x00000000000000...",
+    "status": true,
+    "type": "0x0"
+  }
 }
 ```
 
