@@ -21,24 +21,30 @@ API_URL/api/ekyc/verifications
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 #### Params     
-    | Name                 | Required            |  Description |
-    |:--------------------:|:-------------------:|:-------------------:|
-    | type       | Yes                 |        00 (OCR + FACE + LIVENESS ) or 01 (OCR Only) |
-    | id_country     | Yes             | Country Code ( ISO-3166 alpha-3 format) |     
-    | id_type   | Yes | ID_CARD or PASSPORT |
-    | redirect_url   | Yes | link to redirect after completion |
+    |       Name        |                   Required                   |                            Description                             |
+    | :---------------: | :------------------------------------------: | :----------------------------------------------------------------: |
+    |       type        |                     Yes                      |            00 (OCR + FACE + LIVENESS ) or 01 (OCR Only)            |
+    |    id_country     | Required if select_id_country is not present |              Country Code ( ISO-3166 alpha-3 format)               |
+    | select_id_country |    Required if id_country is not present     | Option to allow user to select document issuing country during OCR |
+    |      id_type      |  Required if select_id_type is not present   | ID_CARD or PASSPORT. ID_CARD is only supported by MYS country code |
+    |  select_id_type   |      Required if id_type is not present      |      Option to allow user to select document type during OCR       |
+    |   redirect_url    |                     Yes                      |                 link to redirect after completion                  |
 
 Note: The maximum number of retry attempts is limited to 2 for OCR and 1 for Face Recognition.
 
+### Supported OCR Document/Country List
+    | ID Type  |                                                           Supported Country (ISO-3166 alpha-3) code                                                            |
+    | :------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+    | ID_CARD  |                                                                              MYS                                                                               |
+    | PASSPORT | AUS, BGD, CAN, CHN, CUB, DEU, FRA, IND, IDN, IRN, ITA, JPN, KAZ, KOR, LAO, MYS, MNG, NLD, NZL, NGA, PAK, PHL, RUS, SAU, SGP, SYR, THA, UKR, GBR, USA, VNM, ZAF |
+
 ```js title="Sample result"
-{
 {
     "status": 200,
     "result": {
         "url": "http://localhost:3001?token=4KK6FYHVZ...",
         "token": "4KK6FYHVZ..."
     }
-}
 }
 ```
 
