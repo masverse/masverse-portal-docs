@@ -1,7 +1,7 @@
 ---
 sidebar_position: 6
 ---
-# Transactions Endpoint
+# Transactions & Accounts Endpoint
 
 ## Get Transaction
 
@@ -103,6 +103,32 @@ The returned values will be in the format of
         "effectiveGasPrice": 0,
         "type": "0x0"
     }
+}
+```
+
+<br/>
+
+## Get Account Nonce
+
+Get Account nonce by address
+
+>**GET** 
+
+```
+API_URL/api/contract/accounts/{address}/nonce
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+The returned values will be in the format of
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": 15
 }
 ```
 
