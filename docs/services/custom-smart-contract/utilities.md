@@ -234,3 +234,54 @@ The returned values will be in the format of
 ```
 
 <br/>
+
+## Simulate Transaction
+
+Simulate Transaction Execution
+
+**Note: The revert reason returned from this API depends on the underlying smart contract. If no revert reason was included, there will be no revert reason included in the response as well.
+
+>**POST** 
+
+```
+API_URL/api/contract/utils/simulate-transaction
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+#### Params     
+    | Name  | Required |                                                 Description                                                  |
+    | :---: | :------: | :----------------------------------------------------------------------------------------------------------: |
+    | from  |    No    | The sender address. If transaction expects specific sender, the corresponding from address shall be included |
+    |  to   | Required |                                         The target/receiver address                                          |
+    | value |    No    |                                   Amount to transfer with the transaction                                    |
+    | data  |    No    |                                         ABI encoded transaction data                                         |
+    | nonce |    No    |                                                    Nonce                                                     |
+
+```js title="Sample Request Body (Contract Execution)"
+{
+        "from": "0x4D377Ac7de73F399B8418F1e22c86920aF0B445F",
+        "to": "0xf099a210E8B7D77B73E840c46cfB8aE4A40F25e8",
+        "data": "0xa0ab965300000000000000000...",
+        "value": 0,
+        "gasPrice": 0,
+        "nonce": 1
+    }
+```
+
+The returned values will be in the format of
+
+```js title="Sample Result (Error)"
+{
+    "message": "Success",
+    "result": {
+        "success": false, // Indicator if the transaction is successful
+        "message": "Returned error: VM Exception while processing transaction: revert Invalid signature provided" // Revert reason if any
+    }
+}
+```
+
+<br/>
