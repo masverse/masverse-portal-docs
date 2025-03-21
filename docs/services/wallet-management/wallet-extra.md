@@ -192,6 +192,70 @@ API_URL/api/wallet/get-smart-contracts
 <br/>
 
 
+## Get Smart contracts V2
+
+Get Smart contracts V2
+ 
+>**GET** 
+
+```
+API_URL/api/wallet/get-smart-contracts
+```
+#### HEADERS
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+**content-type &emsp; application/json**
+
+### Pagination
+#### Query string
+    | Name                 |Required            |
+    |:--------------------:|:---------------:|
+    | contract_address_hash           | no                 |
+    | fiat_value           | no                 |
+    | holder_count           | no                 |
+    | is_name_null           | no                 |
+    | items_count           | no                 |
+    | market_cap           | no                 |
+    | name           | no                 |
+
+
+```js title="Sample result"
+{
+  "status": 200,
+  "result": {
+    "items": [
+      {
+        "address": "0xCEC3d6689ed50b9...",
+        "circulating_market_cap": null,
+        "decimals": null,
+        "exchange_rate": null,
+        "holders": "4",
+        "icon_url": null,
+        "name": "penguin",
+        "symbol": "CERT",
+        "total_supply": null,
+        "type": "ERC-721",
+        "volume_24h": null
+      }
+    ],
+    "next_page_params": {
+      "contract_address_hash": "0xe27aa3916bc930415...",
+      "fiat_value": null,
+      "holder_count": 3,
+      "is_name_null": false,
+      "items_count": 50,
+      "locale": "en",
+      "market_cap": null,
+      "name": "template..."
+    }
+  }
+}
+```
+<br/>
+
+
 ## Get Transaction Details
 
 Get Transaction Details
