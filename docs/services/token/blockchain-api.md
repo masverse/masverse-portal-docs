@@ -210,9 +210,9 @@ API_URL/api/token/get-wallet-tokens?address={wallet_address}
 
 <br/>
 
-# Get Tokens Transfer History
+# Get Tokens Abi
 
-Get all token from wallets
+Get token abi
 
 >**GET** 
 
