@@ -91,7 +91,7 @@ Get the Token price
 >**GET** 
 
 ```
-API_URL/api/token/get-token-price
+API_URL/api/token/get-all-token-price
 ```
 #### HEADERS
 
@@ -101,21 +101,24 @@ API_URL/api/token/get-token-price
 **content-type**   : application/json
 </pre>
 
-#### Query string
-    | Name                 | Type            | Required            |
-    |:--------------------:|:---------------:|:-------------------:|
-    | contract_address     | string          | yes                 |
-
-if no contract_address pass will use MasToken as Default <br/>
-if invalid contract_address was pass will use MasToken
 
 ```js title="Sample result"
 {
   "status": 200,
-  "result": {
-    "contract_address": "0xc02161D9e08E620d....",
-    "token_price": 4.55
-  }
+  "result": [
+    {
+      "contract_address": "0x5eca43F90A8...",
+      "token_price": 4.45
+    },
+    {
+      "contract_address": "0x6FdB5730972...",
+      "token_price": 2.25
+    },
+    {
+      "contract_address": "0xdEc4Ea37672...",
+      "token_price": 4.45
+    }
+  ]
 }
 ```
 
