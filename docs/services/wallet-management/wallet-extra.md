@@ -414,3 +414,105 @@ API_URL/api/wallet/get-transaction-details/{tx_id}
 }
 ```
 <br/>
+
+
+
+# Get Tokens Transfer History
+
+Get all token from wallets
+
+>**POST** 
+
+```
+API_URL/api/wallet/get-wallet-tokens?contract_address={wallet_address}
+```
+#### HEADERS
+
+<pre>
+**client_id**      : 9b16ae5638534ae19...*
+**client_secret**  : sk_9b16ae5638534ae...* 
+**content-type**   : application/json
+</pre>
+
+
+#### Query string
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | contract_address              | string          | Yes                 |
+
+### Pagination
+#### Query string
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | block_number         | int          | no                 |
+    | index               | int          | no                 |
+
+```js title="Sample result"
+{
+  "status": 200,
+  "result": {
+    "items": [
+      {
+        "block_hash": "0xb39c724618c336b632f60be2802c9e3d8d6f9b1d2888ce9ad80d0a4dbb1331de",
+        "from": {
+          "ens_domain_name": null,
+          "hash": "0x147f20a28739da15419AdC04e61fd83e60962683",
+          "implementation_address": null,
+          "implementation_name": null,
+          "implementations": [],
+          "is_contract": false,
+          "is_verified": false,
+          "metadata": null,
+          "name": null,
+          "private_tags": [],
+          "public_tags": [],
+          "watchlist_names": []
+        },
+        "log_index": "5",
+        "method": "0x10cb2e7f",
+        "timestamp": "2024-06-07T08:01:18.000000Z",
+        "to": {
+          "ens_domain_name": null,
+          "hash": "0xa6bF43b1612F7e729828A957E4BFF4160Ee242F1",
+          "implementation_address": null,
+          "implementation_name": null,
+          "implementations": [],
+          "is_contract": false,
+          "is_verified": false,
+          "metadata": null,
+          "name": null,
+          "private_tags": [],
+          "public_tags": [],
+          "watchlist_names": []
+        },
+        "token": {
+          "address": "0xF9B9B40FD1d6f1d155ded0b5d0c3db9Cedc56064",
+          "circulating_market_cap": null,
+          "decimals": "18",
+          "exchange_rate": null,
+          "holders": "6",
+          "icon_url": null,
+          "name": "Demo",
+          "symbol": "DM",
+          "total_supply": "8000000000000000000000",
+          "type": "ERC-20",
+          "volume_24h": null
+        },
+        "total": {
+          "decimals": "18",
+          "value": "100000000000000"
+        },
+        "tx_hash": "0xe37ec624a600d7481aa085701be77010db4a4556b80e2c3c96652e89d6ee9c21",
+        "type": "token_transfer"
+      }
+    ],
+    "next_page_params": {
+      "block_number": 1675670,
+      "index": 1,
+      "locale": "en"
+    }
+  }
+}
+```
+
+<br/>
