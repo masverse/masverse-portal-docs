@@ -424,7 +424,7 @@ Get all token from wallets
 >**POST** 
 
 ```
-API_URL/api/wallet/get-wallet-tokens?contract_address={wallet_address}
+API_URL/api/wallet/get-token-transfers?wallet_address={wallet_address}
 ```
 #### HEADERS
 
@@ -438,7 +438,7 @@ API_URL/api/wallet/get-wallet-tokens?contract_address={wallet_address}
 #### Query string
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
-    | contract_address              | string          | Yes                 |
+    | wallet_address              | string          | Yes                 |
 
 ### Pagination
 #### Query string
