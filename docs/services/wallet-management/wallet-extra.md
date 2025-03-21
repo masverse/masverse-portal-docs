@@ -417,7 +417,7 @@ API_URL/api/wallet/get-transaction-details/{tx_id}
 
 
 
-# Get Tokens Transfer History
+## Get Tokens Transfer History
 
 Get all token from wallets
 
