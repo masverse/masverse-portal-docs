@@ -271,12 +271,12 @@ API_URL/api/contract/projects/{projectSlug}/versions
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 #### Params     
-    |            Name            | Required |                                                                      Description                                                                      |
-    | :------------------------: | :------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
-    |          version           |   Yes    |                  The version name. Only accepts alpha numeric charaters, dot(.), dash(-) and underscore. Empty space is not allowed                   |
-    | compiler_settings.solidity |   Yes    |                                          Solidity version to be used to compile the uploaded smart contracts                                          |
-    |       contract_files       |   Yes    |                                List of contract files to be compiled. Uploaded files must be in solidity(.sol) format                                 |
-    |          packages          |    No    | Lis of package name used by the uploaded smart contract as an array of strings. Can be ommitted if the uploaded smart contract is in flattened format |
+    |       Name        | Required |                                                                      Description                                                                      |
+    | :---------------: | :------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
+    |      version      |   Yes    |                  The version name. Only accepts alpha numeric charaters, dot(.), dash(-) and underscore. Empty space is not allowed                   |
+    | compiler_settings |   Yes    |                                             Compiler settings to use to compile uploaded smart contracts                                              |
+    |  contract_files   |   Yes    |                                List of contract files to be compiled. Uploaded files must be in solidity(.sol) format                                 |
+    |     packages      |    No    | Lis of package name used by the uploaded smart contract as an array of strings. Can be ommitted if the uploaded smart contract is in flattened format |
 
 ```bash title="Sample Request"
 curl -X POST "https://API_URL/api/contract/projects/{projectSlug}/versions" \
@@ -284,7 +284,9 @@ curl -X POST "https://API_URL/api/contract/projects/{projectSlug}/versions" \
   -H "client_secret: sk_9b16ae5638534ae1961fb370f874b6cc" \
   -F "contract_files[]=@/path/to/ContractA.pdf" \
   -F "version=v1.01" \
-  -F "compiler_settings[solidity]=v0.8.27" \
+  -F "compiler_settings[solidity][version]=v0.8.27" \
+  -F "compiler_settings[solidity][settings][optimizer][enabled]=1" \
+  -F "compiler_settings[solidity][settings][optimizer][runs]=200" \
   -F "packages[]=ethers" \
   -F "packages[]=@openzeppelin/hardhat-upgrades" \
 
@@ -301,7 +303,15 @@ The returned values will be in the format of
         "version": "v1.01",
         "slug": "4-v101",
         "compiler_settings": {
-            "solidity": "0.8.27"
+            "solidity": {
+                "version": "0.8.27",
+                "settings": {
+                    "optimizer": {
+                        "enabled": true,
+                        "runs": 200
+                    }
+                }
+            }
         },
         "packages": [
             "ethers",
@@ -338,12 +348,12 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 #### Params     
-    |            Name            | Required |                                                                      Description                                                                       |
-    | :------------------------: | :------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
-    |          version           |   Yes    |                   The version name. Only accepts alpha numeric charaters, dot(.), dash(-) and underscore. Empty space is not allowed                   |
-    | compiler_settings.solidity |   Yes    |                                          Solidity version to be used to compile the uploaded smart contracts                                           |
-    |       contract_files       |   Yes    |                                 List of contract files to be compiled. Uploaded files must be in solidity(.sol) format                                 |
-    |          packages          |    No    | List of package name used by the uploaded smart contract as an array of strings. Can be ommitted if the uploaded smart contract is in flattened format |
+    |       Name        | Required |                                                                      Description                                                                       |
+    | :---------------: | :------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
+    |      version      |   Yes    |                   The version name. Only accepts alpha numeric charaters, dot(.), dash(-) and underscore. Empty space is not allowed                   |
+    | compiler_settings |   Yes    |                                              Compiler settings to use to compile uploaded smart contracts                                              |
+    |  contract_files   |   Yes    |                                 List of contract files to be compiled. Uploaded files must be in solidity(.sol) format                                 |
+    |     packages      |    No    | List of package name used by the uploaded smart contract as an array of strings. Can be ommitted if the uploaded smart contract is in flattened format |
 
 ```bash title="Sample Request"
 curl -X POST "https://API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}" \
@@ -351,7 +361,9 @@ curl -X POST "https://API_URL/api/contract/projects/{projectSlug}/versions/{vers
   -H "client_secret: sk_9b16ae5638534ae1961fb370f874b6cc" \
   -F "contract_files[]=@/path/to/ContractA.pdf" \
   -F "version=v1.01" \
-  -F "compiler_settings[solidity]=v0.8.27" \
+  -F "compiler_settings[solidity][version]=v0.8.27" \
+  -F "compiler_settings[solidity][settings][optimizer][enabled]=1" \
+  -F "compiler_settings[solidity][settings][optimizer][runs]=200" \
   -F "packages[]=ethers" \
   -F "packages[]=@openzeppelin/hardhat-upgrades" \
 
@@ -368,7 +380,15 @@ The returned values will be in the format of
         "version": "v1.01",
         "slug": "4-v101",
         "compiler_settings": {
-            "solidity": "0.8.27"
+            "solidity": {
+                "version": "0.8.27",
+                "settings": {
+                    "optimizer": {
+                        "enabled": true,
+                        "runs": 200
+                    }
+                }
+            }
         },
         "packages": [
             "ethers",
