@@ -263,13 +263,13 @@ API_URL/api/contract/utils/simulate-transaction
 
 ```js title="Sample Request Body (Contract Execution)"
 {
-        "from": "0x4D377Ac7de73F399B8418F1e22c86920aF0B445F",
-        "to": "0xf099a210E8B7D77B73E840c46cfB8aE4A40F25e8",
-        "data": "0xa0ab965300000000000000000...",
-        "value": 0,
-        "gasPrice": 0,
-        "nonce": 1
-    }
+    "from": "0x4D377Ac7de73F399B8418F1e22c86920aF0B445F",
+    "to": "0xf099a210E8B7D77B73E840c46cfB8aE4A40F25e8",
+    "data": "0xa0ab965300000000000000000...",
+    "value": 0,
+    "gasPrice": 0,
+    "nonce": 1
+}
 ```
 
 The returned values will be in the format of
