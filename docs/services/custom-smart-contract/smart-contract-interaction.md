@@ -144,17 +144,19 @@ API_URL/api/contract/smart-contracts/{address}/call
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 #### Params     
-    |    Name     |               Required                |                           Description                           |
-    | :---------: | :-----------------------------------: | :-------------------------------------------------------------: |
-    |    from     |                  Yes                  |           The address to call the smart contract from           |
-    | method_name |                  Yes                  |                     The method name to call                     |
-    |   params    | Required if method requires parameter | Key-value array list of parameters required for the method call |
+    |     Name     |               Required                |                                                                                                        Description                                                                                                         |
+    | :----------: | :-----------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+    |     from     |                  Yes                  |                                                                                        The address to call the smart contract from                                                                                         |
+    | method_name  |                  Yes                  |                                                                                                  The method name to call                                                                                                   |
+    | contract_abi |                  No                   | By default, the contract abi of the contract's compiled artifact will be used. In case of interaction with a proxy's implementation contract, you will be required to provide this information for successful interaction. |
+    |    params    | Required if method requires parameter |                                                                              Key-value array list of parameters required for the method call                                                                               |
 
 
 ```js title="Sample Request Body"
 {
     "from": "0xC7F59f4F9E...Cabb9F9Cf5c48ac6",
     "method_name": "methodName",
+    "contract_abi": [...], // Optional - see description
     "params": {
         "fieldA": "...",
         ...
@@ -194,13 +196,14 @@ API_URL/api/contract/smart-contracts/{address}/execute
 ### Example using custodial wallet
 
 #### Params     
-    |          Name          |               Required                |                                      Description                                       |
-    | :--------------------: | :-----------------------------------: | :------------------------------------------------------------------------------------: |
-    |  wallet_options.type   |                  Yes                  | Wallet type to be used for contract execution. Accepted values: organisation, end_user |
-    | wallet_options.address |                  Yes                  |                    Wallet address to be used for contract execution                    |
-    |      method_name       |                  Yes                  |                       The method name of the function to execute                       |
-    |         params         | Required if method requires parameter |          Key-value array list of parameters required for the method execution          |
-    |      callback_url      |                  No                   |            Callback URL to receive transaction receipt when it is available            |
+    |          Name          |               Required                |                                                                                                                                   Description                                                                                                                                   |
+    | :--------------------: | :-----------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+    |  wallet_options.type   |                  Yes                  |                                                                                             Wallet type to be used for contract execution. Accepted values: organisation, end_user                                                                                              |
+    | wallet_options.address |                  Yes                  |                                                                                                                Wallet address to be used for contract execution                                                                                                                 |
+    |      method_name       |                  Yes                  |                                                                                                                   The method name of the function to execute                                                                                                                    |
+    |      contract_abi      |                  No                   | By default, the contract abi of the contract's compiled artifact will be used. In case of interaction with a proxy's implementation contract, you will be required to provide this information for successful interaction. Not required if executed through signed transaction. |
+    |         params         | Required if method requires parameter |                                                                                                      Key-value array list of parameters required for the method execution                                                                                                       |
+    |      callback_url      |                  No                   |                                                                                                        Callback URL to receive transaction receipt when it is available                                                                                                         |
 
 
 ```js title="Sample Request Body (Custodial Wallet)"
@@ -210,6 +213,7 @@ API_URL/api/contract/smart-contracts/{address}/execute
         "address": "0xC7F59f4F9E9e490023576E33Cabb9F9Cf5c48ac6"
     },
     "method_name": "increment",
+    "contract_abi": [...], // Optional - see description
     "params": {
         "fieldA": "...",
         ...
