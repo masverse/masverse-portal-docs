@@ -253,13 +253,13 @@ API_URL/api/contract/utils/simulate-transaction
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 #### Params     
-    | Name  | Required |                                                 Description                                                  |
-    | :---: | :------: | :----------------------------------------------------------------------------------------------------------: |
-    | from  |    No    | The sender address. If transaction expects specific sender, the corresponding from address shall be included |
-    |  to   | Required |                                         The target/receiver address                                          |
-    | value |    No    |                                   Amount to transfer with the transaction                                    |
-    | data  |    No    |                                         ABI encoded transaction data                                         |
-    | nonce |    No    |                                                    Nonce                                                     |
+    | Name  |                   Required                    |                                                 Description                                                  |
+    | :---: | :-------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
+    | from  | At least one of the listed fields is required | The sender address. If transaction expects specific sender, the corresponding from address shall be included |
+    |  to   | At least one of the listed fields is required |                                         The target/receiver address                                          |
+    | value | At least one of the listed fields is required |                                   Amount to transfer with the transaction                                    |
+    | data  | At least one of the listed fields is required |                                         ABI encoded transaction data                                         |
+    | nonce |                      No                       |                                                    Nonce                                                     |
 
 ```js title="Sample Request Body (Contract Execution)"
 {
