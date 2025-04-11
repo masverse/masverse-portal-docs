@@ -64,7 +64,7 @@ a[href^="/services/ekyc/ekyc-extra"]
 a[href^="/services/custom-smart-contract"],
 div.menu__list-item-collapsible:has(a[href^="/category/custom-smart-contract"])
 {
-  display: none;
+  /* display: none; */
 }
 
 

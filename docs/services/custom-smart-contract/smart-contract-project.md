@@ -37,9 +37,9 @@ The returned values will be in the format of
     ],
     "pagination": {
         "current_page": 1,
-        "first_page_url": "http://localhost/api/projects?page=1",
+        "first_page_url": "http://localhost/api/contract/projects?page=1",
         "last_page": 1,
-        "last_page_url": "http://localhost/api/projects?page=1",
+        "last_page_url": "http://localhost/api/contract/projects?page=1",
         "next_page_url": null,
         "per_page": 10,
         "prev_page_url": null,

@@ -38,9 +38,9 @@ The returned values will be in the format of
     ],
     "pagination": {
         "current_page": 1,
-        "first_page_url": "http://localhost/api/smart-contracts?page=1",
+        "first_page_url": "http://localhost/api/contract/smart-contracts?page=1",
         "last_page": 1,
-        "last_page_url": "http://localhost/api/smart-contracts?page=1",
+        "last_page_url": "http://localhost/api/contract/smart-contracts?page=1",
         "next_page_url": null,
         "per_page": 10,
         "prev_page_url": null,
@@ -306,6 +306,91 @@ The returned result for a callback response will be in the below format:
     "status": true,
     "type": "0x0"
   }
+}
+```
+
+<br/>
+
+## Smart Contract Token Transfers
+
+List Smart Contract Token Transfer History
+
+>**GET** 
+
+```
+API_URL/api/contract/smart-contracts/{address}/token-transfers
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+The returned values will be in the format of
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": [
+        {
+            "block_hash": "0x8fd74fd2765e15e551ddd5102b27762e6af805ffad9cd14180df9b6cdceecaaa",
+            "block_number": 6488863,
+            "from": {
+                "ens_domain_name": null,
+                "hash": "0xc7DD0E0275FCB2b3578f04CEd86F44D1CaF618a6",
+                "implementations": [],
+                "is_contract": false,
+                "is_scam": false,
+                "is_verified": false,
+                "metadata": null,
+                "name": null,
+                "private_tags": [],
+                "proxy_type": null,
+                "public_tags": [],
+                "watchlist_names": []
+            },
+            "log_index": 0,
+            "method": "transfer",
+            "timestamp": "2025-04-09T09:52:30.000000Z",
+            "to": {
+                "ens_domain_name": null,
+                "hash": "0x4891F984221cF124F6b041B533F07Fb298c1b75e",
+                "implementations": [],
+                "is_contract": true,
+                "is_scam": false,
+                "is_verified": true,
+                "metadata": null,
+                "name": "CoKeepsMultisigFinal",
+                "private_tags": [],
+                "proxy_type": null,
+                "public_tags": [],
+                "watchlist_names": []
+            },
+            "token": {
+                "address": "0xA6D2D34530874B92ABC81500E5029050bD1a918a",
+                "circulating_market_cap": null,
+                "decimals": "18",
+                "exchange_rate": null,
+                "holders": "6",
+                "icon_url": null,
+                "name": "TestToken",
+                "symbol": "TTK",
+                "total_supply": "1000000000000000000000000",
+                "type": "ERC-20",
+                "volume_24h": null
+            },
+            "total": {
+                "decimals": "18",
+                "value": "100"
+            },
+            "transaction_hash": "0xe5dace25f6be4821f2121445df15eaf2721f942c9371f0ac367b321529b42dae",
+            "type": "token_transfer"
+        },
+        ...
+    ],
+    "pagination": {
+        "next_page_url": null
+    }
 }
 ```
 
