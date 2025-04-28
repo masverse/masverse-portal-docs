@@ -414,7 +414,7 @@ Deploy Smart Contract Version
 >**POST** 
 
 ```
-API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}
+API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/deploy
 ```
 #### HEADERS
 
