@@ -21,6 +21,12 @@ API_URL/api/contract/smart-contracts
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
+#### Params     
+    |         Name         | Required |              Description               |
+    | :------------------: | :------: | :------------------------------------: |
+    |    filter-version    |    No    | Filter smart contract by version slug  |
+    | filter-deployment_id |    No    | Filter smart contract by deployment id |
+
 The returned values will be in the format of
 
 ```js title="Sample Result"
