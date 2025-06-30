@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Certificate 
+# Non-fungible token 
 
 ## Get Smart Contract list
 
@@ -73,7 +73,7 @@ API_URL/api/certificate/get-smart-contract/{id}
 
 ## Create Smart Contract
 
-Create New Certificate Smart Contract to MasChain with fields. You may also create this smart contract in the portal.
+Create New NFT Smart Contract to MasChain with fields. You may also create this smart contract in the portal.
 >**POST** 
 
 ```
@@ -102,23 +102,23 @@ API_URL/api/certificate/create-smartcontract
 * ***name*** is just to give a nickname for the smart contract.
 * ***field*** is an object that contains the required properties to create this smart contract.
     * **wallet_address_owner** : owner of the smart contract
-    * **max_supply** : Total maximum supply of certificates ( max 2^256 ) *Put 0 for unlimited supply
-    * **name** : Name of the certificate 
-    * **symbol** : Symbol of the certificate
+    * **max_supply** : Total maximum supply of NFT ( max 2^256 ) *Put 0 for unlimited supply
+    * **name** : Name of the NFT 
+    * **symbol** : Symbol of the NFT
 * ***image*** A base64 image with max size of 0.5mb
 * ***callback_url*** response after data is minted into blockchain
 
->****IMPORTANT : Only Owner can mint certificates**
+>****IMPORTANT : Only Owner can mint NFT**
 
 ```js title="Sample request"
 {
     "wallet_address":"0x3423BF219008A8D6b644b79.....", //Address used to deploy this contract
     "name" : "NFT2", //Contract Nickname
     "field":{
-        "wallet_address_owner":"0x3423BF219008A8D6b644b79.....", //Owner of the Certificate contract
+        "wallet_address_owner":"0x3423BF219008A8D6b644b79.....", //Owner of the NFT contract
         "max_supply":1000, //Maximum supply 
-        "name":"MasChain", //Name of Certificate
-        "symbol":"MT" //Certificate Symbol
+        "name":"MasChain", //Name of NFT
+        "symbol":"MT" //NFT Symbol
     },
     "image": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAA..."
     "callback_url": "https://postman-echo.com/post?"
@@ -162,9 +162,9 @@ API_URL/api/certificate/create-smartcontract
 ```
 <br/>
 
-## Mint Certificate
+## Mint NFT
 
-Mint Certificate by contract_address and storing it in MasChain.
+Mint NFT by contract_address and storing it in MasChain.
 
 >**POST** 
 
@@ -173,6 +173,10 @@ Mint Certificate by contract_address and storing it in MasChain.
 API_URL/api/certificate/mint-certificate
 ```
 >**Maximum 10 MB**
+```
+API_URL/api/certificate/mint-certificate-small
+```
+>**Maximum 30 MB**
 ```
 API_URL/api/certificate/mint-certificate-medium
 ```
@@ -215,12 +219,12 @@ description           : NFT CERT
 callback_url           : https://your.domain/
 ```
 * ***wallet_address*** must be the owner of the smart contract.
-* ***to*** is the receiver of the certificate.
-* ***contract_address*** is the certificate contract address.
-* ***attributes*** is the additional attribute of a certificate being minted. Could be none and not required. Also no limitation.
-* ***name*** name of the certificate being minted.
+* ***to*** is the receiver of the NFT.
+* ***contract_address*** is the NFT contract address.
+* ***attributes*** is the additional attribute of a NFT being minted. Could be none and not required. Also no limitation.
+* ***name*** name of the NFT being minted.
 * ***file*** max size of 1mb
-* ***description*** description of the certificate being minted.
+* ***description*** description of the NFT being minted.
 * ***callback_url*** response after data is minted into blockchain
 
 <br/>
@@ -269,9 +273,9 @@ callback_url           : https://your.domain/
 ```
 <br/>
 
-## Transfer Certificate
+## Transfer NFT
 
-Transfer your certificate to another wallet
+Transfer your NFT to another wallet
 
 >**POST** 
 
@@ -325,9 +329,9 @@ API_URL/api/certificate/transfer-certificate
 
 <br/>
 
-## Get Certificate
+## Get NFT
 
-Get Certificate details. Parameter can be null.
+Get NFT details. Parameter can be null.
 
 >**GET** 
 
@@ -388,9 +392,9 @@ status                : success or fail or pending , default success
 
 <br/>
 
-## Get Certificate Transactions
+## Get NFT Transactions
 
-Get success Certificate Transactions
+Get success NFT Transactions
 
 >**GET** 
 
