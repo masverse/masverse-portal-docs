@@ -71,7 +71,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 101 - 500       | 2.25                         | 9.50                        |
 | 501 - 1000      | 2.15                         | 9.00                         |
 | 1,001 - 2,000   | 2.02                         | 8.50                         |
-| > 2,000         | 1.19                         | 5.00                         |
+| > 2,000         | 1.90                         | 8.00                         |
 
 ### Calculation example
 
