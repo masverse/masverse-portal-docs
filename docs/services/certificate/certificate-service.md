@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# Non-fungible token 
+# Non-Fungible token 
 
 ## Get Smart Contract list
 

@@ -5,7 +5,7 @@ sidebar_position: 2
 # Pricing
 ## Pay Per Use Fees
 
-#### Create Certificate ( file < 1mb )
+### Create Non-Fungible Token (file < 1mb)
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
@@ -16,7 +16,7 @@ sidebar_position: 2
 | 1,001 - 2,000   | 0.18                         | 0.85                         |
 | > 2,000         | 0.17                         | 0.80                         |
 
-### Calculation example
+#### Calculation example
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
 
@@ -35,7 +35,7 @@ The table above represents the usage fees for the service. The amount will be ch
 <br/>
 
 
-#### Create Certificate ( file < 10mb )
+### Create Non-Fungible Token (file < 10mb)
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
@@ -45,7 +45,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 1,001 - 2,000   | 1.01                         | 4.25                         |
 | > 2,000         | 0.95                         | 4.00                         |
 
-### Calculation example
+#### Calculation example
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 5.00 and so on. Another clearer example can be found below.
 
@@ -63,7 +63,7 @@ The table above represents the usage fees for the service. The amount will be ch
 
 <br/>
 
-#### Create Certificate ( file < 30mb )
+### Create Non-Fungible Token (file < 30mb)
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
@@ -73,7 +73,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 1,001 - 2,000   | 2.02                         | 8.50                         |
 | > 2,000         | 1.90                         | 8.00                         |
 
-### Calculation example
+#### Calculation example
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 5.00 and so on. Another clearer example can be found below.
 
@@ -92,7 +92,7 @@ The table above represents the usage fees for the service. The amount will be ch
 <br/>
 
 
-#### Create Certificate ( file < 100mb )
+### Create Non-Fungible Token (file < 100mb)
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
@@ -102,7 +102,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 1,001 - 2,000   | 4.03                         | 17.00                         |
 | > 2,000         | 3.80                         | 16.00                         |
 
-### Calculation example
+#### Calculation example
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 20.00 and so on. Another clearer example can be found below.
 
@@ -121,7 +121,7 @@ The table above represents the usage fees for the service. The amount will be ch
 <br/>
 
 
-#### Transfer Certificate
+### Transfer Certificate
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
@@ -132,7 +132,7 @@ The table above represents the usage fees for the service. The amount will be ch
 | 1,001 - 2,000   | 0.18                         | 0.85                         |
 | > 2,000         | 0.17                         | 0.80                         |
 
-### Calculation example
+#### Calculation example
 
 The table above represents the usage fees for the service. The amount will be charged based on after the first range is utilized. For example, if you have utilized a total amount of 2,000 calls, the first 30 calls will be free of charge and any subsequent calls will be charged as 1.00 and so on. Another clearer example can be found below.
 
