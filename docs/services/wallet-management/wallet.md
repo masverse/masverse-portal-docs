@@ -165,12 +165,6 @@ API_URL/api/wallet/create-user
 {
     "status": 200,
     "result": {
-        "user": {
-            "name": "Bob",
-            "email": "test@gmail.com",
-            "ic": "123131231",
-            "phone": null
-        },
         "wallet": {
             "wallet_id": 1,
             "wallet_name": "bob wallet",
