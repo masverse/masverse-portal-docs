@@ -8,6 +8,21 @@ sidebar_label: Introduction
 
 **MasWallet** is a secure, blockchain-based wallet designed to serve as the primary gateway for users and developers within the **MasChain** ecosystem. It functions not only as a traditional digital wallet for managing assets, but also as an **authentication and transaction approval layer** — similar to how "Login with Google" works on many websites.
 
+## Access MasWallet
+
+You can access MasWallet via the following environments:
+
+🔵 **Mainnet MasWallet**  
+  [https://wallet.maschain.com](https://wallet.maschain.com)
+
+🧪 **Testnet MasWallet**  
+  [https://wallet-testnet.maschain.com](https://wallet-testnet.maschain.com)
+
+
+> ℹ️ **Mainnet** is for live, production-ready integrations.  
+> 🧪 **Testnet** is for development and testing purposes only — tokens and transactions are not real.
+
+
 ## What is MasWallet?
 
 MasWallet allows users to:
