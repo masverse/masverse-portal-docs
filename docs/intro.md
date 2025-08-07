@@ -36,7 +36,7 @@ After you have successfully created your API key, you will receive the following
 
 ### Step 4 : Start integration
 
-Finally, you can navigate to the comprehensive documentation for each subscribed service. In [Services](/category/services/), you will find detailed information including available endpoints, API specifications, and other relevant details essential for seamless integration with your system.
+Finally, you can navigate to the comprehensive documentation for each subscribed service. In Services, you will find detailed information including available endpoints, API specifications, and other relevant details essential for seamless integration with your system.
 
 
 ## Enterprise Portal Links
