@@ -247,7 +247,6 @@ With File <br/>
 |  callback_url | url  | Yes |
 |  category_id | array  | No |
 |  tag_id |  array | No |
-|  file |  file | No |
 
 
 
