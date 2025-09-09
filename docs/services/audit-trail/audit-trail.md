@@ -4,6 +4,146 @@ sidebar_position: 3
 
 # Audit Trail
 
+## Get Smart Contract list
+
+Retrieves all smart contract records for an organization.
+
+>**GET** 
+
+```
+API_URL/api/audit/contracts
+```
+
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; application/json**
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": [
+        {
+            "contract_address": "0xab3379af6e256063b....",
+            "transactionHash" : "0xf519ba69ba0e60351...."
+        },
+        {
+            "contract_address": "0x49DbCCC560CE46A582...",
+            "transactionHash" : "0xf519ba6s85786f5ad1..."
+        }
+    ]
+}
+```
+
+## Get Smart Contract by contract address
+
+Retrieves all smart contract records for an organization.
+
+>**GET** 
+
+```
+API_URL/api/audit/contracts/{address}
+```
+
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; application/json**
+
+```js title="Sample result"
+{
+    "status": 200,
+    "result": {
+        "transactionHash" : "0xf519ba69ba0e603583e0e...."
+        "contract_address": "0xab3379af6e256063b92B8...",
+        "contract_name": "Test Contract",
+    },
+}
+```
+
+<br/>
+
+## Create Smart Contract
+
+Create New Audit Trail Smart Contract to MasChain with fields. You may also create this smart contract in the portal.
+
+>**POST** 
+
+```
+API_URL/api/audit/contracts
+```
+
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc**
+
+**content-type &emsp; application/json**
+
+<br/>
+
+#### BODY
+    | Name                 | Type            | Required            |
+    |:--------------------:|:---------------:|:-------------------:|
+    | contract name        | string          | Yes                 |
+    | field                | object          | Yes                 |
+    | callback_url         | string          | No                  |
+
+* ***name*** is just to give a nickname for the smart contract.
+* ***field*** is an object that contains the required properties to create this smart contract.
+    * **encrypt_data**  Encrypt data - boolean (TRUE | FALSE)
+* ***callback_url*** response after data is minted into blockchain
+
+```js title="Sample Request"
+{
+    "name" : "Tree #1",    // Contract Nickname
+    "field":{
+        "encrypt_data": true                // 
+    },
+    "callback_url": "https://4eaeae484e8c.ngrok-free.app/postman/callback"
+}
+```
+
+```js title="Sample Response"
+{
+    "status": 200,
+    "result": {
+        "status": "pending",
+        "message": "Contract creation in progress"
+    }
+}
+```
+
+```js title="Sample Callback Success Response"
+{
+    "status": "success",
+    "from": "0x1a0BA2b4d8830496Beb8469...",
+    "nonce": 129,
+    "transactionHash": "0x4aa7d9242d11c6a4487892663d223dcff0c463d361ecc953c8fb88ddf313d9b0",
+    "receipt": { Transaction Receipt Object }
+}
+```
+
+```js title="Sample Callback Fail Response"
+{
+    "status": 200,
+    "result": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "nonce": 752,
+        "from": "0x1a0BA2b4d8830496Beb8469...",
+        "status": "failed"
+        "message": "Error message"
+    }
+}
+```
+
 ## Get Audit Trails list
 
 Retrieves all audit trail records for an organization from the database.
@@ -22,8 +162,8 @@ API_URL/api/audit/audit?category={id}&tag={id}
 #### Params 
     | Name                 | Required            |
     |:--------------------:|:-------------------:|
-    | category       | No                 |
-    | tag     | No                 |
+    | category             | No                  |
+    | tag                  | No                  |
 
 ```js title="Sample result"
 {
@@ -107,7 +247,6 @@ With File <br/>
 |  callback_url | url  | Yes |
 |  category_id | array  | No |
 |  tag_id |  array | No |
-|  file |  file | No |
 
 
 
