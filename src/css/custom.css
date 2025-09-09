@@ -58,7 +58,7 @@ a[href^="/services/ekyc/ekyc-extra"] {
   display: none;
 }
 
-a[href^="/services/transaction/overview"] {
+/* a[href^="/services/transaction/overview"] {
   display: none;
 }
 
@@ -68,4 +68,4 @@ a[href^="/services/transaction/explorer-display-option"] {
 
 a[href^="/services/transaction"] {
   display: none;
-}
+} */
