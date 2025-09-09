@@ -50,15 +50,22 @@ a[href^="/services/certificate/certificate-extra"] {
   display: none;
 }
 
-a[href^="/services/wallet-management/wallet-extra"]
-{
+a[href^="/services/wallet-management/wallet-extra"] {
   display: none;
 }
 
-a[href^="/services/ekyc/ekyc-extra"]
-{
+a[href^="/services/ekyc/ekyc-extra"] {
   display: none;
 }
 
+a[href^="/services/transaction/overview"] {
+  display: none;
+}
 
+a[href^="/services/transaction/explorer-display-option"] {
+  display: none;
+}
 
+a[href^="/services/transaction"] {
+  display: none;
+}
