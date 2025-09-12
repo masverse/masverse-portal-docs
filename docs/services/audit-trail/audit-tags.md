@@ -229,7 +229,7 @@ Delete tags by id.
 >**DELETE** 
 
 ```
-API_URL/api/audit/delete/{id}
+API_URL/api/audit/tag/{id}
 ```
 #### HEADERS
 

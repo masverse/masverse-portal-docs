@@ -236,7 +236,7 @@ Delete category by id.
 >**DELETE** 
 
 ```
-API_URL/api/audit/delete-category/{id}
+API_URL/api/audit/category/{id}
 ```
 #### HEADERS
 
