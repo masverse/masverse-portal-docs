@@ -28,11 +28,15 @@ API_URL/api/audit/contracts
     "result": [
         {
             "contract_address": "0xab3379af6e256063b....",
-            "transactionHash" : "0xf519ba69ba0e60351...."
+            "transactionHash" : "0xf519ba69ba0e60351....",
+            "contract_name": "Contract 1",
+            "logo_path": null
         },
         {
             "contract_address": "0x49DbCCC560CE46A582...",
-            "transactionHash" : "0xf519ba6s85786f5ad1..."
+            "transactionHash" : "0xf519ba69ba0e60351....",
+            "contract_name": "Contract 2",
+            "logo_path": null
         }
     ]
 }
@@ -63,6 +67,7 @@ API_URL/api/audit/contracts/{address}
         "transactionHash" : "0xf519ba69ba0e603583e0e...."
         "contract_address": "0xab3379af6e256063b92B8...",
         "contract_name": "Test Contract",
+         "logo_path": null
     },
 }
 ```
@@ -103,11 +108,11 @@ API_URL/api/audit/contracts
 
 ```js title="Sample Request"
 {
-    "name" : "Tree #1",    // Contract Nickname
+    "name" : "Tree #1",
     "field":{
-        "encrypt_data": true                // 
+        "encrypt_data": true
     },
-    "callback_url": "https://4eaeae484e8c.ngrok-free.app/postman/callback"
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -126,7 +131,7 @@ API_URL/api/audit/contracts
     "status": "success",
     "from": "0x1a0BA2b4d8830496Beb8469...",
     "nonce": 129,
-    "transactionHash": "0x4aa7d9242d11c6a4487892663d223dcff0c463d361ecc953c8fb88ddf313d9b0",
+    "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
     "receipt": { Transaction Receipt Object }
 }
 ```
@@ -207,12 +212,28 @@ API_URL/api/audit/audit/{id}
 {
     "status": 200,
     "result": {
-        "transactionHash": "0x2da075d49a7ffb9ae491abbdfea32e4b....",
-        "nonce": 39,
-        "status": "pending",
-        "metadatahash": "$2y$12$2OHVfoc/2ZdZSwEU.1mzEe2LUrexmlGBh8.E295LJqPs2KrihfAT.",
-        "metadata": "{\"name\" : \"xxxxxxxx\",\"data\" : \"yyyyyyyy\",\"entity_id\" : \"zzzzzzzzz\",\"content\" : \"wwwwwwwwwwww\"}",
-        "form": "0x40095850F2bb577b364..."
+        "id": 439,
+        "organisation_id": 71,
+        "token_status_id": 10917,
+        "metadata": "test",
+        "file": null,
+        "metadatahash": "$2y$12$OW5v6vG8iBbwB23SJ9iRT.QC1f.gKCH1LZvwYeoy0wuRsHEEw8y9q",
+        "transactionhashId": "0x9700798dec7319a82229c33a573fb5...",
+        "created_at": "2025-09-10T08:06:35.000000Z",
+        "updated_at": "2025-09-10T08:06:35.000000Z",
+        "deleted_at": null,
+        "categories": [
+            {
+                "id": 1,
+                "name": "Food"
+            }
+        ],
+        "tags": [
+            {
+                "id": 4,
+                "name": "allocate"
+            }
+        ]
     }
 }
 ```
@@ -257,7 +278,6 @@ With File <br/>
     "contract_address":"0xc02161D9e08E620...",
     "metadata":{"name" : "xxxxxxxx","data" : "yyyyyyyy","entity_id" : "zzzzzzzzz","content" : "wwwwwwwwwwww"},
     "wallet_address":"0x40095850F2bb577b3644...",
-    "file":"file",
     "callback_url": "https://postman-echo.com/post?"
 }
 ```
@@ -266,13 +286,12 @@ With File <br/>
 {
     "status": 200,
     "result": {
-        "transactionHash": "0xa0cc4dbc19a28ef46cd1cfdd.....",
-        "nonce": 40,
+        "transactionHash": "0x76578bb22a17d1fa06165570...",
+        "nonce": 175,
         "status": "pending",
-        "metadatahash": "$2y$12$6rZ/lZXIMdHcTKrF5q6Ci.VCqkBEdoZQqIntv0MKnQb8iLPONYm9W",
-        "metadata": "{\"name\" : \"xxxxxxxx\",\"data\" : \"yyyyyyyy\",\"entity_id\" : \"zzzzzzzzz\",\"content\" : \"wwwwwwwwwwww\"}",
-        "form": "0x40095850F2bb577b3..."
-
+        "metadatahash": "$2y$12$JCdgqkB1QKI5cRHTVaQXqu2JZPMj5MH8qT6GU7vb0NR4ONjgR1i62",
+        "metadata": "test",
+        "form": "0x44Ce5799F1d0672e6577..."
     }
 }
 ```
@@ -308,22 +327,24 @@ API_URL/api/audit/get-audit-transaction
     "status": 200,
     "result": [
         {
-            "to": "0xED7cfE6FaBA7070Ae4ed2A...",
-            "from": "0x6C8C08029D80445DF1...",
-            "blockNumber": 2769746,
-            "transactionHash": "0x1165c4353bc030205a203f100b6...",
-            "method": "mint"
+            "to": null,
+            "from": "0x44Ce5799F1d0672e6577C4F0038729177dB65FD7",
+            "status": "success",
+            "blockNumber": 8717499,
+            "transactionHash": "0x899bcb62f70b9ac51da499f0bcdebbf4ec528ed37cc00596c4598b1e0ec42d6c",
+            "method": "mint",
+            "timestamp": "2025-09-11T04:16:05.000000Z",
+            "metadata": "testing data"
         }
     ],
     "pagination": {
         "current_page": 1,
         "first_page_url": "/api/get-audit-transaction?page=1",
-        "last_page": 1,
-        "last_page_url": "/api/get-audit-transaction?page=1",
-        "next_page_url": null,
-        "per_page": 20,
+        "last_page": 2,"/api/get-audit-transaction?page=1",
+        "next_page_url": "/api/get-audit-transaction?page=1",
+        "per_page": 3,
         "prev_page_url": null,
-        "total": 1
+        "total": 4
     }
 }
 ```
@@ -356,8 +377,8 @@ API_URL/api/audit/audit/{id}
 
 ```js title="Sample request"
 {
-    "category_id":[1,5],
-    "tag_id":[5,6],
+    "category_id":[1],
+    "tag_id":[2]
 }
 ```
 
@@ -365,15 +386,25 @@ API_URL/api/audit/audit/{id}
 {
     "status": 200,
     "result": {
-        "id": 11,
-        "organisation_id": 2,
-        "metadata": "{\"name\" : \"xxxxxxxx\",\"data\" : \"yyyyyyyy\",\"entity_id\" : \"zzzzzzzzz\",\"content\" : \"wwwwwwwwwwww\"}",
+        "id": 439,
+        "organisation_id": 71,
+        "metadata": "test",
         "file": null,
-        "metadatahash": "$2y$12$6rZ/lZXIMdHcTKrF5q6Ci.VCqkBEdoZQqIntv0MKnQb8iLPONYm9W",
-        "transactionHash": "0xa0cc4dbc19a28ef46cd1cfdd...",
-        "created_at": "2024-07-26T17:25:17.000000Z",
-        "categories": [],
-        "tags": []
+        "metadatahash": "$2y$12$OW5v6vG8iBbwB23SJ9iRT.QC1f.gKCH1LZvwYeoy0wuRsHEEw8y9q",
+        "transactionHash": "0x9700798dec7319a822...",
+        "created_at": "2025-09-10T08:06:35.000000Z",
+        "categories": [
+            {
+                "id": 1,
+                "name": "test"
+            }
+        ],
+        "tags": [
+            {
+                "id": 2,
+                "name": "test"
+            }
+        ]
     }
 }
 ```
