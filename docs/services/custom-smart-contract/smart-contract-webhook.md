@@ -104,7 +104,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/webhooks
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |                 Name                 |             Required              |                             Description                              |
     | :----------------------------------: | :-------------------------------: | :------------------------------------------------------------------: |
     |                 url                  |                Yes                |                           The webhook url                            |
@@ -112,7 +112,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/webhooks
     | subscribed_events.*.contract_address | Required if capture_anonymous = 0 |                  Source contract event of the event                  |
     |      subscribed_events.*.event       | Required if capture_anonymous = 0 | The event signature. Available from get project version details api. |
 
-```js title="Sample Request"
+```js title="Sample Request Body"
 {
     "url": "http://webhookurl",
     "capture_anonymous": 1,
@@ -164,7 +164,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/webhooks/{web
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |                 Name                 |             Required              |                             Description                              |
     | :----------------------------------: | :-------------------------------: | :------------------------------------------------------------------: |
     |                 url                  |                Yes                |                           The webhook url                            |
@@ -173,7 +173,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/webhooks/{web
     |      subscribed_events.*.event       | Required if capture_anonymous = 0 | The event signature. Available from get project version details api. |
     |                status                |                No                 | To update the webhook status. Accepted values are: active, inactive. |
 
-```js title="Sample Request"
+```js title="Sample Request Body"
 {
     "url": "http://webhookurl",
     "capture_anonymous": 1,
@@ -225,12 +225,12 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/webhooks/{web
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |  Name  | Required |                          Description                           |
     | :----: | :------: | :------------------------------------------------------------: |
     | status |   Yes    | The new webhook status. Accepted values are: active, inactive. |
 
-```js title="Sample Request"
+```js title="Sample Request Body"
 {
     "status": "inactive"
 }

@@ -252,7 +252,7 @@ API_URL/api/contract/utils/simulate-transaction
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     | Name  |                   Required                    |                                                 Description                                                  |
     | :---: | :-------------------------------------------: | :----------------------------------------------------------------------------------------------------------: |
     | from  | At least one of the listed fields is required | The sender address. If transaction expects specific sender, the corresponding from address shall be included |

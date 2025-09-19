@@ -149,7 +149,7 @@ API_URL/api/contract/smart-contracts/{address}/call
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |     Name     |               Required                |                                                                                                        Description                                                                                                         |
     | :----------: | :-----------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
     |     from     |                  Yes                  |                                                                                        The address to call the smart contract from                                                                                         |
@@ -201,7 +201,7 @@ API_URL/api/contract/smart-contracts/{address}/execute
 
 ### Example using custodial wallet
 
-#### Params     
+#### BODY     
     |          Name          |               Required                |                                                                                                                                   Description                                                                                                                                   |
     | :--------------------: | :-----------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
     |  wallet_options.type   |                  Yes                  |                                                                                             Wallet type to be used for contract execution. Accepted values: organisation, end_user                                                                                              |
@@ -240,7 +240,7 @@ The returned values will be in the format of
 
 ### Example using non-custodial wallet
 
-#### Params     
+#### BODY     
     |          Name          | Required |                                   Description                                    |
     | :--------------------: | :------: | :------------------------------------------------------------------------------: |
     |  wallet_options.type   |   Yes    | Wallet type to be used to for contract execution. Accepted values: non_custodial |

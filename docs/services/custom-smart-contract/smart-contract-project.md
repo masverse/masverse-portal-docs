@@ -100,7 +100,7 @@ API_URL/api/contract/projects
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |     Name     | Required |              Description               |
     | :----------: | :------: | :------------------------------------: |
     | project_name |   Yes    | The name of the smart contract project |
@@ -146,7 +146,7 @@ API_URL/api/contract/projects/{projectSlug}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |     Name     | Required |              Description               |
     | :----------: | :------: | :------------------------------------: |
     | project_name |   Yes    | The name of the smart contract project |

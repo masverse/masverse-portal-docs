@@ -21,24 +21,48 @@ API_URL/api/wallet/wallet?type=1
 
 **content-type &emsp; application/json**
 
-#### Params
+<!-- #### Params
 ```
 type 1 : organisation
 type 2 : end_user
 
-```
+``` -->
+
+#### Params
+    | Name                 | Input            | Required            | Description            |
+    |:--------------------:|:---------------:|:-------------------:|:-------------------:|
+    | type                 | 1 or 2          | No                 |1 = organisation <br/> 2 = end_user
+
 
 ```js title="Sample result"
 {
     "status": 200,
     "result": [
         {
-            "id": 1,
-            "wallet_type": 'organisation',
-            "address": "0x147f2......",
-            "name": null,
+            "wallet_type": "organisation",
+            "address": "0x44Ce5799F1d0672e657...",
+            "id": 5493,
+            "name": "Wallet 1",
+            "is_active": 1
+        },
+        {
+            "wallet_type": "end_user",
+            "address": "0x77eAFD1BbDB0dF4d...",
+            "id": 6416,
+            "name": "Wallet 2",
+            "is_active": 1
         }
-    ]
+    ],
+    "pagination": {
+        "current_page": 1,
+        "first_page_url": "https://service-testnet.maschain.com/api/wallet/wallet?page=1",
+        "last_page": 5,
+        "last_page_url": "https://service-testnet.maschain.com/api/wallet/wallet?page=5",
+        "next_page_url": "https://service-testnet.maschain.com/api/wallet/wallet?page=2",
+        "per_page": 20,
+        "prev_page_url": null,
+        "total": 95
+    }
 }
 ```
 
@@ -65,12 +89,12 @@ API_URL/api/wallet/wallet/{address}
 {
     "status": 200,
     "result": {
-        "id" : 1,
-        "entity_id": 1,
-        "address": "0x147f20........",
-        "name": null,
-        "is_active" : 1,
-        'wallet_type' : 'end_user',
+        "id": 6416,
+        "address": "0x77eAFD1BbDB0dF4d1A...",
+        "entity_id": null,
+        "name": "Wallet 1",
+        "is_active": 1,
+        "wallet_type": "end_user"
     }
 }
 ```
@@ -104,7 +128,7 @@ API_URL/api/wallet/wallet
 
 ```js title="Sample request"
 {
-    "name":"test",
+    "name":"Wallet Test"
 }
 ```
 
@@ -112,13 +136,13 @@ API_URL/api/wallet/wallet
 {
     "status": 200,
     "result": {
-        "id": 1,
-        "address": "0xF821eaD377B6689D25.....",
-        "name": "test",
+        "id": 13239,
+        "address": "0x550BD3D7363bd0Fea7...",
+        "name": "Wallet Test",
         "wallet_type": "organisation",
         "is_active": 1,
         "entity_id": null,
-        "entity_category_id": null,
+        "entity_category_id": null
     }
 }
 ```
@@ -153,11 +177,9 @@ API_URL/api/wallet/create-user
 
 ```js title="Sample request"
 {
-    "name":"test name2",
-    "email":"testemail9@gmail.com",
-    "ic":"test ic",
-    "phone":"test ic",
-    "entity_id":1,
+    "name":"User 1",
+    "email":"test@email.com",
+    "ic":"IC Number 123"
 }
 ```
 
@@ -166,13 +188,13 @@ API_URL/api/wallet/create-user
     "status": 200,
     "result": {
         "wallet": {
-            "wallet_id": 1,
-            "wallet_name": "bob wallet",
-            "wallet_address": "0x556283a26F5C3d7bcB9a...",
+            "wallet_id": 13240,
+            "wallet_name": "User 1",
+            "wallet_address": "0x815D5e471395db1...",
             "wallet_type": "user",
             "is_active": 1,
             "entity_id": null,
-            "entity_category_id": null,
+            "entity_category_id": null
         }
     }
 }
@@ -205,7 +227,7 @@ API_URL/api/wallet/wallet/{address}
 ```js title="Sample request"
 {
     "entity_id" : 1,
-    "name":"update name",
+    "name":"Update name"
 }
 ```
 
@@ -213,12 +235,12 @@ API_URL/api/wallet/wallet/{address}
 {
     "status": 200,
     "result": {
-        "id" : 1
-        "entity_id" : 1,
+        "id": 13240,
+        "address": "0x815D5e471395db1779...",
+        "entity_id": 1,
+        "name": "Update name",
         "is_active": 1,
-        "name":"update name",
-        'wallet_type' : 'end_user',
-        "address": "0x147f20........",
+        "wallet_type": "end_user"
     }
 }
 ```
@@ -246,12 +268,12 @@ API_URL/api/wallet/wallet/{address}/activate
 {
     "status": 200,
     "result": {
-        "id" : 1
-        "entity_id" : 1,
+        "id": 13240,
+        "address": "0x815D5e471395db177...",
+        "entity_id": 1,
+        "name": "Update name",
         "is_active": 1,
-        "name":"name",
-        'wallet_type' : 'end_user',
-        "address": "0x147f20........",
+        "wallet_type": "end_user"
     }
 }
 ```
@@ -279,12 +301,12 @@ API_URL/api/wallet/wallet/{address}/deactivate
 {
     "status": 200,
     "result": {
-        "id" : 1
-        "entity_id" : 1,
-        "is_active": 1,
-        "name":"name",
-        'wallet_type' : 'end_user',
-        "address": "0x147f20........",
+        "id": 13240,
+        "address": "0x815D5e471395db1779c...",
+        "entity_id": 1,
+        "name": "Update name",
+        "is_active": 0,
+        "wallet_type": "end_user"
     }
 }
 ```
@@ -298,7 +320,7 @@ Retrieves the number of transaction initiated by a wallet address including pend
 >**GET**
 
 ```
-API_URL/api/wallet/wallet/{address}/transactions-count?block=pending
+API_URL/api/wallet/wallet/{address}/transactions-count
 ```
 #### HEADERS
 

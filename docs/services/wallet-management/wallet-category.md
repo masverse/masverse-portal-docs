@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Get Wallet Category list
 
-Retrieves all wallet category records for an organization from the database.
+Retrieves all wallet category records for an organization.
 
 >**GET** 
 
@@ -28,7 +28,7 @@ API_URL/api/wallet/wallet-category
         {
             "id": 1,
             "organisation_id": 1,
-            "name": "Johnathan 456",
+            "name": "Category 1",
             "subcategory_id": null,
             "is_active": 1,
             "created_at": "2024-03-01T03:36:37.000000Z",
@@ -43,7 +43,7 @@ API_URL/api/wallet/wallet-category
 
 ## Get Wallet Category by ID
 
-Retrieves a specific wallet category record by its ID from the database.
+Retrieves a specific wallet category record by its ID.
 
 >**GET** 
 
@@ -64,7 +64,7 @@ API_URL/api/wallet/wallet-category/{id}
     "result": {
         "id": 1,
         "organisation_id": 1,
-        "name": "Johnathan 456",
+        "name": "Category 1",
         "subcategory_id": null,
         "is_active": 1,
         "created_at": "2024-03-01T03:36:37.000000Z",
@@ -78,7 +78,7 @@ API_URL/api/wallet/wallet-category/{id}
 
 ## Create Wallet Category
 
-Creates an wallet category by organisation id and storing it in MasChain.
+Creates a wallet category by organisation ID.
 
 >**POST** 
 
@@ -122,7 +122,7 @@ API_URL/api/wallet/wallet-category
 
 ## Update Wallet Category by ID
 
-Update wallet category by id and store to db.
+Update wallet category by ID.
 
 >**PUT** 
 
@@ -168,7 +168,7 @@ API_URL/api/wallet/wallet-category/{id}
 
 ## Activate Wallet Category by ID
 
-Activate wallet category by id.
+Activate wallet category by ID.
 
 >**PUT** 
 
@@ -203,7 +203,7 @@ API_URL/api/wallet/wallet-category/{id}/activate
 
 ## Deactivate Wallet Category by ID
 
-Deactivate wallet category by id.
+Deactivate wallet category by ID.
 
 >**PUT** 
 
@@ -238,7 +238,7 @@ API_URL/api/wallet/wallet-category/{id}/deactivate
 
 ## Delete Wallet Category by ID
 
-Delete wallet category by id.
+Delete wallet category by ID.
 
 >**DELETE** 
 

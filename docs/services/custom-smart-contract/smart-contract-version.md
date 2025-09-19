@@ -270,7 +270,7 @@ API_URL/api/contract/projects/{projectSlug}/versions
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |       Name        | Required |                                                                      Description                                                                      |
     | :---------------: | :------: | :---------------------------------------------------------------------------------------------------------------------------------------------------: |
     |      version      |   Yes    |                  The version name. Only accepts alpha numeric charaters, dot(.), dash(-) and underscore. Empty space is not allowed                   |
@@ -347,7 +347,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}
 
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
-#### Params     
+#### BODY     
     |       Name        | Required |                                                                      Description                                                                       |
     | :---------------: | :------: | :----------------------------------------------------------------------------------------------------------------------------------------------------: |
     |      version      |   Yes    |                   The version name. Only accepts alpha numeric charaters, dot(.), dash(-) and underscore. Empty space is not allowed                   |
@@ -424,7 +424,7 @@ API_URL/api/contract/projects/{projectSlug}/versions/{versionSlug}/deploy
 
 ### Example using custodial wallet
 
-#### Params     
+#### BODY     
     |                Name                |                    Required                     |                                Description                                |
     | :--------------------------------: | :---------------------------------------------: | :-----------------------------------------------------------------------: |
     |        wallet_options.type         |                       Yes                       | Wallet type to be used to deploy. Accepted values: organisation, end_user |

@@ -141,7 +141,7 @@ API_URL/api/wallet/entity-category/{id}
     | Name                 | Type            | Required            |
     |:--------------------:|:---------------:|:-------------------:|
     | name                 | string          | Yes                 |
-    | parent_category_id       | int             | Yes                 |
+    | parent_category_id       | int             | No                 |
 
 ```js title="Sample request"
 {

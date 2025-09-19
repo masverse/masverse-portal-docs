@@ -41,7 +41,7 @@ API_URL/api/token/pause
 
 ```js title="Sample request"
 {
-    "wallet_address":"0x147f20a28739da15419Ad..."   ,
+    "wallet_address":"0x147f20a28739da15419Ad...",
     "contract_address":"0x4175a3EE7fbD167E...",
     "callback_url": "https://postman-echo.com/post?"
 }
@@ -51,10 +51,10 @@ API_URL/api/token/pause
 {
     "status": 200,
     "result": {
-        "from": "0x147f20a28739da1541...",
-        "transactionHash": "0xf519ba69ba0e603583e0e8857....",
-        "nonce": 0,
-        "status": "pending",
+        "from": "0x44Ce5799F1d0672e6577C...",
+        "nonce": 180,
+        "transactionHash": "0x3635e436ba755...",
+        "status": "pending"
     }
 }
 ```
@@ -66,7 +66,7 @@ API_URL/api/token/pause
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "success"
+        "status": "success",
         "receipt" : { Transaction Receipt Object }
     }
 }
@@ -79,7 +79,7 @@ API_URL/api/token/pause
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "failed"
+        "status": "failed",
         "message": "Error message"
     }
 }
@@ -113,7 +113,7 @@ API_URL/api/token/resume
 
 ```js title="Sample request"
 {
-    "wallet_address":"0x147f20a28739da1541...."   ,
+    "wallet_address":"0x147f20a28739da1541....",
     "contract_address":"0x4175a3EE7fbD167E....",
     "callback_url": "https://postman-echo.com/post?"
 }
@@ -126,7 +126,7 @@ API_URL/api/token/resume
         "from": "0x147f20a28739da1541...",
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 0,
-        "status": "pending",
+        "status": "pending"
     }
 }
 ```
@@ -138,7 +138,7 @@ API_URL/api/token/resume
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "success"
+        "status": "success",
         "receipt" : { Transaction Receipt Object }
     }
 }
@@ -151,7 +151,7 @@ API_URL/api/token/resume
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "failed"
+        "status": "failed",
         "message": "Error message"
     }
 }
@@ -190,7 +190,7 @@ API_URL/api/token/mint
     "to":"0xbD8992F758B4429b92D1...",
     "amount":"2000",
     "contract_address":"0x4175a3EE7fbD167E...",
-    "callback_url": "https://postman-echo.com/post?",
+    "callback_url": "https://postman-echo.com/post?"
 }
 ```
 
@@ -213,7 +213,7 @@ API_URL/api/token/mint
         "transactionHash": "0xf519ba69ba0...",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "success"
+        "status": "success",
         "receipt" : { Transaction Receipt Object }
     }
 }
@@ -226,7 +226,7 @@ API_URL/api/token/mint
         "transactionHash": "0xf519ba69ba0...",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "failed"
+        "status": "failed",
         "message": "Error message"
     }
 }
@@ -261,10 +261,13 @@ API_URL/api/token/burn
     | contract_address     | string          | Yes                 |
     | callback_url          | string          | Yes                 |
 
+- **wallet_address**: The wallet address which owns the smart contract
+- **to**: The wallet address which has the tokens that will be burn
+
 ```js title="Sample request"
 {
-    "wallet_address":"0x147f20a28739da15419Ad...",
-    "to":"0xbD8992F758B4429b92D1...",
+    "wallet_address":"0x147f20a28739da15419Ad...", //The wallet address which owns the smart contract
+    "to":"0xbD8992F758B4429b92D1...", //The wallet address which has the tokens that will be burn
     "amount":"2000",
     "contract_address":"0x4175a3EE7fbD167E...",
     "callback_url": "https://postman-echo.com/post?"
@@ -289,7 +292,7 @@ API_URL/api/token/burn
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "success"
+        "status": "success",
         "receipt" : { Transaction Receipt Object }
     }
 }
@@ -302,7 +305,7 @@ API_URL/api/token/burn
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "failed"
+        "status": "failed",
         "message": "Error message"
     }
 }
@@ -353,7 +356,7 @@ API_URL/api/token/token-transfer
         "from": "0x147f20a28739da1541...",
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 0,
-        "status": "pending",
+        "status": "pending"
     }
 }
 ```
@@ -365,7 +368,7 @@ API_URL/api/token/token-transfer
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "success"
+        "status": "success",
         "receipt" : { Transaction Receipt Object }
     }
 }
@@ -378,7 +381,7 @@ API_URL/api/token/token-transfer
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "failed"
+        "status": "failed",
         "message": "Error message"
     }
 }
@@ -427,7 +430,7 @@ API_URL/api/token/owner-transfer
         "from": "0x147f20a28739da1541...",
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 0,
-        "status": "pending",
+        "status": "pending"
     }
 }
 ```
@@ -439,7 +442,7 @@ API_URL/api/token/owner-transfer
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "success"
+        "status": "success",
         "receipt" : { Transaction Receipt Object }
     }
 }
@@ -452,7 +455,7 @@ API_URL/api/token/owner-transfer
         "transactionHash": "0xf519ba69ba0e603583e0e8857....",
         "nonce": 752,
         "from": "0x147f20a28739da15419Ad...",
-        "status": "failed"
+        "status": "failed",
         "message": "Error message"
     }
 }
@@ -486,7 +489,7 @@ API_URL/api/token/balance
 ```
 {
     "wallet_address":"0x147f20a28739da15419Ad...",
-    "contract_address":"0x4175a3EE7fbD167E...",
+    "contract_address":"0x4175a3EE7fbD167E..."
 }
 ```
 

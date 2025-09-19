@@ -26,14 +26,24 @@ API_URL/api/certificate/get-smart-contract
     "status": 200,
     "result": [
         {
-            "transactionHash" : "0xf519ba69ba0e60351...."
-            "contract_address": "0xab3379af6e256063b....",
-        },
-        {
-            "transactionHash" : "0xf519ba6s85786f5ad1..."
-            "contract_address": "0x49DbCCC560CE46A582...",
+            "contract_address": "0x74f558bDcC18F56042B811f91...",
+            "transactionHash": "0x000807941722a178dc6f4e185...",
+            "contract_name": "Test NFT",
+            "logo": null,
+            "name": "Test NFT",
+            "symbol": "TESTNFT"
         }
-    ]
+    ],
+    "pagination": {
+        "current_page": 1,
+        "first_page_url": "https://service-testnet.maschain.com/api/certificate/get-smart-contract?page=1",
+        "last_page": 1,
+        "last_page_url": "https://service-testnet.maschain.com/api/certificate/get-smart-contract?page=1",
+        "next_page_url": null,
+        "per_page": 100,
+        "prev_page_url": null,
+        "total": 7
+    }
 }
 ```
 
@@ -60,12 +70,13 @@ API_URL/api/certificate/get-smart-contract/{id}
 {
     "status": 200,
     "result": {
-        "transactionHash" : "0xf519ba69ba0e603583e0e...."
-        "contract_address": "0xab3379af6e256063b92B8...",
-        "name": "Maschain",
-        "symbol": "MEI"
-        "logo" : "image.pdf"
-    },
+        "contract_address": "0xcfeEfA3684d...",
+        "contract_name": "Contract 1",
+        "transactionHash": "0x151f2f1821cf0ef5ec8772854b...",
+        "logo": null,
+        "name": "CONTRACT1",
+        "symbol": "CONTRACT1"
+    }
 }
 ```
 
@@ -281,7 +292,7 @@ Transfer your NFT to another wallet
 
 ```
 API_URL/api/certificate/transfer-certificate
-```
+```m
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
@@ -375,7 +386,7 @@ status                : success or fail or pending , default success
             "is_mint": 1,
             "blockNumber": 2805251,
             "nft_token_id": 1,
-            "transactionHash": "0x19801b1d1fad1ce549b9a8af239ed865cd1a0ecb1bf65824651c26735e82d1c2",
+            "transactionHash": "0x19801b1d1fad1ce549b9a8af239ed865c...",
             "certificate_image_file": null,
             "certificate_file": "1.json",
             "created_at": "2024-07-27T06:30:40.000000Z",
@@ -399,7 +410,7 @@ Get success NFT Transactions
 >**GET** 
 
 ```
-API_URL/api/token/get-certificate-transaction
+API_URL/api/token/get-token-transaction
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
