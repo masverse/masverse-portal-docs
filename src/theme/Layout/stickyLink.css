@@ -1,0 +1,110 @@
+/* --- Sticky container --- */
+.sticky-link {
+    position: fixed;
+    bottom: 6rem;
+    /* slightly above BackToTopButton */
+    right: 2rem;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    text-decoration: none;
+    animation: floaty 4s ease-in-out infinite;
+}
+
+/* --- Pulse halo --- */
+.pulse-ring {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 20%;
+    background: rgba(0, 150, 255, 0.25);
+    animation: pulse 2s infinite;
+    z-index: -1;
+}
+
+/* --- Icon --- */
+.sticky-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 20%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+}
+
+.sticky-link:hover .sticky-icon {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 6px 18px rgba(0, 150, 255, 0.4);
+    filter: brightness(1.1);
+}
+
+/* --- Tooltip --- */
+.sticky-tooltip {
+    position: absolute;
+    bottom: 80px;
+    /* above the icon */
+    right: 90%;
+    transform: translateX(50%);
+    background: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+    border: 1px solid rgba(0, 150, 255, 0.3);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Tooltip arrow */
+.sticky-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: var(--ifm-background-surface-color) transparent transparent transparent;
+}
+
+/* --- Animations --- */
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.3);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(0.9);
+        opacity: 0.6;
+    }
+}
+
+@keyframes floaty {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
