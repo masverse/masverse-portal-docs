@@ -410,7 +410,7 @@ Get success NFT Transactions
 >**GET** 
 
 ```
-API_URL/api/token/get-token-transaction
+API_URL/api/certificate/get-certificate-transaction
 ```
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
@@ -442,6 +442,7 @@ API_URL/api/token/get-token-transaction
                 "contract_address": "0x0d4987628e0a736...",
                 "name": "Certificate",
                 "symbol": "CERT"
+                "logo": "xx"
             },
             "timestamp": "2024-07-24T19:20:09.000000Z"
         }
