@@ -118,7 +118,7 @@ The table above represents the usage fees for the service. The amount will be ch
 <br/>
 
 
-### Transfer Certificate
+### Transfer Non-Fungible Token
 
 | Usage           | Fees per Transaction ( USD ) | Fees per Transaction ( MYR ) |
 | :-------------: | :--------------------------: | :--------------------------: |
