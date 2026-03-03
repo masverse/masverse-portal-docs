@@ -285,3 +285,68 @@ The returned values will be in the format of
 ```
 
 <br/>
+
+## Token Factory Contract – Collection Retrieval
+
+Retrieves the list of available Token Factory smart contract versions registered within the system.
+
+>**GET** 
+
+```
+API_URL/api/contract/utils/contracts/token-factory
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+The returned values will be in the format of
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": [
+        {
+            "name": "Audit V2",
+            "slug": "audit-v2",
+            "version_tag": "v2",
+            "abi": [...]
+        },
+        ...
+    ]
+}
+```
+
+<br/>
+
+## Token Factory Contract – Single Retrieval
+
+Retrieves the complete details of a specific Token Factory smart contract version identified by its slug
+
+>**GET** 
+
+```
+API_URL/api/contract/utils/contracts/token-factory/{slug}
+```
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+The returned values will be in the format of
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": {
+        "name": "Audit V2",
+        "slug": "audit-v2",
+        "version_tag": "v2",
+        "abi": [...]
+    }
+}
+```
+
+<br/>
