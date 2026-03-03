@@ -286,7 +286,7 @@ The returned values will be in the format of
 
 <br/>
 
-## Token Factory Contract – Collection Retrieval
+## List Token Factory Contract
 
 Retrieves the list of available Token Factory smart contract versions registered within the system.
 
@@ -320,7 +320,7 @@ The returned values will be in the format of
 
 <br/>
 
-## Token Factory Contract – Single Retrieval
+## Get Token Factory Contract
 
 Retrieves the complete details of a specific Token Factory smart contract version identified by its slug
 
