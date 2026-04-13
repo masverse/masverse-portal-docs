@@ -292,7 +292,8 @@ Transfer your NFT to another wallet
 
 ```
 API_URL/api/certificate/transfer-certificate
-```m
+```
+
 #### HEADERS
 **client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc**
 
@@ -307,7 +308,7 @@ API_URL/api/certificate/transfer-certificate
     | to                   | string          | Yes                 |
     | nft_id               | string          | Yes                 |
     | contract_address     | string          | Yes                 |
-    | callback_url          | string         | Yes                  |
+    | callback_url          | string         | Yes                 |
 
 
 ```js title="Sample request"
