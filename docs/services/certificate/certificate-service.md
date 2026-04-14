@@ -291,7 +291,7 @@ Transfer your NFT to another wallet
 >**POST** 
 
 ```
-API_URL/api/certificate/transfer-certificate
+API_URL/api/certificate/transfer
 ```
 
 #### HEADERS
