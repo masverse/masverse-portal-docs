@@ -55,6 +55,68 @@ The returned values will be in the format of
 
 <br/>
 
+
+## Contract Deploy
+
+>**POST** 
+
+```
+API_URL/api/contract/utils/deploy
+```
+
+#### HEADERS
+
+**client_id &emsp; 9b16ae5638534ae1961fb370f874b6cc***
+
+**client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
+
+#### Params
+    |         Name          |                    Required                     |
+    | :-------------------: | :---------------------------------------------: |
+    |      request_id       |                       Yes                       |
+    |         from          |                       Yes                       |
+    |      private_key      |                       Yes                       |
+    |     contract_abi      |                       Yes                       |
+    |  contract_byte_code   |                       Yes                       |
+    | constructor_arguments | Required if contract have deployment parameters |
+    |     callback_url      |                       Yes                       |
+
+```js title="Sample Request"
+{
+    "request_id": "15354",
+    "from": "0x1a0BA2b4d8830496Beb8469...",
+    "private_key": "",
+    "contract_abi": [],
+    "contract_byte_code": "",
+    "constructor_arguments": [],
+    "callback_url": "https://postman-echo.com/post?"
+}
+```
+
+```js title="Sample Result"
+{
+    "message": "Success",
+    "result": {
+        "requestId": 15354,
+        "from": "0x1a0BA2b4d8830496Beb8469...",
+        "nonce": 122,
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "status": 1
+    }
+}
+```
+
+```js title="Sample Callback Success Response"
+{
+    "status": "success",
+    "from": "0x1a0BA2b4d8830496Beb8469...",
+    "nonce": 129,
+    "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+    "contractAddress": "0xa259...b71965",
+    "receipt": { Transaction Receipt Object }
+}
+```
+
 ## List Supported Compiler Versions
 
 List Supported Compiler Versions
