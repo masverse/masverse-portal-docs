@@ -56,13 +56,29 @@ The returned values will be in the format of
 <br/>
 
 
-## Contract Deploy
+## Contract Deploy (Signed Transaction)
 
 >**POST** 
 
 ```
 API_URL/api/contract/utils/deploy
 ```
+
+#### Overview
+
+Deploys a smart contract to the blockchain using a **pre-signed transaction**. 
+The caller is responsible for building and signing the transaction offline before 
+submitting to this endpoint. This approach keeps private keys client-side and 
+never transmitted to the server.
+
+**Flow:**
+1. Compile your contract to get ABI + bytecode
+2. Build and sign the raw deploy transaction on your end
+3. Submit the signed transaction hex to this endpoint
+4. Receive an immediate response with `transactionHash`
+5. Your `callback_url` will be called once the transaction is confirmed or fails
+
+---
 
 #### HEADERS
 
@@ -71,24 +87,26 @@ API_URL/api/contract/utils/deploy
 **client_secret &emsp; sk_9b16ae5638534ae1961fb370f874b6cc***
 
 #### Params
-    |         Name          |                    Required                     |
-    | :-------------------: | :---------------------------------------------: |
-    |      request_id       |                       Yes                       |
-    |         from          |                       Yes                       |
-    |      private_key      |                       Yes                       |
-    |     contract_abi      |                       Yes                       |
-    |  contract_byte_code   |                       Yes                       |
-    | constructor_arguments | Required if contract have deployment parameters |
-    |     callback_url      |                       Yes                       |
+|        Name        |  Type  | Required | Description                                                                    |
+| :----------------: | :----: | :------: | ------------------------------------------------------------------------------ |
+|     request_id     | String | Optional | Your unique identifier for this request. Echoed back in response and callback. |
+|        from        | String |   Yes    | Wallet address of the contract deployer (must match the signing key)           |
+| signed_transaction | String |   Yes    | Pre-signed raw transaction hex string (starts with `0x`)                       |
+|    callback_url    | String |   Yes    | Endpoint to receive the final transaction result once confirmed on-chain       |
+
+#### Building the Signed Transaction
+
+Before calling this endpoint, you need to build and sign the deploy transaction yourself.
+
+> ⚠️ **Each signed transaction can only be submitted once.** Re-submitting the 
+> same hex will result in an `already known` error from the network. Always 
+> build a fresh signed transaction for each deployment.
 
 ```js title="Sample Request"
 {
     "request_id": "15354",
     "from": "0x1a0BA2b4d8830496Beb8469...",
-    "private_key": "",
-    "contract_abi": [],
-    "contract_byte_code": "",
-    "constructor_arguments": [],
+    "signed_transaction": "0xf90d4e0180835b8d808080...",
     "callback_url": "https://postman-echo.com/post?"
 }
 ```
@@ -99,7 +117,6 @@ API_URL/api/contract/utils/deploy
     "result": {
         "requestId": 15354,
         "from": "0x1a0BA2b4d8830496Beb8469...",
-        "nonce": 122,
         "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
         "status": 1
     }
