@@ -115,7 +115,7 @@ Before calling this endpoint, you need to build and sign the deploy transaction 
 {
     "message": "Success",
     "result": {
-        "request_id": 15354,
+        "request_id": "15354",
         "from": "0x1a0BA2b4d8830496Beb8469...",
         "transaction_hash": "0xf519ba69ba0e603583e0e885786f5ad1...",
         "status": 1
@@ -125,7 +125,7 @@ Before calling this endpoint, you need to build and sign the deploy transaction 
 
 ```js title="Sample Callback Success Response"
 {
-    "requestId": "cc9a8c27...",
+    "requestId": "15354",
     "from": "0x1a0BA2b4d8830496Beb8469...",
     "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
     "status": "success",
