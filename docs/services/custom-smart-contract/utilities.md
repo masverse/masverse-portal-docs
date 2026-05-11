@@ -125,12 +125,24 @@ Before calling this endpoint, you need to build and sign the deploy transaction 
 
 ```js title="Sample Callback Success Response"
 {
-    "status": "success",
+    "requestId": "cc9a8c27...",
     "from": "0x1a0BA2b4d8830496Beb8469...",
-    "nonce": 129,
     "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
-    "contractAddress": "0xa259...b71965",
-    "receipt": { Transaction Receipt Object }
+    "status": "success",
+    "receipt": {
+        "transactionHash": "0xf519ba69ba0e603583e0e885786f5ad1...",
+        "transactionIndex": 0,
+        "blockHash": "0xc61908f2485907474f4dc511413c4f0239c45636136dd4086bf6792f74842629",
+        "from": "0x1a0BA2b4d8830496Beb8469...",
+        "to": null,
+        "blockNumber": 11429467,
+        "gasUsed": 764834,
+        "contractAddress": "0xE53364F1e769090943796D6D0d9Bdd4C428a5B09",
+        "logs": [],
+        "logsBloom": "0x...",
+        "status": true,
+        "type": "0x0"
+    }
 }
 ```
 
