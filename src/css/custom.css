@@ -69,3 +69,12 @@ a[href^="/services/transaction/explorer-display-option"] {
 a[href^="/services/transaction"] {
   display: none;
 } */
+/* Full-SLA download button: tighten spacing without touching other paragraphs */
+.sla-download-btn {
+  margin: 0.2rem 0.2rem;
+}
+
+/* MDX wraps the button label in a <p>; remove its default paragraph margin */
+.sla-download-btn>p {
+  margin: 0.4rem 0 0.4rem;
+}

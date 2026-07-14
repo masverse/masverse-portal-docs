@@ -7,7 +7,7 @@ require('dotenv').config();
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 // @ts-ignore
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -29,6 +29,12 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  // Enable Mermaid diagrams in Markdown ```mermaid code blocks.
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -136,7 +142,7 @@ const config = {
         apiKey: process.env.ALGOLIA_API_KEY,
         indexName: process.env.ALGOLIA_INDEX_NAME,
         contextualSearch: true,
-  
+
         // Optional:
         externalUrlRegex: 'external\\.com|domain\\.com',
         searchParameters: {},
